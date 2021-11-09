@@ -9,7 +9,7 @@ Version: 1.0
 import React, { useState } from 'react'
 import { emailCheck } from './emailCheck'
 
-export default function ResetPassword({  }) {
+export default function ResetPassword({ navigation }) {
     const [email, setEmail] = useState({ value: '', error: '' })
     const [loading, setLoading] = useState(false)
 

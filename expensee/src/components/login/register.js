@@ -13,7 +13,7 @@ import { emailCheck } from './emailCheck'
 import { passwordCheck } from './passwordCheck'
 
 
-export default function register({  }) {
+export default function register({ navigation }) {
     const [email, setEmail] = useState({ value: '', error: '' })
     const [password, setPassword] = useState({ value: '', error: '' })
     const [loading, setLoading] = useState()
