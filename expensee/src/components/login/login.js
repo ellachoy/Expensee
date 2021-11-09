@@ -9,7 +9,7 @@ import React, { useState } from 'react'
 import { loginUser } from './firebase_config'
 import { emailCheck } from './emailCheck'
 import { passwordCheck } from './passwordCheck'
-import {Header} from '..\header\Header'
+
 
 export default function Login({ navigation }) {
     const [email, setEmail] = useState({ value: '', error: '' })
@@ -37,8 +37,20 @@ export default function Login({ navigation }) {
       }
 }
 
-return {
-    
 
+const Login = () => {
 
+  return (
+      <login className="login">
+        <div className="login-container">
+          <form className="login-form">
+            <input type="text" placeholder="hier Email Adresse eingeben"></input>
+            <input type="password"></input>
+          </form>
+          <button type="submit" className="login-button">Einloggen</button>
+          <p>Noch nicht registriert?</p><a href="./register.js">Registrieren</a>
+        </div>
+
+      </login>
+  );
 }
