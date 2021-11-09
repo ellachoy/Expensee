@@ -1,8 +1,9 @@
 import './Charts.scss';
+import Header from '../../components/Header/Header'
 
 const Charts = () => {
     return (  
-        <div>Charts</div>
+        <Header title="Statistik"/>
     );
 }
  
