@@ -1,0 +1,26 @@
+.Collapsible{
+    div{
+        
+        color:#ffffff;
+        font-size:1.2em;
+        width:90vw;
+        margin:3% auto;
+        height:6vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+    }
+    .Einkommen{
+        background: linear-gradient(90deg,#F63535,#FF009D);
+    }
+    .Ausgaben{
+        background-color:#515FEB;
+    }
+    .Sparen{
+        background-color:#EFB722;
+    }
+    .Sonstiges{
+        background-color:#95989A;
+    }
+}
