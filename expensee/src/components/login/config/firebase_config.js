@@ -27,7 +27,7 @@ export const FIREBASE_CONFIG = {
 const app = initializeApp(EXPENSEE);
 
 
-// Registrierung
+// Registrierung, diese Methode wird in register.js aufgerufen
 
 export const signUpUser = async ({ email, password }) => {
   try {
