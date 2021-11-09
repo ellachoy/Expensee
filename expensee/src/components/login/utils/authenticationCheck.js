@@ -11,7 +11,7 @@ import firebase from 'firebase/app'
 /* 
 
   In dieser Funktion wird überprüft, ob der Lgin erfolgreich war. Wenn ja, wird der Nutzer zu "Home" weitergeleitet. Wenn nicht
-  wird er zurück zu "Login geleitet"
+  wird er zurück zu "Login" geleitet
 
 */
 
