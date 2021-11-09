@@ -1,5 +1,4 @@
 import './App.scss';
-import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home.js';
 import Add from'./pages/Add/Add.js';
 import Charts from './pages/Charts/Charts.js';
