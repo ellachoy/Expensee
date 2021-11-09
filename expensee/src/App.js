@@ -1,5 +1,9 @@
 import './App.scss';
 import Footer from './components/Footer/Footer';
+import Home from './pages/Home/Home.js';
+import Add from'./pages/Add/Add.js';
+import Charts from './pages/Charts/Charts.js';
+
 
 import {
   BrowserRouter as Router,
@@ -15,26 +19,26 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/home">Home</Link>
             </li>
             <li>
-              <Link to="/">About</Link>
+              <Link to="/charts">charts</Link>
             </li>
             <li>
-              <Link to="/">Users</Link>
+              <Link to="/add">add</Link>
             </li>
           </ul>
         </nav>
 
         <Routes>
-          <Route path="/">
+          <Route exact path="/home" element={<Home/>}>
             
           </Route>
-          <Route path="/">
+          <Route exact path="/charts" element={<Charts/>}>
             
           </Route>
-          <Route path="/">
-            
+          <Route exact path="/add" element={<Add/>}>
+           
           </Route>
         </Routes>
       </div>
