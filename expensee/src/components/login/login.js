@@ -1,3 +1,13 @@
+/*
+
+Diese Komponente verwaltet den Login. In ihr ist zum Einen die Firebase Konfiguration implementiert. Außerdem beeinhaltet sie den Login, Logout und die Ueberprüfung von Name und Passwort
+
+Autor: Jonas Ermert
+Version: 1.0
+
+*/
+
+
 import firebase from 'firebase/app'
 import 'firebase/auth'
 
@@ -16,6 +26,8 @@ export const FIREBASE_CONFIG = {
 }
 
 
+
+// Login & Logout
   
 export const loginUser = async ({ name, password }) => {
     try {
@@ -40,5 +52,15 @@ export const logoutUser = () => {
 export function nameValidator(name) {
     if (!name) return "Benutzername kann nicht leer sein"
     return ''
-  }
+}
+
+
+// Ueberprüfung Passwort
+
+export function passwordValidator(password) {
+    if (!password) return "Bitte gib ein Passwort ein"
+    return ''
+}
+
+
 
