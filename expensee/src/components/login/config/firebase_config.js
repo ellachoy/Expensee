@@ -27,7 +27,7 @@ export const FIREBASE_CONFIG = {
 const app = initializeApp(FIREBASE_CONFIG);
 const auth = firebase.auth();
 
-// Verbinfung zur Datenbank
+// Verbindung zur Datenbank
 const usersRef = db.collection('users')
 
 // Berechtigungen
