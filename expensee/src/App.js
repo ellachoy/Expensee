@@ -4,6 +4,7 @@ import Home from './pages/Home/Home.js';
 import Add from'./pages/Add/Add.js';
 import Charts from './pages/Charts/Charts.js';
 
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,28 +12,37 @@ import {
   Link
 } from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
-    
-      
-      <Router>
-        <h1>Expensee</h1>
+    <Router>
       <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/home">Home</Link>
+            </li>
+            <li>
+              <Link to="/charts">charts</Link>
+            </li>
+            <li>
+              <Link to="/add">add</Link>
+            </li>
+          </ul>
+        </nav>
+
         <Routes>
-          <Route path="/home">
-            <Home />
+          <Route exact path="/home" element={<Home/>}>
+            
           </Route>
-          <Route path="/charts">
-            <Charts/>
+          <Route exact path="/charts" element={<Charts/>}>
+            
           </Route>
-          <Route path="/add">
-            <Add/>
+          <Route exact path="/add" element={<Add/>}>
+           
           </Route>
         </Routes>
       </div>
     </Router>
-    
   );
 }
 
-export default App;
