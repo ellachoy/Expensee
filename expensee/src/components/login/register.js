@@ -20,6 +20,8 @@ export default function register({ navigation }) {
     const [error, setError] = useState()
 
     const signUpUser = async () => {
+
+        // Hier wird Email und Passwort überprüft
         const emailError = emailCheck(email.value)
         const passwordError = passwordCheck(password.value)
         if (emailError || passwordError) {
