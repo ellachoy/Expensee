@@ -1,24 +1,36 @@
 import './Header.scss'
+import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
-function Header (){
+
+class Header extends Component{
+    constructor(props) {
+        super(props);
+        this.state = { 
+            isOpen:false,
+         }
+     
+    }
+    handleIsOpen= () => { //toggle um die sidebar zu öffnen und zu schließen 
+        this.setState({isOpen:!this.state.isOpen});
+    }
+    render() { 
+      
     return(
     <header>
-        <div id="mySidebar" className="sidebar">
-            <a href="javascript:void(0)" className="closebtn" onclick="closeNav()">×</a>
-            <a href="#">Home</a>
-            <a href="#">Einnahmen</a>
-            <a href="#">Charts</a>
-            <a href="#">Logout</a>
+        <div  className="sidpanel" style={{width:this.state.isOpen?'50vw':'0vw'}}>
+            <a href="javascript:void(0)" className="closebtn" onClick={this.handleIsOpen}>×</a>
+            <Link to="/home">Home</Link>
+            <Link to="/add">Einnahmen</Link>
+            <Link to="/charts">Charts</Link>
+            <Link to="#">Logout</Link>
         </div>
 
         <div id="main">
-            <button className="openbtn" onclick="openNav()">☰</button>  
-            <h2>Collapsed Sidebar</h2>
-            <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+            <button className="openbtn" onClick={this.handleIsOpen}>☰</button>  
         </div>
     </header>
     )
 
-
+    }
 }
 export default Header;

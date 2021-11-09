@@ -1,0 +1,14 @@
+header{
+    .sidepanel{
+        height:100vh;
+        transition:.5s;
+        background-color:red;
+        position:absolute;
+        top:0;
+        
+        a{
+            display:block;
+
+        }
+    }
+}
