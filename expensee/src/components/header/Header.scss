@@ -1,14 +1,30 @@
-header{
-    .sidepanel{
-        height:100vh;
-        transition:.5s;
-        background-color:red;
-        position:absolute;
-        top:0;
-        
-        a{
-            display:block;
-
+.sidebar{
+    
+    height:100vh;
+    margin-left:1%;
+    position:fixed;
+    z-index:5;
+    background:blue;
+    border-right:3px solid #fff; //die weiße Border rechts
+    // z-index:3;
+    display:flex; //Um die Buttons zu platzieren 
+    justify-content: flex-start;
+    align-items: center;
+    div{ //Die Größe und Aussehen der Buttons
+        width:50px;
+        height:50px;
+        border-radius:15px;       
+        }
+    .sideText{
+        font-family:'Source Sans Pro'; 
+        font-size: 20px;
+        background-color:rgba(255, 255, 255, 0); 
+        padding:11px 0% 0 60px;    
+    }
+    .button_container{
+        height:400px; //die Höhe des Divs der die Nav-Buttons beinhaltet
+        div{
+            margin:45px 0%; //der Abstand zwischen den Buttons
         }
     }
 }
