@@ -21,7 +21,7 @@ class Footer extends React.Component {
             chartsIsActive:false,
          };
     }
-    home= () => { //3 Funktionen die onClick dafür sorgen ,dass das aktive div rot wird und die anderen transparent
+    home= () => { 
         this.setState({homeIsActive:true});
         this.setState({addIsActive:false});
         this.setState({chartsIsActive:false});
