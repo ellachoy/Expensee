@@ -6,9 +6,9 @@ Version: 1.0
 */
 
 import React, { useState } from 'react'
-import { loginUser } from './firebase_config'
-import { emailCheck } from './emailCheck'
-import { passwordCheck } from './passwordCheck'
+import { loginUser } from './config/firebase_config'
+import { emailCheck } from './utils/emailCheck'
+import { passwordCheck } from './utils/passwordCheck'
 
 
 export default function Login({ navigation }) {
@@ -44,7 +44,7 @@ const Login = () => {
       <login className="login">
         <div className="login-container">
           <form className="login-form">
-            <input type="text" placeholder="hier Email Adresse eingeben"></input>
+            <input type="text" placeholder="Email Adresse eingeben..."></input>
             <input type="password"></input>
           </form>
           <button type="submit" className="login-button">Einloggen</button>
