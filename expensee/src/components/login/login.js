@@ -63,4 +63,14 @@ export function passwordValidator(password) {
 }
 
 
+// TODO's
+
+/*
+    1. Dem Benutzer ermöglichen sein Passwort zurückzusetzen
+    2. Registrierung ermöglichen, damit sich nicht nur Nutzer anmelden können, die in Firebase angelegt wurden
+    3. Stylen des Loginscreens
+    4. Verbinden der Login Komponente mit dem Rest der Applikation
+
+*/
+
 
