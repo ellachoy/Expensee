@@ -42,3 +42,20 @@ export default function register({ navigation }) {
 
     }
 }
+
+
+const Register = () => {
+
+    return (
+        <login className="register">
+          <div className="register-container">
+            <form className="register-form">
+              <input name="email" type="text" placeholder="hier Email Adresse eingeben"></input>
+              <input name="password "type="password"></input>
+            </form>
+            <button type="submit" className="register-button">Registrieren</button>
+          </div>
+  
+        </login>
+    );
+  }
