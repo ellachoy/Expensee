@@ -24,7 +24,7 @@ export const FIREBASE_CONFIG = {
     measurementId: '',
 }
 
-const app = initializeApp(FIREBASE_CONFIG);
+const app = initializeApp(EXPENSEE);
 
 
 // Registrierung
