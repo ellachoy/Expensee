@@ -13,13 +13,13 @@ export default function authenticationCheck({ navigation }) {
         // Benutzer ist eingeloggt
         navigation.reset({
           index: 0,
-          routes: [{ name: 'home' }],
+          routes: [{ name: 'Home' }],
         })
       } else {
         // Benutzer ist nicht eingeloggt
         navigation.reset({
           index: 0,
-          routes: [{ name: 'login' }],
+          routes: [{ name: 'Login' }],
         })
       }
     })

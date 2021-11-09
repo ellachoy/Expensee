@@ -52,6 +52,16 @@ export const signUpUser = async ({ email, password }) => {
   }
 }
 
+export const sendEmailWithPassword = async (email) => {
+  try {
+    await firebase.auth().sendPasswordResetEmail(email)
+    return {}
+  } catch (error) {
+    return {
+      error: error.message,
+    }
+  }
+}
 
 // Login & Logout
   
