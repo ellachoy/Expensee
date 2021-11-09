@@ -25,9 +25,16 @@ export const FIREBASE_CONFIG = {
 }
 
 const app = initializeApp(FIREBASE_CONFIG);
+const auth = firebase.auth();
+
+// Verbindung zur Datenbank
+const usersRef = db.collection('users')
+
+// Berechtigungen
+const functions = firebase.functions();
 
 
-// Registrierung
+// Registrierung, diese Methode wird in register.js aufgerufen
 
 export const signUpUser = async ({ email, password }) => {
   try {

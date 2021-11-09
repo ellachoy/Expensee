@@ -9,6 +9,7 @@ import React, { useState } from 'react'
 import { loginUser } from './firebase_config'
 import { emailCheck } from './emailCheck'
 import { passwordCheck } from './passwordCheck'
+import {Header} from '..\header\Header'
 
 export default function Login({ navigation }) {
     const [email, setEmail] = useState({ value: '', error: '' })
@@ -34,4 +35,10 @@ export default function Login({ navigation }) {
         }
         setLoading(false)
       }
+}
+
+return {
+    
+
+
 }
