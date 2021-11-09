@@ -24,7 +24,14 @@ export const FIREBASE_CONFIG = {
     measurementId: '',
 }
 
-const app = initializeApp(EXPENSEE);
+const app = initializeApp(FIREBASE_CONFIG);
+const auth = firebase.auth();
+
+// Verbinfung zur Datenbank
+const usersRef = db.collection('users')
+
+// Berechtigungen
+const functions = firebase.functions();
 
 
 // Registrierung, diese Methode wird in register.js aufgerufen
