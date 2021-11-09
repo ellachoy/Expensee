@@ -1,4 +1,38 @@
-div {
-  font-size: 2em;
-  color: red;
+.footer {
+  position: absolute;
+  bottom: 0;
+  position: fixed;
+  height: 15vh;
+  width: 100%;
+  background: url('./background_nav.png') center cover no-repeat;
+
+  .footer-container {
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .wallet {
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        img {
+          width: 30px;
+        }
+      }
+      .home {
+        position: absolute;
+        top: 15%;
+        left: 43%;
+      }
+      .charts {
+        position: absolute;
+        top: 15%;
+        left: 75%;
+        img {
+          width: 70px;
+        }
+      }
+    }
+  }
 }
