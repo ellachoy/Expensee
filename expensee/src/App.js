@@ -1,44 +1,37 @@
 import './App.scss';
+import Footer from './components/Footer/Footer';
+import Home from './pages/Home/Home.js';
+import Add from'./pages/Add/Add.js';
+import Charts from './pages/Charts/Charts.js';
+
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/users">Users</Link>
-          </li>
-        </ul>
-      </nav>
-
-      {/* A <Switch> looks through its children <Route>s and
-          renders the first one that matches the current URL. */}
-      <Switch>
-        <Route path="/">
-          
-        </Route>
-        <Route path="/">
-          
-        </Route>
-        <Route path="/">
-        
-        </Route>
-      </Switch>
-    </div>
-  </Router>
+    
+      
+      <Router>
+        <h1>Expensee</h1>
+      <div>
+        <Routes>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/charts">
+            <Charts/>
+          </Route>
+          <Route path="/add">
+            <Add/>
+          </Route>
+        </Routes>
+      </div>
+    </Router>
+    
   );
 }
 
