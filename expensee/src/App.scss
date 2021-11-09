@@ -18,7 +18,7 @@ body {
   background-image: url('./img/background.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center 65vh;
+  background-position: center 55vh;
 }
 
 h1 {
@@ -29,20 +29,20 @@ h1 {
   padding: 15% 0 0 0;
 }
 
-nav{
-  ul{
-    list-style:none;
-    padding-top:45%;
-    li{
-      text-align:center;
-      a{
-        text-decoration:none;
-        
-        div{
-          color:white;
+nav {
+  ul {
+    list-style: none;
+    padding-top: 45%;
+    li {
+      text-align: center;
+      a {
+        text-decoration: none;
+
+        div {
+          color: white;
           box-shadow: 0 0.1em 0.2em rgba(8, 8, 8, 0.911);
-          font-size:0.3em;
-          margin:0% 5% 5% 5%;
+          font-size: 0.3em;
+          margin: 0% 5% 5% 5%;
           padding: 4% 5%;
         }
       }
@@ -50,26 +50,24 @@ nav{
   }
 }
 
-  
+// body{
+//   background-color:#2B2D5B;
+//   background-image:url('./img/background.png');
+//   background-repeat:no-repeat;
+//   background-size:contain;
+//   background-position:center 75vh;
+// }
 
-body{
-  background-color:#2B2D5B;
-  background-image:url('./img/background.png');
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:center 75vh;
-}
+// h1{
+//   color:#FFFFFF;
+//   font-size:1em;
+//   text-align:center;
+//   font-weight:500;
+// }
 
-h1{
-  color:#FFFFFF;
-  font-size:1em;
-  text-align:center;
-  font-weight:500;
-}
-
-p{
-  color:white;
-  font-size:0.3em;
-  padding-left:15%;
-  padding-top:15%;
-}
+// p{
+//   color:white;
+//   font-size:0.3em;
+//   padding-left:15%;
+//   padding-top:15%;
+// }
