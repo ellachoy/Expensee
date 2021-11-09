@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
-
 import './Footer.scss';
 import wallet from '../../img/wallet.png'
 import homebtn from '../../img/home_button_active.png'
@@ -15,7 +14,7 @@ const Footer = () => {
             <div className="footer-container">
                 <ul>
                     <li> <NavLink exact to="/Einnahme">
-                        <img src={wallet} className="wallet" alt="wallet" /> Einnahme
+                        <img src={wallet} className="wallet" alt="wallet" /> Add
                         </NavLink>
                     </li>
                     <li> <NavLink exact to="/">
@@ -23,7 +22,7 @@ const Footer = () => {
                          </NavLink>
                     </li>
                     <li> <NavLink exact to="/Static"> 
-                         <img src={chart} className="charts" alt="" />
+                         <img src={chart} className="charts" alt="" />Charts
                          </NavLink>
                     </li>
                 </ul>
