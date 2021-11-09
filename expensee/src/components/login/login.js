@@ -48,6 +48,7 @@ const Login = () => {
             <input type="password"></input>
           </form>
           <button type="submit" className="login-button">Einloggen</button>
+          <p>Noch nicht registriert?</p><a href="./register.js">Registrieren</a>
         </div>
 
       </login>

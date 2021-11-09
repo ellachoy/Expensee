@@ -52,6 +52,8 @@ export const signUpUser = async ({ email, password }) => {
   }
 }
 
+// Email mit Passwort versenden
+
 export const sendEmailWithPassword = async (email) => {
   try {
     await firebase.auth().sendPasswordResetEmail(email)
