@@ -50,13 +50,13 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="col-md-6">
+      <div className="login">
         <form>
-          <div class="form-group">
+          <div class="email">
             <label for="Email">Email</label>
             <input  value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="Email" placeholder="Email eingeben" />
           </div>
-          <div class="form-group">
+          <div class="passwort">
             <label for="Password">Password</label>
             <input  value={this.state.password} onChange={this.handleChange} type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
           </div>
