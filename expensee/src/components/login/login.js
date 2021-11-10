@@ -13,6 +13,10 @@ import { passwordCheck } from './utils/passwordCheck'
 // import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 
+// Style
+import {Style} from './login.scss'
+import { render } from 'node-sass'
+
 
 
 /*
@@ -101,7 +105,6 @@ export default function Login({ navigation }) {
 
 
 const Login = () => {
-
   return (
       <login className="login">
         <div className="login-container">
@@ -117,6 +120,7 @@ const Login = () => {
 
       </login>
   );
+  
 }
 
 export default Login;
