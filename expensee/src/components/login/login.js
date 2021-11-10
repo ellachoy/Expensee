@@ -16,9 +16,6 @@ import { useState } from 'react';
 
 // Style
 import {Style} from './login.scss'
-import { render } from 'node-sass'
-
-
 
 /*
 class Login extends Component {
