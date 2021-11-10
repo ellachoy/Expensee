@@ -9,6 +9,23 @@ import React, { useState } from 'react'
 import { loginUser } from './config/firebase_config'
 import { emailCheck } from './utils/emailCheck'
 import { passwordCheck } from './utils/passwordCheck'
+import { authenticationCheck} from './utils/authenticationCheck'
+
+/*
+
+class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.login = this.login.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.signup = this.signup.bind(this);
+    this.state = {
+      email: '',
+      password: ''
+    };
+  }
+  
+*/
 
 
 export default function Login({ navigation }) {
