@@ -9,9 +9,9 @@ import React, { useState } from 'react'
 import { loginUser } from './config/firebase_config'
 import { emailCheck } from './utils/emailCheck'
 import { passwordCheck } from './utils/passwordCheck'
-import { authenticationCheck} from './utils/authenticationCheck'
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { authenticationCheck} from './utils/authenticationCheck'
+// import React, { Component } from 'react';
+// import { Link } from 'react-router-dom';
 
 /*
 
@@ -26,8 +26,6 @@ class Login extends Component {
       password: ''
     };
   }
-
-
 
  handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
@@ -50,17 +48,16 @@ class Login extends Component {
       })
   }
 
-
   render() {
     return (
       <div className="col-md-6">
         <form>
           <div class="form-group">
-            <label for="Email">Email address</label>
+            <label for="Email">Email</label>
             <input  value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="Email" placeholder="Email eingeben" />
           </div>
           <div class="form-group">
-            <label for="Password1">Password</label>
+            <label for="Password">Password</label>
             <input  value={this.state.password} onChange={this.handleChange} type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
           </div>
           <button type="submit" onClick={this.login}>Login</button>
@@ -120,3 +117,5 @@ const Login = () => {
       </login>
   );
 }
+
+export default Login;
