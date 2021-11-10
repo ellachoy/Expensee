@@ -1,6 +1,5 @@
 import React ,{useContext} from 'react'
 import { Link as NavLink } from 'react-router-dom'
-// import { Link } from "react-router-dom";
 
 import './Footer.scss'
 import wallet from '../../img/wallet.png'
