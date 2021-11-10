@@ -42,7 +42,7 @@ export const signUpUser = async ({ email, password }) => {
       .auth()
       .createUserWithEmailAndPassword(email, password)
     firebase.auth().currentUser.updateProfile({
-      displayName: email,
+      displayName: email
     })
     return { user }
   } catch (error) {
@@ -75,7 +75,7 @@ export const loginUser = async ({ email, password }) => {
       return { user }
     } catch (error) {
       return {
-        error: error.message,
+        error: error.message
       }
     }
 }
