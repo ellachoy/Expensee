@@ -153,7 +153,7 @@ const Login = () => {
 
                 <input type="submit" value="Log In" />
             </form>
-            <p>You don't have an Account, please <Link to="/signup">sign up</Link></p>
+            <p>Du hast keinen Account <Link to="/register">Registrieren</Link></p>
             {error && <p>{error}</p>}
         </div>
     );
