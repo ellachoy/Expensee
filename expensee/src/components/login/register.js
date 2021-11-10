@@ -51,7 +51,7 @@ const RegisterForm = () => {
             <form className="register-form">
               <input name="email" type="text" placeholder="hier Email Adresse eingeben"></input>
             </form>
-            <button type="submit" className="register-button" onClick={signUpUser()}>Registrieren</button>
+            <button type="submit" className="register-button" onClick={signUpUser(email, password)}>Registrieren</button>
           </div>
   
         </login>
