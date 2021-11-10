@@ -13,7 +13,7 @@ const Home = () => {
             <p>Willkommen bei</p>
             <h1>Expensee</h1>
             <Button />
-           
+        
             <Header/>
             
         
