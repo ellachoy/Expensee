@@ -43,8 +43,7 @@ export default function register({ navigation }) {
     }
 }
 
-
-const Register = () => {
+const RegisterForm = () => {
 
     return (
         <login className="register">
