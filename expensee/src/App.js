@@ -33,7 +33,7 @@ export default function App() {
         </nav> */}
 
         <Routes>
-          <Route exact path="/Home" element={<Home/>}>
+          <Route exact path="/" element={<Home/>}>
             
           </Route>
           <Route exact path="/charts" element={<Charts/>}>
