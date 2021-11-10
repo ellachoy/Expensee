@@ -16,9 +16,6 @@ import { useState } from 'react';
 
 // Style
 import {Style} from './login.scss'
-import { render } from 'node-sass'
-
-
 
 /*
 class Login extends Component {
@@ -153,7 +150,7 @@ const Login = () => {
 
                 <input type="submit" value="Log In" />
             </form>
-            <p>You don't have an Account, please <Link to="/signup">sign up</Link></p>
+            <p>Du hast keinen Account <Link to="/register">Registrieren</Link></p>
             {error && <p>{error}</p>}
         </div>
     );
