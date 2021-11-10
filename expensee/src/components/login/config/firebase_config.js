@@ -83,6 +83,7 @@ export const logoutUser = () => {
 }
 
 
+export default Firebase_Config;
 
 
 

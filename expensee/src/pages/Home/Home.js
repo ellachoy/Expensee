@@ -1,6 +1,7 @@
 import './Home.scss';
 
 import Header from '../../components/Header/Header'
+
 import Footer from '../../components/Footer/Footer';
 import Button from '../../components/Button/Button';
 
@@ -15,11 +16,12 @@ const Home = () => {
            
             <Header/>
             
+        
             <Header title="Übersicht"/>
-           
+    
             <Footer/>
         </div>
     );
 }
- 
+
 export default Home;

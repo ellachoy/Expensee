@@ -34,9 +34,10 @@ export default function App() {
           </ul>
         </nav>*/}
 
+     
 
         <Routes>
-          <Route exact path="/Home" element={<Home/>}>
+          <Route exact path="/" element={<Home/>}>
             
           </Route>
           <Route exact path="/charts" element={<Charts/>}>
