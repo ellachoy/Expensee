@@ -18,10 +18,11 @@ export default function App() {
   return (
     <Router>
       <div>
-        <nav>
+    
+        {/*<nav>
           <ul>
             <li>
-              <Link to="/home">Home</Link>
+              <Link to="/Home">Home</Link>
             </li>
             <li>
               <Link to="/charts">charts</Link>
@@ -30,20 +31,19 @@ export default function App() {
               <Link to="/add">add</Link>
             </li>
           </ul>
-        </nav>
+        </nav>*/}
 
         <Routes>
-          <Route exact path="/home" element={<Home/>}>
+          <Route exact path="/Home" element={<Home/>}>
             
           </Route>
           <Route exact path="/charts" element={<Charts/>}>
             
           </Route>
           <Route exact path="/add" element={<Add/>}>
-           
+        
           </Route>
         </Routes>
-     
       </div>
     </Router>
 

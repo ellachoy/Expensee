@@ -1,6 +1,6 @@
 import Footer from '../../components/Footer/Footer';
 import './Charts.scss';
-import Header from '../../components/Header/Header'
+import Header from '../../components/header/Header'
 import Collaps from '../../components/Collaps/Collaps'
 
 const Charts = () => {
