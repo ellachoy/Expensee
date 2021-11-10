@@ -44,7 +44,9 @@ const Login = () => {
       <login className="login">
         <div className="login-container">
           <form className="login-form">
+            <label htmlFor="email">Bitte gib deine Email Adresse ein:</label>
             <input type="text" placeholder="Email Adresse eingeben..."></input>
+            <label htmlFor="password">Bitte gib dein Passwort ein:</label>
             <input type="password"></input>
           </form>
           <button type="submit" className="login-button">Einloggen</button>
