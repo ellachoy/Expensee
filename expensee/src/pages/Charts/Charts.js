@@ -1,3 +1,4 @@
+
 import Footer from '../../components/Footer/Footer';
 import './Charts.scss';
 import Header from '../../components/header/Header'
@@ -8,6 +9,7 @@ const Charts = () => {
         <div>Charts
         <Header title="Statistik"/>
         <Collaps/>
+       
         <Footer/>
         </div>
         
