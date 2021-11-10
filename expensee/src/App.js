@@ -18,12 +18,7 @@ export default function App() {
   return (
     <Router>
       <div>
-<<<<<<< HEAD
-    
-        {/*<nav>
-=======
         {/* <nav>
->>>>>>> 79d8a05d1cce7a1e8ccc2d7a3a284e73f3c343e5
           <ul>
             <li>
               <Link to="/Home">Home</Link>
@@ -35,14 +30,10 @@ export default function App() {
               <Link to="/add">add</Link>
             </li>
           </ul>
-<<<<<<< HEAD
-        </nav>*/}
-=======
         </nav> */}
->>>>>>> 79d8a05d1cce7a1e8ccc2d7a3a284e73f3c343e5
 
         <Routes>
-          <Route exact path="/Home" element={<Home/>}>
+          <Route exact path="/" element={<Home/>}>
             
           </Route>
           <Route exact path="/charts" element={<Charts/>}>
