@@ -14,7 +14,6 @@ import { passwordCheck } from './utils/passwordCheck'
 export default function Login({ navigation }) {
     const [email, setEmail] = useState({ value: '', error: '' })
     const [password, setPassword] = useState({ value: '', error: '' })
-    const [loading, setLoading] = useState()
     const [error, setError] = useState()
 
     const onLogin = async () => {
@@ -45,9 +44,9 @@ const Login = () => {
         <div className="login-container">
           <form className="login-form">
             <label htmlFor="email">Bitte gib deine Email Adresse ein:</label>
-            <input type="text" placeholder="Email Adresse eingeben..."></input>
+              <input type="text" placeholder="Email Adresse eingeben..."></input>
             <label htmlFor="password">Bitte gib dein Passwort ein:</label>
-            <input type="password"></input>
+              <input type="password"></input>
           </form>
           <button type="submit" className="login-button">Einloggen</button>
           <p>Noch nicht registriert?</p><a href="./register.js">Registrieren</a>
