@@ -18,20 +18,6 @@ export default function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/home">Home</Link>
-            </li>
-            <li>
-              <Link to="/charts">charts</Link>
-            </li>
-            <li>
-              <Link to="/add">add</Link>
-            </li>
-          </ul>
-        </nav>
-
         <Routes>
           <Route exact path="/home" element={<Home/>}>
             

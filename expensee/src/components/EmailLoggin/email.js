@@ -8,10 +8,10 @@ const Email = () => {
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/"><div>Login</div></Link>
+                            <Link to="./Login/login.js"><div>Login</div></Link>
                         </li>
                         <li>
-                            <Link to="/"><div>Account erstellen mit Email</div></Link>
+                            <Link to="./Login/register.js"><div>Account erstellen mit Email</div></Link>
                         </li>
                     </ul>
                 </nav>

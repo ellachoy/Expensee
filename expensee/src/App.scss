@@ -21,13 +21,6 @@ body {
   background-position: center 55vh;
 }
 
-h1 {
-  color: #ffffff;
-  font-size: 4em;
-  text-align: center;
-  font-weight: 500;
-  padding: 15% 0 0 0;
-}
 
 nav {
   ul {
@@ -50,24 +43,24 @@ nav {
   }
 }
 
-// body{
-//   background-color:#2B2D5B;
-//   background-image:url('./img/background.png');
-//   background-repeat:no-repeat;
-//   background-size:contain;
-//   background-position:center 75vh;
-// }
+ body{   
+   background-color:#2B2D5B;
+  background-image:url('./img/background.png');
+  background-repeat:no-repeat;
+  background-size:contain;
+   background-position:center 75vh;
+ }
 
-// h1{
-//   color:#FFFFFF;
-//   font-size:1em;
-//   text-align:center;
-//   font-weight:500;
-// }
+ h1{
+   color:#FFFFFF;
+   font-size:1em;
+   text-align:center;
+   font-weight:500;
+ }
 
-// p{
-//   color:white;
-//   font-size:0.3em;
-//   padding-left:15%;
-//   padding-top:15%;
-// }
+ p{
+   color:white;
+   font-size:0.3em;
+  padding-left:15%;
+   padding-top:15%;
+ }

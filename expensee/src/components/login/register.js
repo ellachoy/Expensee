@@ -43,8 +43,7 @@ export default function register({ navigation }) {
     }
 }
 
-
-const Register = () => {
+const RegisterForm = () => {
 
     return (
         <login className="register">
@@ -52,7 +51,7 @@ const Register = () => {
             <form className="register-form">
               <input name="email" type="text" placeholder="hier Email Adresse eingeben"></input>
             </form>
-            <button type="submit" className="register-button">Registrieren</button>
+            <button type="submit" className="register-button" onClick={signUpUser()}>Registrieren</button>
           </div>
   
         </login>
