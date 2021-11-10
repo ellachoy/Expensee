@@ -10,6 +10,8 @@ import { loginUser } from './config/firebase_config'
 import { emailCheck } from './utils/emailCheck'
 import { passwordCheck } from './utils/passwordCheck'
 import { authenticationCheck} from './utils/authenticationCheck'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 /*
 
