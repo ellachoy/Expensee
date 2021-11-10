@@ -48,7 +48,7 @@ const Login = () => {
             <label htmlFor="password">Bitte gib dein Passwort ein:</label>
               <input type="password"></input>
           </form>
-          <button type="submit" className="login-button">Einloggen</button>
+          <button type="submit" className="login-button" onClick={loginUser()}>Einloggen</button>
           <p>Noch nicht registriert?</p><a href="./register.js">Registrieren</a>
         </div>
 
