@@ -13,7 +13,6 @@ import { passwordCheck } from './utils/passwordCheck'
 // import React, { Component } from 'react'
 // import { Link } from 'react-router-dom'
 import { useState } from 'react';
-// import { useLogin } from '../hooks/useLogin'
 
 // Style
 import {Style} from './login.scss'
