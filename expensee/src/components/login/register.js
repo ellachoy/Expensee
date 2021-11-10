@@ -57,3 +57,5 @@ const RegisterForm = () => {
         </login>
     );
   }
+
+  export default register
