@@ -1,5 +1,5 @@
-import EmailButton from "../../components/EmailButton/EmailButton";
-import "./Email.scss";
+import GoogleButton from "../../components/GoogleButton/GoogleButton";
+import "./Google.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 const Email = () => {
@@ -7,7 +7,7 @@ const Email = () => {
         <div>
             <Header />
             <h1 id="EmailH1">Expensee</h1>
-            <EmailButton />
+            <GoogleButton />
             <Footer />
         </div>
     );
