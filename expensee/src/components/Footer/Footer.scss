@@ -11,7 +11,7 @@
     bottom: 0;
     width: 100%;
     height: 10vh;
-    filter: drop-shadow(0 -2mm 2mm #141529);
+    filter: drop-shadow(0 -1mm 1mm #141529);
   }
 
   .footer-container {
@@ -22,8 +22,8 @@
 
       .wallet {
         position: absolute;
-        top: 15%;
-        left: 15%;
+        top: -45%;
+        left: 5%;
         img {
           width: 30px;
         }
