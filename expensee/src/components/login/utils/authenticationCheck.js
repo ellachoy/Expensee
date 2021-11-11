@@ -33,3 +33,21 @@ export default function authenticationCheck({ navigation }) {
       }
     })
 }
+
+/*
+const Authentication = Component => {
+  class Authentication extends React.Component {
+    state = {
+      authUser: null
+    };
+
+    componentDidMount() {
+      firebase.auth.onAuthStateChanged(User => {
+        User
+          ? this.setState({ User })
+          : this.setState({ User: null });
+      });
+    }
+  }
+}
+*/
