@@ -26,7 +26,7 @@ export default function authenticationCheck({ navigation }) {
       } else {
         // Benutzer ist nicht eingeloggt
         navigation.reset({
-          index: 0,
+          index: 1,
           routes: [{ name: 'Login' }],
         })
       }
