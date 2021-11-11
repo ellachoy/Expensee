@@ -1,20 +1,18 @@
-
 import Footer from '../../components/Footer/Footer';
 import './Charts.scss';
 import Header from '../../components/header/Header'
 import Collaps from '../../components/Collaps/Collaps'
 
 const Charts = () => {
-    return (  
+    return (
         <div>Charts
-        <Header title="Statistik"/>
-        <Collaps/>
+            <Header title="Statistik" />
+            <Collaps />
        
-        <Footer/>
+            <Footer />
         </div>
         
        
     );
 }
- 
 export default Charts;
