@@ -1,6 +1,6 @@
 import EmailButton from "../../components/EmailButton/EmailButton";
 import "./Email.scss";
-import Header from "../../components/Header/Header";
+import Header from "../../components/Navbar/Header";
 import Footer from "../../components/Footer/Footer";
 const Email = () => {
     return (

@@ -1,13 +1,15 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./GoogleButton.scss";
-const GoogleButton = () => {
-    return (
+import { signInWithGoogle } from '../../Service/firebase'
+import firebase from '../../Service/firebase'
 
+const GoogleButton = ({ user } ) => {
+    return (
             <div>
                 <nav>
                     <ul>
                         <li>
-                            <Link to="./Login/login.js"><div>Login</div></Link>
+                            <a href="#"><div onClick={signInWithGoogle}>Login with Google</div></a>
                         </li>
                         <li>
                             <Link to="./Login/register.js"><div>Account erstellen mit Google</div></Link>
@@ -15,7 +17,6 @@ const GoogleButton = () => {
                     </ul>
                 </nav> 
             </div>
-     
     );
 }
 
