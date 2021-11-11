@@ -43,25 +43,41 @@ class Collaps extends Component {
                     Einkommen
                 </div>
                 <div className="list" style={{display:this.state.showMenu1?'block':'none'}}>
-                    payday
+                    <div className="listItem">1</div>
+                    <div className="listItem">2</div>
+                    <div className="listItem">3</div>
+                    <div className="listItem">4</div>
+                    <div className="listItem">5</div>
                 </div>
                 <div className="Ausgaben" onClick={this.showMenu2}>
                     Ausgaben
                 </div>
                 <div className="list" style={{display:this.state.showMenu2?'block':'none'}}>
-                    -800LP
+                    <div className="listItem">1</div>
+                    <div className="listItem">2</div>
+                    <div className="listItem">3</div>
+                    <div className="listItem">4</div>
+                    <div className="listItem">5</div>
                 </div>
                 <div className="Sparen" onClick={this.showMenu3}>
                     Sparen
                 </div>
                 <div className="list" style={{display:this.state.showMenu3?'block':'none'}}>
-                    spar mal
+                <div className="listItem">1</div>
+                    <div className="listItem">2</div>
+                    <div className="listItem">3</div>
+                    <div className="listItem">4</div>
+                    <div className="listItem">5</div>
                 </div>
                 <div className="Sonstiges" onClick={this.showMenu4}>
                     Sonstiges
                 </div>
                 <div className="list" style={{display:this.state.showMenu4?'block':'none'}}>
-                    sonstig so
+                    <div className="listItem">1</div>
+                    <div className="listItem">2</div>
+                    <div className="listItem">3</div>
+                    <div className="listItem">4</div>
+                    <div className="listItem">5</div>
                 </div>
 
 

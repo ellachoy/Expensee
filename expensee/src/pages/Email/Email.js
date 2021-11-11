@@ -4,8 +4,10 @@ import "./Email.scss";
 const Email = () => {
     return (
         <div>
-            <h1 id="EmailH1">Expensee</h1>
+        <p>Willkommen bei</p>
+            <h1>Expensee</h1>
             <Button />
+        
         </div>
     );
 }

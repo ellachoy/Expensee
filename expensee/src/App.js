@@ -10,45 +10,30 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
 
 export default function App() {
   return (
     <Router>
-      <div>
-    
-        
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to="/Home">Home</Link>
-            </li>
-            <li>
-              <Link to="/charts">charts</Link>
-            </li>
-            <li>
-              <Link to="/add">add</Link>
-            </li>
-          </ul>
-        </nav>*/}
-
-     
+      <div>    
 
         <Routes>
-          <Route exact path="/" element={<Home/>}>
+        <Route exact path="/" element={<Email/>}>
+        
+        </Route>
+          <Route exact path="/charts" element={<Home/>}>
+
             
           </Route>
-          <Route exact path="/charts" element={<Charts/>}>
+          <Route exact path="/home" element={<Charts/>}>
             
           </Route>
           <Route exact path="/add" element={<Add/>}>
-        
+           
           </Route>
-          <Route exact path="/Email" element={<Email/>}>
-        
-          </Route>
+          
         </Routes>
+     
       </div>
     </Router>
 

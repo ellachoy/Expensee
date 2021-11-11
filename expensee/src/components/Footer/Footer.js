@@ -12,7 +12,7 @@ import backgroundNav from '../../img/background_nav.png'
 import { FooterContext } from '../../contexts/FooterContext'
 
 
-const Footer1 = () => {
+const Footer = () => {
     const{homeIsActive,setHomeIsActive,addIsActive,setAddIsActive,chartsIsActive,setChartsIsActive}=useContext(FooterContext)
   return (
     <footer className="footer">
@@ -70,4 +70,4 @@ const Footer1 = () => {
   )
 }
 
-export default Footer1
+export default Footer
