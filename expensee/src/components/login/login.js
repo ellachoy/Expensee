@@ -9,13 +9,14 @@ import React, { useState } from 'react'
 import { loginUser } from './config/firebase_config'
 import { emailCheck } from './utils/emailCheck'
 import { passwordCheck } from './utils/passwordCheck'
-// import { authenticationCheck} from './utils/authenticationCheck'
+import { authenticationCheck} from './utils/authenticationCheck'
 // import React, { Component } from 'react'
 // import { Link } from 'react-router-dom'
 import { useState } from 'react';
 
 // Style
 import {Style} from './login.scss'
+
 
 /*
 class Login extends Component {
@@ -92,7 +93,7 @@ export default function Login({ navigation }) {
         setLoading(true)
         const response = await loginUser({
           email: email.value,
-          password: password.value,
+          password: password.value
         })
         if (response.error) {
           setError(response.error)

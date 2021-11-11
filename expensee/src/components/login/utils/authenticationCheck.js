@@ -5,12 +5,13 @@ Version: 1.0
 
 */
 
+import React from 'react'
 import firebase from 'firebase/app'
 
 
 /* 
 
-  In dieser Funktion wird überprüft, ob der Lgin erfolgreich war. Wenn ja, wird der Nutzer zu "Home" weitergeleitet. Wenn nicht
+  In dieser Funktion wird überprüft, ob der Login erfolgreich war. Wenn ja, wird der Nutzer zu "Home" weitergeleitet. Wenn nicht
   wird er zurück zu "Login" geleitet
 
 */
@@ -26,7 +27,7 @@ export default function authenticationCheck({ navigation }) {
       } else {
         // Benutzer ist nicht eingeloggt
         navigation.reset({
-          index: 0,
+          index: 1,
           routes: [{ name: 'Login' }],
         })
       }

@@ -1,10 +1,9 @@
 import React from 'react';
-
 import './App.scss';
 import Home from './pages/Home/Home.js';
 import Add from'./pages/Add/Add.js';
 import Charts from './pages/Charts/Charts.js';
-
+import Email from './pages/Email/Email';
 
 
 import {
@@ -44,6 +43,9 @@ export default function App() {
             
           </Route>
           <Route exact path="/add" element={<Add/>}>
+        
+          </Route>
+          <Route exact path="/Email" element={<Email/>}>
         
           </Route>
         </Routes>
