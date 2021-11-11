@@ -22,13 +22,13 @@ export default function authenticationCheck({ navigation }) {
         // Benutzer ist eingeloggt
         navigation.reset({
           index: 0,
-          routes: [{ name: 'Home' }],
+          routes: [{ name: './Home/Home.js' }],
         })
       } else {
         // Benutzer ist nicht eingeloggt
         navigation.reset({
           index: 1,
-          routes: [{ name: 'Login' }],
+          routes: [{ name: 'login.js' }],
         })
       }
     })
