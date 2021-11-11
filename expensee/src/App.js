@@ -6,6 +6,7 @@ import Charts from './pages/Charts/Charts.js';
 import Email from './pages/Email/Email';
 import Google from './pages/Google/Google';
 import firebase from './Service/firebase'
+import Home from './pages/Home/Home'
 
 
 import {
