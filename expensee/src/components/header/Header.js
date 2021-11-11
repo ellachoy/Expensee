@@ -1,6 +1,7 @@
 import './Header.scss'
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
+import {useState} from "react";
 
 
 class Header extends Component{
@@ -80,3 +81,68 @@ class Header extends Component{
     }
 }
 export default Header;
+
+// const Header = (props) => {
+
+//     const [isOpen, setState] = useState(false);
+  
+//     return ( 
+//         <div className="NavElement">
+//             <section className="menu">
+//             <div className="hamburger" 
+//             onClick={setState({isOpen:!isOpen})} style={{display: isOpen?'none':'block'}}>
+//                 ☰
+//             </div>
+//             <h3>{props.title}</h3>
+//             </section>
+        
+//         <div className='sidebar'style={{width: isOpen?'70vw':'0vw'}}>
+        
+//             <div className="closeButton" 
+//             onClick={setState({isOpen:!isOpen})} style={{display: isOpen?'block':'none'}}>
+//                 ✕
+//             </div>
+//             <div className="button_container">
+//             <Link to="/home" >
+//                 <div className="homeButton" 
+//                 onClick={setState({isOpen:false})} 
+//                 >
+//                         <p className="sideText">
+//                             { isOpen ?'Home':''}
+//                         </p>
+                             
+//                         </div>
+//             </Link>
+//             <Link to="/add">
+//                 <div className="addButton" onClick={setState({isOpen:false})} 
+//                 >
+//                         <p className="sideText">
+//                             { isOpen ?'Einnahmen':''}
+//                         </p>
+//                 </div>
+//             </Link>
+//             <Link to="/charts">
+//                 <div className="chartsButton" onClick={setState({isOpen:false})} 
+//                 style={{}}>
+//                         <p className="sideText">
+//                             { isOpen ?'Charts':''}
+//                         </p>
+//                 </div>
+//             </Link>
+//             <Link to="/charts">
+//                 <div className="addedButton" onClick={setState({isOpen:false})} 
+//                 style={{}}>
+//                         <p className="sideText">
+//                             { isOpen ?'Logout':''}
+//                         </p>
+//                 </div>
+//             </Link>
+//             </div>
+            
+//             </div>
+//         </div>
+//      );
+//     }
+
+ 
+// export default Header;
