@@ -1,6 +1,6 @@
 import GoogleButton from "../../components/GoogleButton/GoogleButton";
 import "./Google.scss";
-import Header from "../../components/Header/Header";
+import Header from "../../components/Navbar/Header";
 import Footer from "../../components/Footer/Footer";
 const Google = () => {
     return (

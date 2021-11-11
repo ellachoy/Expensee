@@ -1,5 +1,5 @@
 import './Home.scss';
-import Header from '../../components/Header/Header.js';
+import Header from '../../components/Navbar/Header.js';
 import Footer from '../../components/Footer/Footer';
 import TransaktionContainer from '../../components/Transaktion/TransaktionContainer'
 
