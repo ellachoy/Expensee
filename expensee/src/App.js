@@ -17,9 +17,26 @@ export default function App() {
   return (
     <Router>
       <div>
+    
         
+        {/* <nav>
+          <ul>
+            <li>
+              <Link to="/Home">Home</Link>
+            </li>
+            <li>
+              <Link to="/charts">charts</Link>
+            </li>
+            <li>
+              <Link to="/add">add</Link>
+            </li>
+          </ul>
+        </nav>*/}
+
+     
+
         <Routes>
-          <Route exact path="/Home" element={<Home/>}>
+          <Route exact path="/" element={<Home/>}>
             
           </Route>
           <Route exact path="/charts" element={<Charts/>}>
