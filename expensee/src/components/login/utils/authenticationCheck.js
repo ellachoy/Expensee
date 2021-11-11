@@ -22,14 +22,32 @@ export default function authenticationCheck({ navigation }) {
         // Benutzer ist eingeloggt
         navigation.reset({
           index: 0,
-          routes: [{ name: 'Home' }],
+          routes: [{ name: './Home/Home.js' }],
         })
       } else {
         // Benutzer ist nicht eingeloggt
         navigation.reset({
           index: 1,
-          routes: [{ name: 'Login' }],
+          routes: [{ name: 'login.js' }],
         })
       }
     })
 }
+
+/*
+const Authentication = Component => {
+  class Authentication extends React.Component {
+    state = {
+      authUser: null
+    };
+
+    componentDidMount() {
+      firebase.auth.onAuthStateChanged(User => {
+        User
+          ? this.setState({ User })
+          : this.setState({ User: null });
+      });
+    }
+  }
+}
+*/

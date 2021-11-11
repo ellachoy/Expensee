@@ -91,7 +91,7 @@ export default function Login({ navigation }) {
           return
         }
         setLoading(true)
-        const response = await loginUser({
+        const response = await loginUser({ // Methode loginUser aus firebase_config.js wird aufgerufen
           email: email.value,
           password: password.value
         })
