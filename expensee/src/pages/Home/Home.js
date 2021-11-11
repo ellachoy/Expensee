@@ -1,7 +1,7 @@
 import './Home.scss';
 import Header from '../../components/Header/Header.js';
 import Footer from '../../components/Footer/Footer';
-import HomeButton from '../../HomeButton/HomeButton';
+import HomeButton from '../../components/HomeButton/HomeButton.js';
 
 const Home = () => {
     return (  
