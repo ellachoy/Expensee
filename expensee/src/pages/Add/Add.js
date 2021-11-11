@@ -33,7 +33,7 @@ class Add extends Component {
                         <input 
                        
                           ref={this.inputRef}
-                        type="text" name="description" list="Beschreibung" placeholder="beschreibung" />
+                        type="text" name="description" list="Beschreibung" placeholder="Beschreibung" />
                     </form>
                     <form ref={this.formRef} className="add-form" onSubmit={this.onSubmit}>
                         <input 
