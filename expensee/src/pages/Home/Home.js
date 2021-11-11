@@ -1,5 +1,5 @@
 import './Home.scss';
-import Header from '../../components/header/Header.js';
+import Header from '../../components/Header/Header.js';
 import Footer from '../../components/Footer/Footer';
 import Button from '../../components/Button/Button';
 

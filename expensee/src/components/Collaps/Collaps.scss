@@ -1,25 +1,50 @@
 .Collapsible{
+    
     div{
         color:#ffffff;
         font-size:1.2em;
         width:90vw;
-        margin:3% auto;
-        height:6vh;
+        height:7vh;
         display:flex;
         justify-content:center;
         align-items:center;
+        border-radius:3px;
+        transition:.5s;
 
     }
     .Einkommen{
         background: linear-gradient(90deg,#F63535,#FF009D);
+        margin:3% auto 0 auto;
     }
     .Ausgaben{
         background-color:#515FEB;
+        margin:3% auto 0 auto;
     }
     .Sparen{
         background-color:#EFB722;
+        margin:3% auto 0 auto;
     }
     .Sonstiges{
         background-color:#95989A;
+        margin:3% auto 0 auto;
     }
+}
+.list{
+    margin:0% auto;
+    display:block;
+    transition:.5s;
+    
+    
+}
+.listItem{
+    background-color:#32377C;
+    overflow: hidden;
+    color:#fff;
+    width:90vw;    
+    border-bottom:1px solid #2b2d5b;
+    border-radius:0px;
+    height:6vh;
+    display:block;
+    position: relative;
+
 }
