@@ -8,7 +8,7 @@ class Add extends Component {
     formRef = React.createRef();
     inputRef = React.createRef();
   
-    onSubmit = event => {
+    onAdd = event => {
       event.preventDefault();
       const name = this.inputRef.current.value;
       name && this.props.onAdd(name);
@@ -24,26 +24,21 @@ class Add extends Component {
                     <img src={shapeImg} alt='shape' />
                      </Link>
                     <h1>Umsätze</h1>
-                <form ref={this.formRef} className="add-form" onSubmit={this.onSubmit}>
+                <form ref={this.formRef} className="add-form" onAdd={this.onAdd}>
                         <input 
                           ref={this.inputRef}
                         type="text" name="category" list="Kategorie" placeholder="Kategorie" />
-                </form>
-                <form ref={this.formRef} className="add-form" onSubmit={this.onSubmit}>
                         <input 
-                       
                           ref={this.inputRef}
                         type="text" name="description" list="Beschreibung" placeholder="Beschreibung" />
-                    </form>
-                    <form ref={this.formRef} className="add-form" onSubmit={this.onSubmit}>
                         <input 
                           ref={this.inputRef}
-                        type="number" name="price" placeholder="Geldbetrag" />
-                    </form>
-                    <input type="date" name="date"  placeholder="Datum" />
-                    <br />
-                    <input type='submit' value='Abschicken' />
-
+                        type="number" name="price" placeholder="Geldbetrag" />             
+                        <input type="date" name="date"  placeholder="Datum" />
+                        
+                        <br />
+                        <input type='submit' value='Abschicken' />
+                </form>
            </section>
            <Footer/>
        </main>
