@@ -1,14 +1,17 @@
 import './Home.scss';
 import Header from '../../components/Header/Header.js';
 import Footer from '../../components/Footer/Footer';
-import Button from '../../components/Button/Button';
-
+import HomeButton from '../../components/HomeButton/HomeButton.js';
 
 const Home = () => {
     return (  
         <div>
             <Header title="Übersicht"/>
-            
+            <p>Willkommen bei</p>
+            <h1>Expensee</h1>
+            <HomeButton />
+            <Footer />
+
             
             
         
