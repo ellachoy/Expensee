@@ -15,43 +15,23 @@ import {
 export default function App() {
   return (
     <Router>
-      <div>
-<<<<<<< HEAD
+      <div>    
+
         <Routes>
-          <Route exact path="/home" element={<Home/>}>
-=======
-    
+        <Route exact path="/" element={<Email/>}>
         
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to="/Home">Home</Link>
-            </li>
-            <li>
-              <Link to="/charts">charts</Link>
-            </li>
-            <li>
-              <Link to="/add">add</Link>
-            </li>
-          </ul>
-        </nav>*/}
+        </Route>
+          <Route exact path="/charts" element={<Home/>}>
 
-     
-
-        <Routes>
-          <Route exact path="/" element={<Home/>}>
->>>>>>> f048c69693eac024c4444242b9a5f65861146bef
             
           </Route>
-          <Route exact path="/charts" element={<Charts/>}>
+          <Route exact path="/home" element={<Charts/>}>
             
           </Route>
           <Route exact path="/add" element={<Add/>}>
            
           </Route>
-          <Route exact path="/Email" element={<Email/>}>
-        
-          </Route>
+          
         </Routes>
      
       </div>
