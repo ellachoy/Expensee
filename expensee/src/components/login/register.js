@@ -13,6 +13,21 @@ import { emailCheck } from './emailCheck'
 import { passwordCheck } from './passwordCheck'
 
 
+/*
+constructor(props){
+  super(props);
+
+  this.state = {
+    err: ''
+  };
+
+  this.login = this.loginUser.bind(this);
+  this.signUpUser = this.signUpUser.bind(this);
+  this.logout = this.logoutUser.bind(this);
+}
+*/
+
+
 export default function register({ navigation }) {
     const [email, setEmail] = useState({ value: '', error: '' })
     const [password, setPassword] = useState({ value: '', error: '' })
@@ -43,6 +58,16 @@ export default function register({ navigation }) {
     }
 }
 
+/*
+register() {
+
+  const email = this.refs.email.value
+  const password = this.refs,password.value
+  console.log(email, password)
+
+}
+*/
+
 const RegisterForm = () => {
 
     return (
@@ -55,6 +80,22 @@ const RegisterForm = () => {
           </div>
   
         </login>
+
+
+        /*
+        <div>
+          <input id="email" ref="email" type="email" placeholder="Gib deine Email ein" /><br />
+          <input id="password" ref="password" type="password" placeholder="Gib hier dein Passwort ein" /><br />
+            <p>{this.state.err}</p>
+              <button onClick={this.login}>Login</button>
+              <button onClick={this.signUpUser}>Registriren</button>
+              <button onClick={this.logout} id="logout" className="logout">Logout</button><br />
+        </div>
+
+        */
+
+
+
     );
   }
 
