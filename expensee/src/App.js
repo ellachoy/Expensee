@@ -28,19 +28,11 @@ export default function App() {
       <div>    
 
         <Routes>
-        <Route exact path="/" element={<Google/>}>
-        
-        </Route>
-          <Route exact path="/charts" element={<Email/>}>
-            
-          </Route>
-          <Route exact path="/home" element={<Charts/>}>
-            
-          </Route>
-          <Route exact path="/add" element={<Add/>}>
-
-          </Route>
-          
+        <Route exact path="/" element={<Google/>}/>
+        <Route exact path="/charts" element={<Home/>}/>
+        <Route exact path="/home" element={<Charts/>}/>
+        <Route exact path="/add" element={<Add/>}/>
+        <Route exact path='/test' element={<Email/>}/>
         </Routes>
 
       </div>
