@@ -22,7 +22,7 @@ constructor(props){
   };
 
   this.login = this.loginUser.bind(this);
-  this.signup = this.signUpUser.bind(this);
+  this.signUpUser = this.signUpUser.bind(this);
   this.logout = this.logoutUser.bind(this);
 }
 */
