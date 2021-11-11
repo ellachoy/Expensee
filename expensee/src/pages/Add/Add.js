@@ -40,6 +40,7 @@ class Add extends Component {
                           ref={this.inputRef}
                         type="number" name="price" placeholder="Geldbetrag" />
                     </form>
+                    <input type="date" name="date"  placeholder="Datum" />
                     <br />
                     <input type='submit' value='Abschicken' />
 
