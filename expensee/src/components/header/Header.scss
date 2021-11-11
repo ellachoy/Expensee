@@ -7,6 +7,7 @@
     z-index:5;
     background:#2B2D5B;
     filter: drop-shadow(0 -2mm 2mm #141529);
+    
     // z-index:3;
     display:flex; //Um die Buttons zu platzieren 
     justify-content: flex-start;
@@ -18,7 +19,8 @@
     background-size:100%;
     background-position:0vw 76vh;
     a{ 
-        text-decoration:none;       
+        text-decoration:none; 
+        color:white;      
         }
     .sideText{
         font-family:'Lato'; 
