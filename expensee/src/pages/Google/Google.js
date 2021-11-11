@@ -2,7 +2,7 @@ import GoogleButton from "../../components/GoogleButton/GoogleButton";
 import "./Google.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-const Email = () => {
+const Google = () => {
     return (
         <div>
             <Header />
@@ -13,4 +13,4 @@ const Email = () => {
     );
 }
 
-export default Email;
+export default Google;
