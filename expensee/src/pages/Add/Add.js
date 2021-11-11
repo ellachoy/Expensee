@@ -2,13 +2,14 @@ import Footer from '../../components/Footer/Footer';
 import './Add.scss';
 import { Link } from 'react-router-dom';
 import shapeImg from '../../img/shape.png'
+
 const Add = () => {
     return (  
         <div>
             <main>
                 <section className="wallet">
                     <Link to='/home'>
-                    <img src={shapeImg} alt='#' />
+                    <img src={shapeImg} alt='shape' />
                     </Link>
                     <h1>Umsätze</h1>
                     <input type="text" name="category" list="Kategorie" placeholder="Kategorie" />
