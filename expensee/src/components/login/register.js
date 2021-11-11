@@ -85,9 +85,9 @@ const RegisterForm = () => {
         /*
         <div>
           <input id="email" ref="email" type="email" placeholder="Gib deine Email ein" /><br />
-          <input id="pass" ref="password" type="password" placeholder="Gib hier dein Passwort ein" /><br />
+          <input id="password" ref="password" type="password" placeholder="Gib hier dein Passwort ein" /><br />
             <p>{this.state.err}</p>
-              <button onClick={this.login}>Log In</button>
+              <button onClick={this.login}>Login</button>
               <button onClick={this.signUpUser}>Registriren</button>
               <button onClick={this.logout} id="logout" className="logout">Logout</button><br />
         </div>
