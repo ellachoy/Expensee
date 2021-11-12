@@ -1,6 +1,7 @@
 import './Header.scss'
-import {Link} from 'react-router-dom'
+import {Link, Navigate} from 'react-router-dom'
 import {useState} from "react";
+import { firebase } from '../../Service/firebase'
 
 
 const Header = (props) => {
@@ -51,7 +52,7 @@ const Header = (props) => {
                 </div>
             </Link>
             <Link to="/">
-                <div className="addedButton" onClick={()=>setState(false)}
+                <div className="addedButton"  onClick={() => firebase.auth().signOut()} onClick={()=>setState(false)}
                 style={{}}>
                         <p className="sideText">
                             { isOpen ?'Logout':''}

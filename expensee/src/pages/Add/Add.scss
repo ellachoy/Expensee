@@ -7,30 +7,38 @@
     padding: 5% 0;
     text-align: start;
   }
-  input {
-    width: 100%;
-    height: 55px;
-    padding: 0 1%;
-    background-color: #232450;
-    border-style: none;
-    margin-top: 12%;
+  form {
+    select,
+    input,
+    button {
+      width: 100%;
+      height: 55px;
+      padding: 0 1%;
+      background-color: #232450;
+      border-style: none;
+      margin-top: 12%;
+      color: #fff;
+    }
+    button {
+      color: #fff;
+      margin-top: 10%;
+      background: #2b2d5b;
+      box-shadow: 3px 3px 6px 2px #141627;
+      margin-top: 25%;
+      font-size: 1em;
+    }
+    input[type='date'] {
+      color: #fff;
+      margin-right: 2px;
+    }
+    select {
+      font-size: 1em;
+    }
   }
-  input[type='submit'] {
-    color: #fff;
-    margin-top: 10%;
-    background: #2b2d5b;
-    box-shadow: 3px 3px 6px 2px #141627;
-    margin-top: 25%;
-    font-size: 1em;
-  }
-  input[type='date'] {
-    color: #fff;
-    margin-right: 2px;
-  }
+
   ::placeholder {
     color: #fff;
     font-size: 1.2em;
     // padding-left: 12px;
   }
 }
-

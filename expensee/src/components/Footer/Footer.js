@@ -22,11 +22,7 @@ const Footer = () => {
         <ul>
           <li>
             {' '}
-            <NavLink exact to="/Add" onClick={()=>{
-                setAddIsActive(true)
-                setHomeIsActive(false)
-                setChartsIsActive(false)
-                }}>
+            <NavLink exact to="/Add" >
               <img
                 src={addIsActive ? `${walletActive}` : `${wallet}`}
                 className="wallet"
