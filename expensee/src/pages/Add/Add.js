@@ -6,8 +6,16 @@ import './Add.scss';
 import shapeImg from '../../img/shape.png'
 import ModalAdd from '../../components/Modal/ModalAdd';
 import {optionData, descriptionData} from '../../data/Add.data'
+import { FooterContext } from '../../contexts/FooterContext'
+import React ,{useContext} from 'react'
 
 const Add = () => {
+  //Diese Funktionen setzen das richtige Bild auf gelb onload
+  const{setHomeIsActive,setAddIsActive,setChartsIsActive}=useContext(FooterContext)
+  setAddIsActive(true)
+  setHomeIsActive(false)
+  setChartsIsActive(false)
+  //==========================================================
   const [open, setOpen] = useState(false);
   const [data, setData] = useState('');
   const [inputs, setInputs] = useState({
