@@ -1,7 +1,8 @@
 import './Header.scss'
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import {Link, Navigate} from 'react-router-dom'
 import {useState} from "react";
+import { firebase } from '../../Service/firebase'
 
 
 class Header extends Component{
@@ -66,7 +67,9 @@ class Header extends Component{
                     </div>
                 </Link>
                 <Link to="/charts">
-                    <div className="addedButton" onClick={this.reset} 
+                    {/* <div className="addedButton" onClick={this.reset}  */}
+                    {/* onClick={ <Navigate to={'/'}*/}
+                    <div className="addedButton" onClick={() => firebase.auth().signOut()}
                     style={{}}>
                             <p className="sideText">
                                 {this.state.isOpen ?'Logout':''}
