@@ -82,14 +82,14 @@ const Add = () => {
   //   setError(null);
   // };
   return ( 
-    <>
-<main>
+  <>
+    <main>
         <section className="wallet">
              <Link to='/home'>
                  <img src={shapeImg} alt='shape' />
                   </Link>
                  <h1>Umsätze</h1>
-             <form  className="add-form" onSubmit={(ev)=> newTransfer(ev)}> 
+            <form  className="add-form" onSubmit={(ev)=> newTransfer(ev)}> 
                <select onChange={(event)=> setData(event.target.value)}  required> {valueChoice} Kategorie</select> {' '}
                
               <input
@@ -126,13 +126,15 @@ const Add = () => {
               required
             />{' '}
            
-            <input type='submit' value='Abschicken' />
-             </form>
+            <button type='submit' value='Abschicken' >
+            Abschicken
+            </button>
+          </form>
             <ModalAdd/>
         </section>
         <Footer/>
     </main>
-</>
+  </>
    );
 }
  
