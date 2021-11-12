@@ -65,7 +65,7 @@ class Header extends Component{
                             </p>
                     </div>
                 </Link>
-                <Link to="/charts">
+                <Link to="/">
                     <div className="addedButton" onClick={this.reset} 
                     style={{}}>
                             <p className="sideText">

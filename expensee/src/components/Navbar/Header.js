@@ -66,7 +66,7 @@ class Header extends Component{
                             </p>
                     </div>
                 </Link>
-                <Link to="/charts">
+                <Link to="/">
                     {/* <div className="addedButton" onClick={this.reset}  */}
                     {/* onClick={ <Navigate to={'/'}*/}
                     <div className="addedButton" onClick={() => firebase.auth().signOut()}
