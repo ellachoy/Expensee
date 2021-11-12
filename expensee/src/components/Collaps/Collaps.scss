@@ -1,50 +1,70 @@
-.Collapsible{
-    
-    div{
-        color:#ffffff;
-        font-size:1.2em;
-        width:90vw;
-        height:7vh;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        border-radius:3px;
-        transition:.5s;
 
-    }
+
     .Einkommen{
+        .Collapsible__trigger{
         background: linear-gradient(90deg,#F63535,#FF009D);
-        margin:3% auto 0 auto;
+        margin:3% 3% 0 3%;
+      
+        }
     }
     .Ausgaben{
+        .Collapsible__trigger{
         background-color:#515FEB;
-        margin:3% auto 0 auto;
+        margin:3% 3% 0 3%;
+        }
     }
     .Sparen{
+        .Collapsible__trigger{
         background-color:#EFB722;
-        margin:3% auto 0 auto;
+        margin:3% 3% 0 3%;
+        }
     }
     .Sonstiges{
+        .Collapsible__trigger{
         background-color:#95989A;
-        margin:3% auto 0 auto;
+        margin:3% 3% 0 3%;
+        }
+    }
+    .Collapsible {
+        background-color: #2B2D5B; }
+      
+      .Collapsible__contentInner {
+        padding:0 3% 10px 3%;
+        border-top: 0; }
+
+          .Collapsible__contentInner p:last-child {
+            margin-bottom: 0; }
+      
+      .Collapsible__trigger {
+        display: block;
+        text-decoration: none;
+        position: relative;
+        padding: 5%;
+        font-size:1.2em;
+        border-radius:2px;
+        text-align:center;
+        color: white; }
+      
+//=======================CollapsItem=================
+
+.CollapsItem{
+    color:white;
+    background-color:#32377C;
+    .flex{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:6% 3%;
+        border-bottom:#2B2D5B 1px solid;
+        h5{
+            font-weight:300;
+            font-size:1em;
+        }
     }
 }
-.list{
-    margin:0% auto;
-    display:block;
-    transition:.5s;
-    
-    
-}
-.listItem{
-    background-color:#32377C;
-    overflow: hidden;
-    color:#fff;
-    width:90vw;    
-    border-bottom:1px solid #2b2d5b;
-    border-radius:0px;
-    height:6vh;
-    display:block;
-    position: relative;
 
+.collapsContainer{
+    padding-bottom:20%;
 }
+
+

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 import "./GoogleButton.scss";
 import { signInWithGoogle } from '../../Service/firebase'
 import firebase from '../../Service/firebase'

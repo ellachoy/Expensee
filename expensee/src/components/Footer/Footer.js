@@ -36,11 +36,7 @@ const Footer = () => {
           </li>
           <li>
             {' '}
-            <NavLink exact to="/Home" onClick={()=>{
-                setAddIsActive(false)
-                setHomeIsActive(true)
-                setChartsIsActive(false)
-                }}>
+            <NavLink exact to="/Home" >
               <img
                 src={
                   homeIsActive ? `${homebtnActive}` : `${homebtn}`
@@ -52,11 +48,7 @@ const Footer = () => {
           </li>
           <li>
             {' '}
-            <NavLink exact to="/Charts" onClick={()=>{
-                setAddIsActive(false)
-                setHomeIsActive(false)
-                setChartsIsActive(true)
-                }}>
+            <NavLink exact to="/Charts" >
               <img
                 src={chartsIsActive ? `${chartActive}` : `${chart}`}
                 className="charts"
