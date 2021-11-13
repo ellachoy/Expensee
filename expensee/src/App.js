@@ -11,6 +11,8 @@ import {
   Route,
 } from "react-router-dom";
 import { firebase } from './Service/firebase';
+import TransaktionDb from './components/Transaktion/TransaktionDB';
+import TransaktionDBContainer from './components/Transaktion/TransaktionDBContainer';
 
 export default function App() {
   const [isUserSignedIn, setIsUserSignedIn] = useState(false);
@@ -31,7 +33,8 @@ export default function App() {
             <Route exact path="/charts" element={<Home/>}/>
             <Route exact path="/home" element={<Charts/>}/>
             <Route exact path="/add" element={<Add/>}/>
-            <Route exact path='/test' element={<Email/>}/>
+            <Route exact path='/test' element={<TransaktionDb/>}/>
+            <Route exact path='/test2' element={<TransaktionDBContainer/>}/>
           </Routes>
         </div>
       </Router>
