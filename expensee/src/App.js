@@ -15,16 +15,16 @@ import TransaktionDb from './components/Transaktion/TransaktionDB';
 import TransaktionDBContainer from './components/Transaktion/TransaktionDBContainer';
 
 export default function App() {
-  const [isUserSignedIn, setIsUserSignedIn] = useState(false);
-  firebase.auth().onAuthStateChanged((user) => {
-    if(user){
-      return setIsUserSignedIn(true)
-    }
-    setIsUserSignedIn(false)
-  })
+  // const [isUserSignedIn, setIsUserSignedIn] = useState(false);
+  // firebase.auth().onAuthStateChanged((user) => {
+  //   if(user){
+  //     return setIsUserSignedIn(true)
+  //   }
+  //   setIsUserSignedIn(false)
+  // })
 
-  if(isUserSignedIn === true){
-    console.log('user is logged in');
+  // if(isUserSignedIn === true){
+  //   console.log('user is logged in');
     return (
       <Router>
         <div>    
@@ -39,17 +39,17 @@ export default function App() {
         </div>
       </Router>
     );
-  }else{
-    return (
-      <Router>
-        <div>    
-          <Routes>
-            <Route exact path="/" element={<GoogleSignIn/>}/>
-          </Routes>
-        </div>
-      </Router>
-    );
-  }
+  // }else{
+  //   return (
+  //     <Router>
+  //       <div>    
+  //         <Routes>
+  //           <Route exact path="/" element={<GoogleSignIn/>}/>
+  //         </Routes>
+  //       </div>
+  //     </Router>
+  //   );
+  // }
   }
   
 
