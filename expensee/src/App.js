@@ -27,7 +27,7 @@ export default function App() {
       <Router>
         <div>    
           <Routes>
-            <Route exact path="/" element={<Charts/>}/>
+            <Route exact path="/" element={<GoogleSignIn/>}/>
             <Route exact path="/charts" element={<Home/>}/>
             <Route exact path="/home" element={<Charts/>}/>
             <Route exact path="/add" element={<Add/>}/>
@@ -41,7 +41,7 @@ export default function App() {
       <Router>
         <div>    
           <Routes>
-            <Route exact path="/" element={<GoogleSignIn/>}/>
+          <Route exact path="/" element={<GoogleSignIn/>}/>
           </Routes>
         </div>
       </Router>
