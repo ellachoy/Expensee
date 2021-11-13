@@ -8,6 +8,8 @@ import ModalAdd from '../../components/Modal/ModalAdd';
 import {optionData, descriptionData} from '../../data/Add.data'
 import { FooterContext } from '../../contexts/FooterContext'
 import React ,{useContext} from 'react'
+import { db } from "../../Service/firebase"
+import { collection, getDocs } from "firebase/firestore"
 
 const Add = () => {
   //Diese Funktionen setzen das richtige Bild auf gelb onload
