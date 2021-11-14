@@ -4,15 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import FooterContextProvider from './contexts/FooterContext';
-import { AuthProvider } from './contexts/AuthContext'
+import { AuthContextProvider } from "./contexts/AuthContext"
 
 ReactDOM.render(
   <React.StrictMode>
-    <AuthProvider>
-        <FooterContextProvider>
-          <App />
-        </FooterContextProvider>
-      </AuthProvider>
+    <AuthContextProvider>
+      <FooterContextProvider>
+        <App />
+      </FooterContextProvider>
+    </AuthContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

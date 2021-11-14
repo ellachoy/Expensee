@@ -1,27 +1,37 @@
-import './Transaktion.scss'
+import { onSnapshot, collection } from '@firebase/firestore';
+import { useEffect, useState } from 'react'
+import { db } from '../../Service/firebase'
 import TransaktionItem from './TransaktionItem'
 
-const TransaktionContainer = () => {
-    return ( 
-        <div>
+
+export default function TransaktionDB() {
+    const [finance, setFinance] = useState([])
+
+    console.log(finance)
+    useEffect(
+        () => 
+            onSnapshot(collection(db, "finance"),(snapshot) => 
+                setFinance(snapshot.docs.map((doc) => doc.data()))
+            ),
+        []
+    );
+
+    return (
         <div className="transaktionContainer">
-        <div className="transaktionHeader">
+               <div className="transaktionHeader">
             <h3>Letzten Transaktionen</h3>
             <p>Show full</p>
-        </div>
-        <TransaktionItem income={true} description='Lohn' date="24.10.2021" value='2000'  />
-        <TransaktionItem income={false} description='Rewe' date="24.10.2021" value='-2000'  />
-        <TransaktionItem income={false} description='Rewe' date="24.10.2021" value='-2000'  />
-        <TransaktionItem income={false} description='Rewe' date="24.10.2021" value='-2000'  />
-        <TransaktionItem income={false} description='Rewe' date="24.10.2021" value='-2000'  />
-        <TransaktionItem income={false} description='Rewe' date="24.10.2021" value='-2000'  />
-        <TransaktionItem income={true} description='Lohn' date="24.10.2021" value='2000'  />
-        </div>
-        <div className="button">
+            </div> 
+            {finance.map((elt) => (
+                <TransaktionItem  key={elt.id} 
+                income={elt.category=='Einkommen'? true:false} 
+                description={elt.description} 
+                date={elt.date} 
+                value={elt.category=='Einkommen'?elt.amount:`-${elt.amount}`}/>
+            ))}
+            <div className="button">
             MEHR TRANSAKTIONEN
-        </div>
+            </div>
         </div>
     );
 }
- 
-export default TransaktionContainer;
