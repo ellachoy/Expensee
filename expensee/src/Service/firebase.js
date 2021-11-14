@@ -2,6 +2,7 @@ import firebase from "firebase/compat/app";
 import 'firebase/compat/auth';
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "@firebase/firestore";
+import { getAuth } from 'firebase/auth'
 
 
 // Firebase configuration
@@ -21,6 +22,9 @@ const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app)
 
+// Init the Storage service
+const auth = getAuth()
+
 // export const auth = firebase.auth();
 
 // const provider = new firebase.auth.GoogleAuthProvider();
@@ -28,4 +32,4 @@ export const db = getFirestore(app)
 
 // export const signInWithGoogle = () => auth.signInWithRedirect(provider);
 
-export { firebase }
+export { firebase, auth }
