@@ -9,7 +9,7 @@ import {optionData, descriptionData} from '../../data/Add.data'
 import { FooterContext } from '../../contexts/FooterContext'
 import React ,{useContext} from 'react'
 import { db } from "../../Service/firebase"
-import { collection, getDocs } from "firebase/firestore"
+import { collection, addDoc } from "firebase/firestore"
 
 const Add = () => {
   //Diese Funktionen setzen das richtige Bild auf gelb onload
@@ -27,37 +27,21 @@ const Add = () => {
     created_at: '',
   });
   const [error, setError] = useState(null);
+  // ======================================
+// =========== FIREBASE ADD =============
+const [newCategory, setNewCategory] = useState("")
+const [newDescription, setNewDescription] = useState("")
+const [newAmount, setNewAmount] = useState(0)
+const [newDate, setNewDate] = useState("")
 
-  useEffect(() => {
-    let close;
-    if (open) {
-      close = setTimeout(() => {
-        setOpen(false);
-        setInputs({ category: '', description: '', price: '', created_at: '' });
-      }, 4000);
-    }
-    return () => clearTimeout(close);
-  }, [open]);
+const financeCollectionRef = collection(db, "finance")
 
-  useEffect(() => {
-    let close;
-    if (error) {
-      close = setTimeout(() => {
-        setError(null);
-      }, 3000);
-    }
-    return () => clearTimeout(close);
-  }, [error]);
+const createFinance = async () => {
+    await addDoc(financeCollectionRef, {amount: newAmount, category: newCategory, date: newDate, description: newDescription});
+}
 
-  const handleInputs = (event) => {
-    setInputs((prev) => {
-      return {
-        ...prev,
-        category: data,
-        [event.target.name]: event.target.value,
-      };
-    });
-  };
+
+// ======================================
 
   let valueChoice = optionData.map((element) => {
     return (
@@ -67,86 +51,59 @@ const Add = () => {
     );
   });
 
-  let valueDescription = descriptionData.map((element) => {
-    return (
-      <option key={element} value={element}>
-        {element}
-      </option>
-    );
-  });
-
-  const newTransfer = async (event) => {
-    event.preventDefault();
-    try {
-      let { data } = await axios.post('/input', inputs);
-      if (data.success) {
-        setOpen(true);
-      }
-    } catch (error) {
-      // setError(errorResponseMessage(error));
-    }
-  };
-
-  // const handleClose = () => {
-  //   setOpen(false);
-  //   setError(null);
-  // };
   return ( 
     <>
 <main>
         <section className="wallet">
-             <Link to='/home'>
-                 <img src={shapeImg} alt='shape' />
-                  </Link>
-                 <h1>Umsätze</h1>
-             <form  className="add-form" onSubmit={(ev)=> newTransfer(ev)}> 
-               <select onChange={(event)=> setData(event.target.value)}  required> {valueChoice} Kategorie</select> {' '}
-               
+            <Link to='/home'>
+                <img src={shapeImg} alt='shape' />
+                </Link>
+                <h1>Umsätze</h1>
+            <div  className="add-form"> 
+              <select 
+                placeholder='Kategorie'
+                onChange={(event) => {
+                  setNewCategory(event.target.value)}}  
+                required> 
+                {valueChoice} Kategorie
+              </select> 
+              {' '}
+              
               <input
-              type='text'
-              name='description'
-              list='Beschreibung'
-              placeholder='Beschreibung'
-              value={inputs.description}
-              onChange={handleInputs}
-              required
-            />
-            <datalist
-              id='Beschreibung'
-              onChange={(event) => setData(event.target.value)}
-              required
-            >
-              {valueDescription}
-            </datalist>
+                type='text'
+                name='description'
+                list='Beschreibung'
+                placeholder='Beschreibung'
+                onChange={(event) => {
+                  setNewDescription(event.target.value)}}
+                required
+              />
             <input
-              type='number'
-              name='price'
-              placeholder='Geldbetrag'
-              value={inputs.price}
-              onChange={handleInputs}
-              required
+                type='number'
+                name='price'
+                placeholder='Geldbetrag'
+                onChange={(event) => {
+                  setNewAmount(Number.parseFloat(event.target.value))}}
+                required
             />{' '}
             <br />
             <input
-              type='date'
-              name='created_at'
-              placeholder='Datum'
-              value={inputs.created_at}
-              onChange={handleInputs}
-              required
+                type='date'
+                name='created_at'
+                placeholder='Datum'
+                onChange={(event) => {
+                  setNewDate(event.target.value)}}
+                required
             />{' '}
-           
-            <input type='submit' value='Abschicken' />
-             </form>
-            <ModalAdd/>
+          
+          <button onClick={createFinance}>Abschicken</button>
+            </div>
         </section>
         <Footer/>
     </main>
 </>
-   );
+  );
 }
- 
+
 export default Add;
 
-    
-     
