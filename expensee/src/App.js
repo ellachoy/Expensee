@@ -14,7 +14,6 @@ import {
 import { firebase } from './Service/firebase';
 import TransaktionDb from './components/Transaktion/TransaktionDB';
 import TransaktionDBContainer from './components/Transaktion/TransaktionDBContainer';
-import AddDB from './pages/Add/AddDB';
 import { useAuthContext } from "./hooks/useAuthContext"
 
 export default function App() {
@@ -59,7 +58,6 @@ export default function App() {
             <Route exact path="/add" element={<Add/>}/>
             <Route exact path='/test' element={<TransaktionDb/>}/>
             <Route exact path='/test2' element={<TransaktionDBContainer/>}/>
-            <Route exact path='/test3' element={<AddDB/>}/>
           </Routes>
         </div>
         {/* // )} */}
