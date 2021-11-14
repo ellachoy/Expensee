@@ -1,7 +1,7 @@
 export const optionData =[
 
     'Kategorie',
-    'Einnahmen', 
+    'Einkommen', 
     'Ausgaben',
     'Sparen',
     'Sonstiges'

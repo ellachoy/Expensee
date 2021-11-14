@@ -88,7 +88,7 @@ const createFinance = async () => {
             />{' '}
             <br />
             <input
-                type='date'
+                type='datetime-local'
                 name='created_at'
                 placeholder='Datum'
                 onChange={(event) => {
