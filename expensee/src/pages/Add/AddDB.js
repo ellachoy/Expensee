@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Footer from '../../components/Footer/Footer';
 import './Add.scss';
 import shapeImg from '../../img/shape.png'
 import { FooterContext } from '../../contexts/FooterContext'
 import React ,{useContext} from 'react'
 import { db } from "../../Service/firebase"
-import { collection, getDocs, addDoc } from "firebase/firestore"
+import { collection, addDoc } from "firebase/firestore"
 
 function AddDB() {
     // Diese Funktionen setzen das richtige Bild auf gelb onload
@@ -21,7 +21,6 @@ function AddDB() {
     const [newAmount, setNewAmount] = useState(0)
     const [newDate, setNewDate] = useState("")
 
-    const [finance, setFinance] = useState([])
     const financeCollectionRef = collection(db, "finance")
 
     const createFinance = async () => {
