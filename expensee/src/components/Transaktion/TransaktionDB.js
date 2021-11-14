@@ -1,15 +1,28 @@
-import { useCollection } from '../../hooks/useCollection'
-import './Transaktion.scss'
+import { onSnapshot, collection } from '@firebase/firestore';
+import { useEffect, useState } from 'react'
+import { db } from '../../Service/firebase'
 
-const AllFinance = () => {
-    const { documents } = useCollection('finance')
+
+
+export default function TransaktionDB() {
+    const [finance, setFinance] = useState([])
+
+    console.log(finance)
+    useEffect(
+        () => 
+            onSnapshot(collection(db, "finance"),(snapshot) => 
+                setFinance(snapshot.docs.map((doc) => doc.data()))
+            ),
+        []
+    );
+
     return (
         <div className="transaktionItem"> 
-            {documents && documents.map(elt =>
-                <div key={elt.id}>
+            {finance.map((elt) => (
+                <div>
                     <div className="circleContainer">
                         <div className="circle" style={{backgroundColor:elt.income?"#00FF00":"#F63535"}}>
-                    </div>
+                        </div>
                     </div>
                     <ul>
                         <li className="description">
@@ -25,11 +38,7 @@ const AllFinance = () => {
                         </p>
                     </div>
                 </div>
-            )
-            }
+            ))}
         </div>
     );
 }
-
-
-export default AllFinance;

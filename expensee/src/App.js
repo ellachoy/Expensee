@@ -28,29 +28,29 @@ export default function App() {
 
   // if(isUserSignedIn === true){
   //   console.log('user is logged in');
-  const { user, appReady } = useAuthContext()
+  // const { user, appReady } = useAuthContext()
     return (
       <Router>
         {/* {appReady && ( */}
         <div>   
           <Routes>
             {/* <Route path="/charts">
-              {!user && <Charts/>}
+              {!user && <Charts />}
               {user && <Navigate to="/" />}
             </Route>
 
             <Route path="/add">
-              {!user && <Add/>}
+              {!user && <Add />}
               {user && <Navigate to="/" />}
             </Route>
 
             <Route path="/home">
-              {!user && <Home/>}
+              {!user && <Home />}
               {user && <Navigate to="/" />}
             </Route>
 
             <Route path="/">
-              {!user && <GoogleSignIn/>}
+              {!user && <GoogleSignIn />}
               {user && <Home />}
             </Route> */}
             <Route exact path="/" element={<Charts/>}/>
@@ -62,7 +62,7 @@ export default function App() {
             <Route exact path='/test3' element={<AddDB/>}/>
           </Routes>
         </div>
-        {/* )} */}
+        {/* // )} */}
       </Router>
     );
   // }else{
