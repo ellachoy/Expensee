@@ -32,6 +32,56 @@ const usersRef = db.collection('users')
 const functions = firebase.functions();
 
 
+/*
+const app = firebase.initializeApp(firebaseConfig);
+const auth = app.auth();
+const db = app.firestore();
+
+const signInWithEmailAndPassword = async (email, password) => {
+  try {
+    await auth.signInWithEmailAndPassword(email, password);
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  }
+};
+const registerWithEmailAndPassword = async (name, email, password) => {
+  try {
+    const res = await auth.createUserWithEmailAndPassword(email, password);
+    const user = res.user;
+    await db.collection("users").add({
+      uid: user.uid,
+      name,
+      authProvider: "local",
+      email,
+    });
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  }
+};
+const sendPasswordResetEmail = async (email) => {
+  try {
+    await auth.sendPasswordResetEmail(email);
+    alert("Password gesendet!");
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  }
+};
+const logout = () => {
+  auth.signOut();
+};
+export {
+  auth,
+  db,
+  signInWithEmailAndPassword,
+  registerWithEmailAndPassword,
+  sendPasswordResetEmail,
+  logout,
+};
+*/
+
 // Registrierung, diese Methode wird in register.js aufgerufen
 
 export const signUpUser = async ({ email, password }) => {
@@ -62,6 +112,19 @@ export const sendEmailWithPassword = async (email) => {
     }
   }
 }
+
+/*
+const forgotPassword = (email) => {
+  firebase.auth().sendPasswordResetEmail(email)
+      .then(function () {
+          alert('Bitte ueberpruefe deine Emails...')
+      }).catch(function (e) {
+          console.log(e)
+      }) 
+  }
+
+*/
+
 
 // Login & Logout
   

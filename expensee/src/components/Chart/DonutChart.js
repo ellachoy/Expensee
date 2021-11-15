@@ -1,16 +1,17 @@
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import './DonutChart.scss'
-// import { useEffect, useState } from 'react';
+import { AmountContext } from '../../contexts/AmountContext'
+import { useEffect, useState,useContext } from 'react';
 // import axios from 'axios';
 
 const DoughnutChart = () => {
-
+  const{einkommen,setEinkommen,ausgaben,setAusgaben,sparen,setSparen,sonstiges,setSonstiges}=useContext(AmountContext)
   return (
     <div className='chart'>
         <div className="konto"> 
-        {/* hier kommt der Kontostand hin  */}
-            40.000€ 
+        {(einkommen-ausgaben-sparen-sonstiges).toFixed(2)+'€'}
+             
         </div>
       <div className='chartText'>
       </div>
@@ -21,7 +22,7 @@ const DoughnutChart = () => {
           datasets: [
             {
               label: '# of votes',
-              data: [30,30,30,30],
+              data: [einkommen,ausgaben,sparen,sonstiges],
               backgroundColor: [
                 'rgba(246, 53, 53, 1)',
                 'rgba(81, 95, 235, 1)',
