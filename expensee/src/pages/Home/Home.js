@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer';
 import TransaktionContainer from '../../components/Transaktion/TransaktionContainer'
 import { FooterContext } from '../../contexts/FooterContext'
 import React ,{useContext} from 'react'
+import FooterOhne from '../../components/Footer/FooterOhne';
 
 const Home = () => {
     //Diese Funktionen setzen das richtige Bild auf gelb onload
@@ -13,10 +14,10 @@ const Home = () => {
     setChartsIsActive(true)
     //==========================================================
     return (  
-        <div>
+        <div className="Home">
             <Header title="Übersicht"/>
             <TransaktionContainer/>
-            <Footer/>
+            <FooterOhne/>
         </div>
     );
 }

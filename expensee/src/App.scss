@@ -37,15 +37,7 @@ nav {
 
 body {
   background-color: #2b2d5b;
-  background-image: url('./img/background.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center 75vh;
 }
-
-//  p{
-//    color:white;
-//    font-size:0.3em;
-//   padding-left:15%;
-//    padding-top:15%;
-//  }
+#footerBg:not(.Home, .transaktionItem) {
+  display: block;
+}
