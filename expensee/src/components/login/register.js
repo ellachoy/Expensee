@@ -59,6 +59,28 @@ export default function register({ navigation }) {
 }
 
 /*
+const registerWithEmailAndPassword = async (name, email, password) => {
+  try {
+    const res = await auth.createUserWithEmailAndPassword(email, password);
+    const user = res.user;
+    await db.collection("users").add({
+      uid: user.uid,
+      name,
+      authProvider: "local",
+      email,
+    });
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  }
+};
+
+
+
+*/
+
+
+/*
 register() {
 
   const email = this.refs.email.value
