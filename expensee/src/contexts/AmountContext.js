@@ -70,12 +70,6 @@ const AmountContextProvider = ({children}) => {
     }, [finance]);
         
 
-        // setEinkommen(finance.map((elt)=>(
-        //     elt.category=='Einkommen'? einkommen+= elt.amount:null
-        // )
-        // ))
-
-
     return ( 
         <AmountContext.Provider value={{einkommen,setEinkommen,ausgaben,setAusgaben,sparen,setSparen,sonstiges,setSonstiges}}>
             {children}
