@@ -71,7 +71,7 @@
     }
     #line {
       position: relative;
-      top: 8px;
+      top: -88px;
     }
     .circle1 {
       position: absolute;
@@ -97,33 +97,52 @@
       font-size: 1.5rem;
       font-weight: 300;
       position: relative;
-      top: -20px;
+      top: -100px;
       margin-bottom: 2%;
     }
-    section {
-      padding: 10% 7% 0;
+    .infoContainer {
+      padding: 0 7%;
       text-align: left;
-      span {
-        color: rgb(95, 95, 130);
-      }
-
+      position: relative;
+      top: -100px;
       article {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
+      #mLeft {
+        margin-right: 100px;
+      }
+      span {
+        color: rgb(95, 95, 130);
+      }
       .price {
-        margin-top: 15%;
+        position: absolute;
+        left: 22px;
+        top: 150px;
       }
       .price::after {
         content: ' €';
       }
+
+      #showDt {
+        color: #fff;
+        font-size: 0.9rem;
+        margin-left: -15px;
+      }
+      #showDc {
+        color: #fff;
+        font-size: 0.9rem;
+        margin-left: -4px;
+      }
       #showBig {
         font-size: 1.5rem;
         color: #fff;
+        margin-left: -90px;
       }
       .categorie {
-        margin-top: 10%;
+        position: absolute;
+        left: 18px;
       }
     }
   }

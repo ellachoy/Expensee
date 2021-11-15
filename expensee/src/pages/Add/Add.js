@@ -120,11 +120,11 @@ const createFinance = async () => {
                     <span className="circle1"></span>
                     <img id= "line"  src={lineImg}alt="line" />
                     <span className="circle2"></span>
-                    <section>
+                    <section className="infoContainer">
                         <article>
                           <p>
-                          <span id="date">Datum </span>
-                          <br />  {newDate}
+                          <span id="mLeft">Datum </span>
+                          <br />  <span id="showDt">{newDate}</span>
                           </p>
                           <p>
                             <span>Zeit</span>
@@ -134,10 +134,10 @@ const createFinance = async () => {
                         </article>
                         <p className="categorie">
                           <span>Kategorie</span>
-                            <br />{newDescription}
+                            <br /> <span id="showDc">{newDescription}</span>
                         </p>
                         <p className="price">
-                          <span>Summe</span>
+                          <span id="mLeft">Summe</span>
                             <br /> <span id="showBig">{newAmount}</span> 
                         </p>
                     </section>
