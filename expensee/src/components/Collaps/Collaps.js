@@ -62,20 +62,6 @@ const App = () => {
         <CollapsItem key={elt.id} description={elt.description} value={elt.amount}/>:null
         ))}
     </Collapsible>
-    {/* <div>
-    {finance.map((elt) => (
-    
-    elt.category=='Einkommen'?()=>einkommen+=elt.amount:
-    elt.category=='Ausgaben'?()=>setAusgaben(ausgaben+elt.amount):
-    elt.category=='Sparen'?()=>setSparen(sparen+elt.amount):
-    // elt.category=='Sonstiges'? setSonstiges(+elt.amount):null,
-    null, 
-    console.log('Einkommen:'+einkommen+'Augaben:'+ausgaben+'Sparen:'+sparen+'Sonstiges:'+sonstiges)
-
-    
-       
-        ))}
-    </div>  */}
     </section>
       </div>
 
