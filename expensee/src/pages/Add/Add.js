@@ -108,7 +108,7 @@ const createFinance = async () => {
               <input
                 type='datetime-local'
                 name='created_at'
-                placeholder='Datum'
+                // placeholder='Datum'
                 onChange={(event) => {
                   setNewDate(event.target.value)}}
                 required
@@ -145,7 +145,7 @@ const createFinance = async () => {
                       </p>
                       <p className="price">
                         <span>Summe</span>
-                          <br /> {newAmount} 
+                          <br /> <span id="showBig">{newAmount}</span> 
                       </p>
           </section>
                     {/* {newDate}
