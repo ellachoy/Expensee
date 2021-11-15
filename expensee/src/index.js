@@ -4,13 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import FooterContextProvider from './contexts/FooterContext';
-<<<<<<< HEAD
-import AuthContextProvider from './contexts/AuthContext';
-
-=======
-import { AuthContextProvider } from "./contexts/AuthContext"
+import AuthContextProvider  from "./contexts/AuthContext"
 import AmountContextProvider from './contexts/AmountContext'
->>>>>>> 7b8bbb84a5d88af14e85d957f606451f248c916e
 
 ReactDOM.render(
   <React.StrictMode>
