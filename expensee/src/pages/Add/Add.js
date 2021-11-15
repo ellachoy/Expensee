@@ -43,7 +43,7 @@ const [newCategory, setNewCategory] = useState("")
 const [newDescription, setNewDescription] = useState("")
 const [newAmount, setNewAmount] = useState(0)
 const [newDate, setNewDate] = useState("")
-
+const[openModal,setOpenModal]=useState(false)
 const financeCollectionRef = collection(db, "finance")
 
 const createFinance = async () => {
@@ -110,9 +110,19 @@ const handleClose = () => {
                 required
               />{' '}
           
-              <button onClick={createFinance}>Abschicken</button>
+          <button 
+              onClick={createFinance} 
+              onClick={()=>setOpenModal(true)}>Abschicken</button>
             </div>
            <ModalAdd  open={open} onClose={handleClose} data={inputs} />
+           {/* <ModalAdd  open={open} onClose={handleClose} data={inputs}/> */}
+           <div className="Modalbg"  onClick={()=>setOpenModal(false)}  style={{width: openModal?'100vw':'0vw'}}>
+                  <div className="Modal" style={{display: openModal?'block':'none'}}>
+                    {newDate}
+                    {newDescription}
+                    {newAmount} 
+                  </div>
+           </div>
         </section>
        
       </main>

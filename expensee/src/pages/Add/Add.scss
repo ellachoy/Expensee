@@ -42,3 +42,22 @@
     // padding-left: 12px;
   }
 }
+// ===================MDOAL=================
+.Modalbg{
+  width:100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.404);
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:999;
+
+  .Modal{
+    width:50%;
+    height:50%;
+    color:white;
+
+  }
+}
+
+// ===================MDOAL=================

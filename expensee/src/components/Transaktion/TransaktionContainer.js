@@ -30,7 +30,7 @@ export default function TransaktionDB() {
                 date={`${elt.date.slice(8,10)}.${elt.date.slice(5,7)}.${elt.date.slice(0,4)}  ${elt.date.slice(11,16)}`} 
                 value={elt.category=='Einkommen'?elt.amount:`-${elt.amount}`}/>
             ))}
-            <div className="button" onClick={()=>setShowItems(showItems+7)}>
+            <div className="button" onClick={()=>setShowItems(showItems+7)}> 
             MEHR TRANSAKTIONEN
             </div>
         </div>
