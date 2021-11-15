@@ -19,19 +19,21 @@
     }
     ul{
         padding:3% 0 0 5%;
+        flex-basis: 70%;
         .date{
             color:#ffffff70;
         }
         
     }
     .valueContainer{
-        margin-left:40%;
+        
         display:flex;
         align-items:center;
         justify-content:center;
         .value{
             padding-bottom:20%;
             color:rgba(255, 217, 0, 0.623);
+            padding-right:25%;
         }
     }
    
@@ -39,6 +41,7 @@
 }
 .transaktionContainer{
     margin-top:25%;
+    padding-bottom:24%;
     .transaktionHeader{
         color:#ffffff;
         display:flex;
