@@ -4,13 +4,13 @@ import { useState, useEffect  } from 'react';
 import Footer from '../../components/Footer/Footer';
 import './Add.scss';
 import shapeImg from '../../img/shape.png'
-import ModalAdd from '../../components/Modal/ModalAdd';
 import {optionData, descriptionData} from '../../data/Add.data'
 import { FooterContext } from '../../contexts/FooterContext'
 import React ,{useContext} from 'react'
 import { db } from "../../Service/firebase"
 import { collection, addDoc } from "firebase/firestore"
-
+import successImg from '../../img/sucess.png'
+import lineImg from '../../img/line.png'
 const Add = () => {
   //Diese Funktionen setzen das richtige Bild auf gelb onload
   const{setHomeIsActive,setAddIsActive,setChartsIsActive}=useContext(FooterContext)
@@ -49,10 +49,10 @@ const financeCollectionRef = collection(db, "finance")
 const createFinance = async () => {
     await addDoc(financeCollectionRef, {amount: newAmount, category: newCategory, date: newDate, description: newDescription});
 }
-const handleClose = () => {
-  setOpen(false);
-  setError(null);
-};
+// const handleClose = () => {
+//   setOpen(false);
+//   setError(null);
+// };
 
 
 // ======================================
@@ -63,6 +63,10 @@ const handleClose = () => {
         {element}
       </option>
     );
+  });
+  let time = new Date().toLocaleTimeString('de', {
+    hour: 'numeric',
+    minute: 'numeric',
   });
   
   return ( 
@@ -114,13 +118,39 @@ const handleClose = () => {
               onClick={createFinance} 
               onClick={()=>setOpenModal(true)}>Abschicken</button>
             </div>
-           <ModalAdd  open={open} onClose={handleClose} data={inputs} />
+           {/* <ModalAdd  open={open} onClose={handleClose} data={inputs} /> */}
            {/* <ModalAdd  open={open} onClose={handleClose} data={inputs}/> */}
            <div className="Modalbg"  onClick={()=>setOpenModal(false)}  style={{width: openModal?'100vw':'0vw'}}>
-                  <div className="Modal" style={{display: openModal?'block':'none'}}>
-                    {newDate}
+                  <div id="ModalPopUp" style={{display: openModal?'block':'none'}}>
+                  <img src={successImg } alt="success" />
+                  <h3>Erfolgreich <br/> eingetragen!</h3>
+                  <span className="circle1"></span>
+                  <img id= "line"  src={lineImg}alt="line" />
+                  <span className="circle2"></span>
+                  <section>
+                      <article>
+                        <p>
+                        <span id="date">Datum </span>
+                        <br />  {newDate}
+                        </p>
+                        <p>
+                          <span>Zeit</span>
+                          <br />{time}
+                        </p>
+                        
+                      </article>
+                      <p className="categorie">
+                        <span>Kategorie</span>
+                          <br />{newDescription}
+                      </p>
+                      <p className="price">
+                        <span>Summe</span>
+                          <br /> {newAmount} 
+                      </p>
+          </section>
+                    {/* {newDate}
                     {newDescription}
-                    {newAmount} 
+                    {newAmount}  */}
                   </div>
            </div>
         </section>

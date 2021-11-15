@@ -32,31 +32,93 @@
       margin-right: 2px;
     }
     select {
+      color: rgb(95, 95, 130);
       font-size: 1em;
     }
   }
 
   ::placeholder {
-    color: #fff;
+    color: rgb(95, 95, 130);
     font-size: 1.2em;
-    // padding-left: 12px;
+    padding-left: 20px;
   }
 }
 // ===================MDOAL=================
-.Modalbg{
-  width:100%;
-  height:100%;
+.Modalbg {
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.404);
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  #ModalPopUp {
+    margin: 0 0 0 20px;
+    color: #fff;
+    width: 330px;
+    height: 450px;
+    text-align: center;
+    background-color: #2b2d5b;
+    border-radius: 10px;
+    position: absolute;
+    top: 150px;
+    img {
+      position: relative;
+      top: -30px;
+    }
+    #line {
+      position: relative;
+      top: 8px;
+    }
+    .circle1 {
+      position: absolute;
+      top: 35%;
+      height: 10px;
+      width: 20px;
+      border-radius: 15px 15px 0 0;
+      background-color: #16172e;
+      transform: rotate(90deg);
+      left: -5px;
+    }
+    .circle2 {
+      position: absolute;
+      top: 35%;
+      height: 10px;
+      width: 20px;
+      border-radius: 15px 15px 0 0;
+      background-color: #16172e;
+      transform: rotate(-90deg);
+      right: -5px;
+    }
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      position: relative;
+      top: -20px;
+      margin-bottom: 2%;
+    }
+    section {
+      padding: 10% 7% 0;
+      text-align: left;
+      span {
+        color: rgb(95, 95, 130);
+      }
 
-  .Modal{
-    width:50%;
-    height:50%;
-    color:white;
-
+      article {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .price {
+        margin-top: 15%;
+      }
+      .price::after {
+        content: ' €';
+      }
+      .categorie {
+        margin-top: 10%;
+      }
+    }
   }
 }
 
