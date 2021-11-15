@@ -1,0 +1,95 @@
+
+h3{
+    color:#ffffff;
+    font-size:1em;
+    text-align: center;
+    font-weight:500;
+    padding-top: 30%;
+}
+h1{
+    color:#ffffff;
+    font-size:4em;
+    text-align:center;
+    font-weight:500;
+}
+p{
+    color:#ffffff;
+    font-size:.8em;
+    text-align: center;
+    font-weight:500;
+    padding-top: 15%;
+}
+
+.mail {
+    padding: 10%;
+    .loginMail {
+        input,
+        button {
+        width: 100%;
+        height: 55px;
+        padding: 0 1%;
+        background-color: #232450;
+        border-style: none;
+        margin-top: 12%;
+        color: #fff;
+        }
+        .reg{
+            margin: 2px 0 0 3px;
+            color:#ffffff;
+            font-size:.8em;
+            text-align: center;
+            font-weight:500;
+            display: flex;
+            div{
+                margin-left: 10px;
+                color:#ffffff;
+                text-decoration: underline;
+            }
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-evenly;
+            .container{
+                height: 60px;
+                width: 60px;
+                margin-top: 10%;
+                box-shadow: 3px 3px 6px 2px #141627;
+                background: #fff;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+                .buttonG {
+                    background-image: url('../../img/google.png');
+                    background-size: cover;
+                    background-position: center;
+                    width: 45px;
+                    height: 45px;
+                    color: #fff;
+                    }
+                .buttonT {
+                    background-image: url('../../img/twitter.png');
+                    background-size: cover;
+                    background-position: center;
+                    width: 45px;
+                    height: 45px;
+                    color: #fff;
+                    }
+                .buttonH {
+                    background-image: url('../../img/github.png');
+                    background-size: cover;
+                    background-position: center;
+                    width: 50px;
+                    height: 50px;
+                    color: #fff;
+                    }
+        }
+    }
+
+    ::placeholder {
+        color: rgba(255, 255, 255, 0.767);
+        font-size: 1.2em;
+        padding-left: 15px;
+    }
+  }

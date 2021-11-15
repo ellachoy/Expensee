@@ -4,8 +4,10 @@ import Footer from '../../components/Footer/Footer';
 import TransaktionContainer from '../../components/Transaktion/TransaktionContainer'
 import { FooterContext } from '../../contexts/FooterContext'
 import React ,{useContext} from 'react'
+import { useAuth } from '../../contexts/AuthContext';
 
 const Home = () => {
+    const { currentUser } = useAuth()
     //Diese Funktionen setzen das richtige Bild auf gelb onload
     const{setHomeIsActive,setAddIsActive,setChartsIsActive}=useContext(FooterContext)
     setAddIsActive(false)
