@@ -10,7 +10,7 @@ import CollapsItem from './CollapsItem'
 
 const App = () => {
     const [finance, setFinance] = useState([])
-    const{einkommen,setEinkommen,ausgaben,setAusgaben,sparen,setSparen,sonstiges,setSonstiges}=useContext(AmountContext)
+    const{einkommen,ausgaben,sparen,sonstiges}=useContext(AmountContext)
 
     console.log(finance)
     useEffect(
@@ -24,7 +24,7 @@ const App = () => {
     const financeRef = collection(db, "finance");
     const q = query(financeRef, where("category", "==", 'Einkommen'));
     console.log(q);
-
+    
     
   return (
       <div className="collapsContainer">
@@ -32,7 +32,9 @@ const App = () => {
     <Collapsible trigger={`Einkommen: ${einkommen} €`}>
     {finance.map((elt) => ( 
         elt.category=='Einkommen'? 
-        <CollapsItem key={elt.id} description={elt.description} value={elt.amount}/>:null
+        <CollapsItem key={elt.id} 
+        description={elt.description} 
+        value={elt.amount}/>:null
         ))}
     </Collapsible>
 
