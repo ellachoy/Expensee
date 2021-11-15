@@ -64,7 +64,7 @@ const handleClose = () => {
       </option>
     );
   });
-
+  
   return ( 
     <>
       <main>
@@ -112,7 +112,7 @@ const handleClose = () => {
           
               <button onClick={createFinance}>Abschicken</button>
             </div>
-           <ModalAdd  open={open} onClose={handleClose} data={inputs}/>
+           <ModalAdd  open={open} onClose={handleClose} data={inputs} />
         </section>
        
       </main>
