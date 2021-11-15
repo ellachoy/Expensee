@@ -5,12 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import FooterContextProvider from './contexts/FooterContext';
 import { AuthContextProvider } from "./contexts/AuthContext"
+import AmountContextProvider from './contexts/AmountContext'
 
 ReactDOM.render(
   <React.StrictMode>
     <AuthContextProvider>
       <FooterContextProvider>
+        <AmountContextProvider>
         <App />
+        </AmountContextProvider>
       </FooterContextProvider>
     </AuthContextProvider>
   </React.StrictMode>,
