@@ -148,9 +148,7 @@ const createFinance = async () => {
                           <br /> <span id="showBig">{newAmount}</span> 
                       </p>
           </section>
-                    {/* {newDate}
-                    {newDescription}
-                    {newAmount}  */}
+                 
                   </div>
            </div>
         </section>
