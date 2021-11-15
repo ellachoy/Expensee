@@ -116,7 +116,7 @@ const handleClose = () => {
             </div>
            {/* <ModalAdd  open={open} onClose={handleClose} data={inputs}/> */}
            <div className="Modalbg"  onClick={()=>setOpenModal(false)}  style={{width: openModal?'100vw':'0vw'}}>
-                  <div className="Modal">
+                  <div className="Modal" style={{display: openModal?'block':'none'}}>
                     {newDate}
                     {newDescription}
                     {newAmount} 
