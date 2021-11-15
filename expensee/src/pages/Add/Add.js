@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState, useEffect  } from 'react';
+// import axios from 'axios';
 import Footer from '../../components/Footer/Footer';
 import './Add.scss';
 import shapeImg from '../../img/shape.png'
@@ -27,6 +27,16 @@ const Add = () => {
     created_at: '',
   });
   const [error, setError] = useState(null);
+  useEffect(() => {
+    let close;
+    if (open) {
+      close = setTimeout(() => {
+        setOpen(false);
+        setInputs({ category: '', description: '', price: '', created_at: '' });
+      }, 4000);
+    }
+    return () => clearTimeout(close);
+  }, [open]);
   // ======================================
 // =========== FIREBASE ADD =============
 const [newCategory, setNewCategory] = useState("")
@@ -39,6 +49,10 @@ const financeCollectionRef = collection(db, "finance")
 const createFinance = async () => {
     await addDoc(financeCollectionRef, {amount: newAmount, category: newCategory, date: newDate, description: newDescription});
 }
+const handleClose = () => {
+  setOpen(false);
+  setError(null);
+};
 
 
 // ======================================
@@ -53,7 +67,7 @@ const createFinance = async () => {
 
   return ( 
     <>
-<main>
+      <main>
         <section className="wallet">
             <Link to='/home'>
                 <img src={shapeImg} alt='shape' />
@@ -78,29 +92,31 @@ const createFinance = async () => {
                   setNewDescription(event.target.value)}}
                 required
               />
-            <input
+              <input
                 type='number'
                 name='price'
                 placeholder='Geldbetrag'
                 onChange={(event) => {
                   setNewAmount(Number.parseFloat(event.target.value))}}
                 required
-            />{' '}
-            <br />
-            <input
+              />{' '}
+              <br />
+              <input
                 type='datetime-local'
                 name='created_at'
                 placeholder='Datum'
                 onChange={(event) => {
                   setNewDate(event.target.value)}}
                 required
-            />{' '}
+              />{' '}
           
-          <button onClick={createFinance}>Abschicken</button>
+              <button onClick={createFinance}>Abschicken</button>
             </div>
+           <ModalAdd  open={open} onClose={handleClose} data={inputs}/>
         </section>
-        <Footer/>
-    </main>
+       
+      </main>
+      <Footer/>
 </>
   );
 }
