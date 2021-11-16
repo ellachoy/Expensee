@@ -12,7 +12,7 @@ const AmountContextProvider = ({children}) => {
         const[sparen,setSparen]= useState([0])
         const[sonstiges,setSonstiges]= useState([0])
 
-        console.log(finance)
+        // console.log(finance)
     
         useEffect(
             () => 
@@ -28,7 +28,7 @@ const AmountContextProvider = ({children}) => {
     useEffect(() => {
         let sum=0;
         finance.forEach((elt)=>{
-            console.log(elt)
+            // console.log(elt)
             if(elt.category=='Einkommen'){
                 sum+=Number(elt.amount)
             }
@@ -39,7 +39,7 @@ const AmountContextProvider = ({children}) => {
     useEffect(() => {
         let sum=0;
         finance.forEach((elt)=>{
-            console.log(elt)
+            // console.log(elt)
             if(elt.category=='Ausgaben'){
                 sum+=Number(elt.amount)
             }
@@ -50,7 +50,7 @@ const AmountContextProvider = ({children}) => {
     useEffect(() => {
         let sum=0;
         finance.forEach((elt)=>{
-            console.log(elt)
+            // console.log(elt)
             if(elt.category=='Sparen'){
                 sum+=Number(elt.amount)
             }
@@ -61,7 +61,7 @@ const AmountContextProvider = ({children}) => {
     useEffect(() => {
         let sum=0;
         finance.forEach((elt)=>{
-            console.log(elt)
+            // console.log(elt)
             if(elt.category=='Sonstiges'){
                 sum+=Number(elt.amount)
             }

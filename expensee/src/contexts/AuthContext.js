@@ -23,12 +23,15 @@ export const AuthContext = createContext({
 
 export const useAuth = () => useContext(AuthContext)
 
+
 export default function AuthContextProvider({ children }) {
     const [currentUser, setCurrentUser] = useState(null)
+    const [appIsReady, setAppIsReady] = useState(false)
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, user => {
             setCurrentUser(user)
+            setAppIsReady(true)
         })
         return () => {
             unsubscribe()
@@ -56,7 +59,7 @@ export default function AuthContextProvider({ children }) {
         const provider_github = new GithubAuthProvider()
         return signInWithPopup(auth, provider_github)
     }
-
+ 
 
     function logout() {
         return signOut(auth)
@@ -71,6 +74,7 @@ export default function AuthContextProvider({ children }) {
         signInWithGoogle,
         signInWithTwitter,
         signInWithGitHub,
+        appIsReady,
     }
     return <AuthContext.Provider value={value}>
         {children}

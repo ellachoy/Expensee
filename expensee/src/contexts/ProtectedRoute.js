@@ -1,20 +1,14 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Navigate,
-  } from "react-router-dom";
+import { Route, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext'
 
-export const ProtectedRoute = (props) => {
+const PrivateRoute = ( props ) => {
     const { currentUser } = useAuth()
-    const { path } = props
-
-    return currentUser ? <Route {...props} /> : <Navigate to={{
-        pathname: '/login',
-        state: {from: path}
-    }} />
+    
+    return currentUser ? <Route {...props} /> : <useNavigate to="/" />;
 }
 
-export default ProtectedRoute
+export default PrivateRoute
+
+
+

@@ -12,7 +12,7 @@ const App = () => {
     const [finance, setFinance] = useState([])
     const{einkommen,setEinkommen,ausgaben,setAusgaben,sparen,setSparen,sonstiges,setSonstiges}=useContext(AmountContext)
 
-    console.log(finance)
+    // console.log(finance)
     useEffect(
         () => 
             onSnapshot(collection(db, "finance"),(snapshot) => 
@@ -23,7 +23,7 @@ const App = () => {
     );
     const financeRef = collection(db, "finance");
     const q = query(financeRef, where("category", "==", 'Einkommen'));
-    console.log(q);
+    // console.log(q);
 
     
   return (
