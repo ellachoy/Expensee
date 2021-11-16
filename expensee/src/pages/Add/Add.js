@@ -12,6 +12,7 @@ import { collection, addDoc } from "firebase/firestore"
 import successImg from '../../img/sucess.png'
 import lineImg from '../../img/line.png'
 import { useAuth } from '../../contexts/AuthContext'
+import errorImg from '../../img/error.png'
 const Add = () => {
   //Diese Funktionen setzen das richtige Bild auf gelb onload
   const{setHomeIsActive,setAddIsActive,setChartsIsActive}=useContext(FooterContext)
@@ -57,12 +58,7 @@ const onClickCollect=()=>{
   createFinance();
   setOpenModal(true)
 }
-
-
-
-
 // ======================================
-
   let valueChoice = descriptionData.map((element) => {
     return (
       <option key={element} value={element}>
@@ -127,7 +123,7 @@ const onClickCollect=()=>{
             </div>
         
           <div className="Modalbg"  onClick={()=>setOpenModal(false)}  style={{width: openModal?'100vw':'0vw'}}>
-              <div id="ModalPopUp" style={{display: openModal?'block':'none'}}>
+               <div id="ModalPopUp" style={{display: openModal?'block':'none'}}>
                     <img  id="sucessImg" src={successImg } alt="success" />
                     <h3>Erfolgreich <br/> eingetragen!</h3>
                     <span className="circle1"></span>
@@ -155,8 +151,20 @@ const onClickCollect=()=>{
                         </p>
                     </section>
                  
-              </div>
+              </div> 
+              
            </div>
+           {/* <div className="Modalbg"  onClick={()=>setOpenModal(true)}  style={{width: openModal?'100vw':'0vw'}}>
+             <div id="errorPopUp" style={{display:'block'}}>
+                <img  id ="errorImg" src={errorImg} alt="errorImg" />
+               <h3> </h3>
+                <span className="circle1"></span>
+                    <img id= "line"  src={lineImg}alt="line" />
+                    <span className="circle2"></span>
+                    <h3 id="errortitle">Error</h3>
+                    <h4>Bitte Füllen Sie alle Felder aus!</h4>
+                </div>
+                </div> */}
         </section>
        
       </main>

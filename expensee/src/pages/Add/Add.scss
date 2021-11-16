@@ -21,14 +21,17 @@
       margin-top: 12%;
       color: #fff;
       border-radius: 5px;
+      padding-left: 5%;
     }
     select:focus,
     input:focus,
     button:focus {
       outline: none;
     }
+    input {
+      width: 95%;
+    }
     button {
-      margin-top: 10%;
       background: #2b2d5b;
       box-shadow: 3px 3px 6px 2px #141627;
       margin-top: 25%;
@@ -56,7 +59,7 @@
   ::placeholder {
     color: rgb(95, 95, 130);
     font-size: 1.2em;
-    padding-left: 20px;
+    padding-left: 10px;
   }
 }
 // ===================MDOAL=================
@@ -68,7 +71,8 @@
   top: 0;
   left: 0;
   z-index: 999;
-  #ModalPopUp {
+  #ModalPopUp,
+  #errorPopUp {
     margin: 0 0 0 20px;
     color: #fff;
     width: 330px;
@@ -153,16 +157,16 @@
 
       #showDt {
         color: #fff;
-        margin-left: -17px;
+        margin-left: -67px;
       }
       #showDc {
         color: #fff;
         margin-left: 3px;
       }
       #showBig {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: #fff;
-        margin-left: -85px;
+        margin-left: -80px;
       }
       .categorie {
         position: absolute;
@@ -176,3 +180,38 @@
 }
 
 // ===================MDOAL=================
+#errorPopUp {
+  text-align: center;
+  background-color: #2b2d5b;
+  height: 380px;
+  width: 300px;
+  border-radius: 10px;
+
+  #errorImg {
+    position: relative;
+    top: 25px;
+    width: 35%;
+    height: 15vh;
+    animation: scale 1s ease-in-out alternate;
+    margin-bottom: 2%;
+  }
+  @keyframes scale {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  #errortitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    position: relative;
+    top: -100px;
+    margin-bottom: 2%;
+  }
+  h4 {
+    position: relative;
+    top: -100px;
+  }
+}
