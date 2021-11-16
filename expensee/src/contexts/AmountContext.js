@@ -25,7 +25,7 @@ const AmountContextProvider = ({children}) => {
         
         
 
-        console.log(finance)
+        // console.log(finance)
     
         useEffect(
             () => 
@@ -41,8 +41,8 @@ const AmountContextProvider = ({children}) => {
     useEffect(() => {
         let sum=0;
         finance.forEach((elt)=>{
-            console.log(elt)
-            if(elt.category=='Gehalt'||elt.category=='Sonstige Einnahmen'){
+            // console.log(elt)
+            if(elt.category=='Einkommen'){
                 sum+=Number(elt.amount)
             }
                 })
@@ -52,8 +52,8 @@ const AmountContextProvider = ({children}) => {
     useEffect(() => {
         let sum=0;
         finance.forEach((elt)=>{
-            console.log(elt)
-            if(elt.category=='Lebensmittel'||elt.category=='Shopping'||elt.category=='Wohnen'||elt.category=='Mobilität'||elt.category=='Freizeit'||elt.category=='Restaurant'||elt.category=='Versicherungen'){
+            // console.log(elt)
+            if(elt.category=='Ausgaben'){
                 sum+=Number(elt.amount)
             }
                 })
@@ -63,8 +63,8 @@ const AmountContextProvider = ({children}) => {
     useEffect(() => {
         let sum=0;
         finance.forEach((elt)=>{
-            console.log(elt)
-            if(elt.category=='Geldanlage'||elt.category=='Sonstiges Sparen'){
+            // console.log(elt)
+            if(elt.category=='Sparen'){
                 sum+=Number(elt.amount)
             }
                 })
@@ -74,7 +74,7 @@ const AmountContextProvider = ({children}) => {
     useEffect(() => {
         let sum=0;
         finance.forEach((elt)=>{
-            console.log(elt)
+            // console.log(elt)
             if(elt.category=='Sonstiges'){
                 sum+=Number(elt.amount)
             }

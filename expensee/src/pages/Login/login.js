@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext'
 
 const Login = () => {
-const history = useNavigate()
+// const history = useNavigate()
 
 const { login, signInWithGoogle, signInWithTwitter, signInWithGitHub, currentUser } = useAuth()
 
@@ -16,6 +16,8 @@ const { login, signInWithGoogle, signInWithTwitter, signInWithGitHub, currentUse
                 <input type="email" name="email" id="" placeholder="Email"/><br />
                 <input type="text" name="password" placeholder="Passwort"/><br />
                 <div className="reg">Noch nicht registriert? <Link to="./Login/register.js"><div>Sign Up</div></Link></div>
+
+                <button>Login</button>
                 <p>oder Login mit</p>
                     <div className="buttons">
                         <div className="container">

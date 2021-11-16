@@ -1,5 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import '../../App.scss'; 
+
+import "./Login/config/firebase_config.js";
+import "./Login/login.js";
+import "./Login/register.js";
+
+
+
 const Email = () => {
     return (
 
@@ -8,10 +15,20 @@ const Email = () => {
                 <nav>
                     <ul>
                         <li>
-                            <Link to="./Login/login.js"><div>Login</div></Link>
+                        <Router>
+                             <Switch>
+                                <Route loginpath = "./Login/login.js"><Login/></Route>
+                            </Switch>
+                        </Router>
+                            <Link to="#"><div>Login</div></Link>
                         </li>
                         <li>
-                            <Link to="./Login/register.js"><div>Account erstellen mit Email</div></Link>
+                            <Router>
+                                <Switch>
+                                    <Route registerpath = "./Login/register.js"><Register/></Route>
+                                </Switch>
+                            </Router>
+                                <Link to="#"><div>Account erstellen mit Email</div></Link>
                         </li>
                     </ul>
                 </nav>

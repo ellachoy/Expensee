@@ -9,7 +9,7 @@ const Header = (props) => {
 
     const [isOpen, setState] = useState(false);
 
-    const {logout} = useAuth()
+    const {logout, currentUser} = useAuth()
   
     return ( 
         <div className="NavElement">
@@ -54,14 +54,11 @@ const Header = (props) => {
                         </p>
                 </div>
             </Link>
-            <Link to="/">
-                <div className="addedButton"  onClick={async => {logout()}, console.log("user is logged out")}
-                style={{}}>
-                        <p className="sideText">
-                            { isOpen ?'Logout':''}
-                        </p>
-                </div>
-            </Link>
+            {currentUser && (
+                <li onClick={logout}>
+                  Logout
+                </li>
+              )}
             </div>
             
             </div>
