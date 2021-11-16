@@ -149,6 +149,7 @@ const onClickCollect=()=>{
                  
               </div>
            </div>
+           
         </section>
        
       </main>
