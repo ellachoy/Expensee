@@ -1,11 +1,12 @@
 import { useState,createContext,useEffect } from 'react';
 import { onSnapshot, collection } from '@firebase/firestore';
 import { db } from '../Service/firebase'
-
+import { useAuth } from './AuthContext'
 export const AmountContext=createContext()
 
 const AmountContextProvider = ({children}) => {
-   
+        const { currentUser } = useAuth()
+        //currentUserImport
         const [finance, setFinance] = useState([])
         const[einkommen,setEinkommen]= useState([0])
         const[ausgaben,setAusgaben]= useState([0])
@@ -41,8 +42,8 @@ const AmountContextProvider = ({children}) => {
     useEffect(() => {
         let sum=0;
         finance.forEach((elt)=>{
-            // console.log(elt)
-            if(elt.category=='Einkommen'){
+            console.log(elt)
+            if(elt.category=='Gehalt'&& elt.user==currentUser.email||elt.category=='Sonstige Einnahmen'&& elt.user==currentUser.email){
                 sum+=Number(elt.amount)
             }
                 })
@@ -52,8 +53,8 @@ const AmountContextProvider = ({children}) => {
     useEffect(() => {
         let sum=0;
         finance.forEach((elt)=>{
-            // console.log(elt)
-            if(elt.category=='Ausgaben'){
+            console.log(elt)
+            if(elt.category=='Lebensmittel'&&elt.user==currentUser.email||elt.category=='Shopping'&&elt.user==currentUser.email||elt.category=='Wohnen'&&elt.user==currentUser.email||elt.category=='Mobilität'&&elt.user==currentUser.email||elt.category=='Freizeit'&&elt.user==currentUser.email||elt.category=='Restaurant'&&elt.user==currentUser.email||elt.category=='Versicherungen'&&elt.user==currentUser.email){
                 sum+=Number(elt.amount)
             }
                 })
@@ -63,8 +64,8 @@ const AmountContextProvider = ({children}) => {
     useEffect(() => {
         let sum=0;
         finance.forEach((elt)=>{
-            // console.log(elt)
-            if(elt.category=='Sparen'){
+            console.log(elt)
+            if(elt.category=='Geldanlage'&&elt.user==currentUser.email||elt.category=='Sonstiges Sparen'&&elt.user==currentUser.email){
                 sum+=Number(elt.amount)
             }
                 })
@@ -74,8 +75,8 @@ const AmountContextProvider = ({children}) => {
     useEffect(() => {
         let sum=0;
         finance.forEach((elt)=>{
-            // console.log(elt)
-            if(elt.category=='Sonstiges'){
+            console.log(elt)
+            if(elt.category=='Sonstiges'&&elt.user==currentUser.email){
                 sum+=Number(elt.amount)
             }
                 })
@@ -87,45 +88,45 @@ const AmountContextProvider = ({children}) => {
         finance.forEach((elt)=>{ //Notiz an Erik( mich selbst) es wäre viel kürzer mit Switch Case c(^:
             console.log(elt)
             
-            if(elt.category=='Gehalt'){
+            if(elt.category=='Gehalt'&&elt.user==currentUser.email){
                 sum1+=Number(elt.amount)
             }
-            if(elt.category=='Restaurant'){
+            if(elt.category=='Restaurant'&&elt.user==currentUser.email){
                 sum2+=Number(elt.amount)
             }
-            if(elt.category=='Sonstige Einnahmen'){
+            if(elt.category=='Sonstige Einnahmen'&&elt.user==currentUser.email){
                 sum3+=Number(elt.amount)
                 
             }
-            if(elt.category=='Lebensmittel'){
+            if(elt.category=='Lebensmittel'&&elt.user==currentUser.email){
                 sum4+=Number(elt.amount)
                 
             }
-            if(elt.category=='Shopping'){
+            if(elt.category=='Shopping'&&elt.user==currentUser.email){
                 sum5+=Number(elt.amount)
                 
             }
-            if(elt.category=='Wohnen'){
+            if(elt.category=='Wohnen'&&elt.user==currentUser.email){
                 sum6+=Number(elt.amount)
                 
             }
-            if(elt.category=='Mobilität'){
+            if(elt.category=='Mobilität'&&elt.user==currentUser.email){
                 sum7+=Number(elt.amount)
                 
             }
-            if(elt.category=='Freizeit'){
+            if(elt.category=='Freizeit'&&elt.user==currentUser.email){
                 sum8+=Number(elt.amount)
                 
             }
-            if(elt.category=='Versicherung'){
+            if(elt.category=='Versicherung'&&elt.user==currentUser.email){
                 sum9+=Number(elt.amount)
                 
             }
-            if(elt.category=='Geldanlage'){
+            if(elt.category=='Geldanlage'&&elt.user==currentUser.email){
                 sum10+=Number(elt.amount)
                 
             }
-            if(elt.category=='Sonstiges Sparen'){
+            if(elt.category=='Sonstiges Sparen'&&elt.user==currentUser.email){
                 sum11+=Number(elt.amount)
                 
             }
