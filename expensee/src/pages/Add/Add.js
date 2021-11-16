@@ -11,6 +11,7 @@ import { db } from "../../Service/firebase"
 import { collection, addDoc } from "firebase/firestore"
 import successImg from '../../img/sucess.png'
 import lineImg from '../../img/line.png'
+import errorImg from '../../img/'
 const Add = () => {
   //Diese Funktionen setzen das richtige Bild auf gelb onload
   const{setHomeIsActive,setAddIsActive,setChartsIsActive}=useContext(FooterContext)
