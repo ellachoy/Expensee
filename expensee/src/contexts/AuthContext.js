@@ -1,44 +1,79 @@
-import { createContext, useReducer, useEffect } from "react";
-import { onAuthStateChanged } from "@firebase/auth";
-import { auth } from "../Service/firebase"
+import { createContext, useContext, useEffect, useState } from 'react' 
+import { auth } from '../Service/firebase'
+import { 
+    createUserWithEmailAndPassword, 
+    signInWithEmailAndPassword,
+    onAuthStateChanged,
+    signOut,   
+    GoogleAuthProvider,
+    TwitterAuthProvider,
+    GithubAuthProvider,
+    signInWithPopup,
+} from 'firebase/auth'
 
-export const AuthContext = createContext()
+export const AuthContext = createContext({
+    currentUser: null, 
+    register: () => Promise,
+    login: () => Promise,
+    logout: () => Promise,
+    signInWithGoogle: () => Promise,
+    signInWithTwitter: () => Promise,
+    signInWithGitHub: () => Promise,
+})
 
-function reducer(state, action) {
-    switch (action.type) {
-        case 'LOGIN':
-            console.log('reducer login')
-            console.log('action', action)
-            return { ...state, user: action.payload }
+export const useAuth = () => useContext(AuthContext)
 
-        case 'LOGOUT':
-            console.log(action)
-            return { ...state, user: null }
-
-        case 'CHECK_IF_READY':
-            console.log(action)
-            return { ...state, user: action.payload, appReady: true }
-
-        default:
-            return { ...state }
-
-    }
-}
-
-export const AuthContextProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(reducer, { user: null, appReady: false });
+export default function AuthContextProvider({ children }) {
+    const [currentUser, setCurrentUser] = useState(null)
 
     useEffect(() => {
-        const unsub = onAuthStateChanged(auth, (user) => {
-            dispatch({ type: 'CHECK_IF_READY', payload: user })
-            unsub()
+        const unsubscribe = onAuthStateChanged(auth, user => {
+            setCurrentUser(user)
         })
-    }, []);
+        return () => {
+            unsubscribe()
+        }
+    }, [])
 
-    console.log('AuthContext State:', state)
-    return (
-        <AuthContext.Provider value={{ ...state, dispatch }}>
-            {children}
-        </AuthContext.Provider>
-    )
+    function register(email, password) {
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
+
+    function login(email, password) {
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+    function signInWithGoogle() {
+        const provider_google = new GoogleAuthProvider()
+        return signInWithPopup(auth, provider_google)
+    }
+
+    function signInWithTwitter() {
+        const provider_twitter = new TwitterAuthProvider()
+        return signInWithPopup(auth, provider_twitter)
+    }
+
+    function signInWithGitHub() {
+        const provider_github = new GithubAuthProvider()
+        return signInWithPopup(auth, provider_github)
+    }
+
+
+    function logout() {
+        return signOut(auth)
+    }
+ 
+
+    const value = {
+        currentUser,
+        register,
+        login,
+        logout,
+        signInWithGoogle,
+        signInWithTwitter,
+        signInWithGitHub,
+    }
+    return <AuthContext.Provider value={value}>
+        {children}
+    </AuthContext.Provider>
 }
+

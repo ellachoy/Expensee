@@ -2,11 +2,14 @@ import './Header.scss'
 import {Link, Navigate} from 'react-router-dom'
 import {useState} from "react";
 import { firebase } from '../../Service/firebase'
+import { useAuth } from '../../contexts/AuthContext';
 
 
 const Header = (props) => {
 
     const [isOpen, setState] = useState(false);
+
+    const {logout} = useAuth()
   
     return ( 
         <div className="NavElement">
@@ -15,7 +18,7 @@ const Header = (props) => {
             onClick={()=>setState(true)} style={{display: isOpen?'none':'block'}}>
                 ☰
             </div>
-            <h3>{props.title}</h3>
+            <h3 className="headerTitle">{props.title}</h3>
             </section>
         
         <div className='sidebar'style={{width: isOpen?'70vw':'0vw'}}>
@@ -52,7 +55,7 @@ const Header = (props) => {
                 </div>
             </Link>
             <Link to="/">
-                <div className="addedButton"  onClick={() => firebase.auth().signOut()} onClick={()=>setState(false)}
+                <div className="addedButton"  onClick={async => {logout()}, console.log("user is logged out")}
                 style={{}}>
                         <p className="sideText">
                             { isOpen ?'Logout':''}

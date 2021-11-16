@@ -1,7 +1,7 @@
 import React ,{useContext} from 'react'
 import { Link as NavLink } from 'react-router-dom'
 
-import './Footer.scss'
+import './FooterOhne.scss'
 import wallet from '../../img/wallet.png'
 import walletActive from '../../img/wallet_active.png'
 import homebtn from '../../img/home_button.png'
@@ -10,15 +10,14 @@ import chart from '../../img/charts.png'
 import chartActive from '../../img/chart_active.png'
 import backgroundNav from '../../img/background_nav.png'
 import { FooterContext } from '../../contexts/FooterContext'
-import Bg from '../../img/background.png'
 
 
-const Footer = () => {
+
+const FooterOhne = () => {
     const{homeIsActive,setHomeIsActive,addIsActive,setAddIsActive,chartsIsActive,setChartsIsActive}=useContext(FooterContext)
   return (
     <footer className="footer">
-      <img src={Bg} id="footerBg" alt="" />
-
+      
       <img src={backgroundNav} className="nav-Bg" alt="bBg" />
 
       <div className="footer-container">
@@ -61,4 +60,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default FooterOhne
