@@ -44,12 +44,11 @@ const [newCategory, setNewCategory] = useState("")
 const [newDescription, setNewDescription] = useState("")
 const [newAmount, setNewAmount] = useState(0)
 const [newDate, setNewDate] = useState("")
-const [newUser, setNewUser] = useState("")
 const[openModal,setOpenModal]=useState(false)
 const financeCollectionRef = collection(db, "finance")
 const { currentUser } = useAuth()
 const createFinance = async () => {
-    await addDoc(financeCollectionRef, {amount: newAmount, category: newCategory, date: newDate, description: newDescription,user:newUser});
+    await addDoc(financeCollectionRef, {amount: newAmount, category: newCategory, date: newDate, description: newDescription, user: currentUser.email});
 }
 //diese Funktion fasst zwei Funktionen zusammen , sodass man 2 Funktionen onClick verwenden kann 
 const onClickCollect=()=>{ 
@@ -116,14 +115,6 @@ const onClickCollect=()=>{
                 placeholder='Datum'
                 onChange={(event) => {
                   setNewDate(event.target.value)}}
-                required
-              />{' '}
-                  <input
-                type='hidden'
-                name='user'
-                value={currentUser}
-                onSubmit={(event) => {
-                  setNewUser(event.target.value)}}
                 required
               />{' '}
 

@@ -10,7 +10,11 @@ const Header = (props) => {
     const [isOpen, setState] = useState(false);
 
     const {logout, currentUser} = useAuth()
-  
+    const onClickCollect=()=>{
+        logout();
+        setState(false)
+
+    }  
     return ( 
         <div className="NavElement">
             <section className="menu">
@@ -54,14 +58,25 @@ const Header = (props) => {
                         </p>
                 </div>
             </Link>
-            {currentUser && (
-                <li onClick={logout}>
+            {/* {currentUser && (
+                <div className="logoutButton" >
+                <li onClick={onClickCollect}>
                   Logout
                 </li>
+                </div>
               )}
-            </div>
+            </div> */}
+            {currentUser && (
+                <div className="addedButton"  onClick={onClickCollect}
+                style={{}}>
+                        <p className="sideText">
+                            { isOpen ?'Logout':''}
+                        </p>
+                </div>)}
+            
             
             </div>
+        </div>
         </div>
      );
     }
