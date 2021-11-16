@@ -54,12 +54,7 @@ const onClickCollect=()=>{
   createFinance();
   setOpenModal(true)
 }
-
-
-
-
 // ======================================
-
   let valueChoice = descriptionData.map((element) => {
     return (
       <option key={element} value={element}>
