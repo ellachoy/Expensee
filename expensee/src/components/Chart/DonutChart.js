@@ -22,7 +22,7 @@ const DoughnutChart = () => {
           datasets: [
             {
               label: '# of votes',
-              data: [einkommen,ausgaben,sparen,sonstiges],
+              data: [einkommen-ausgaben-sparen-sonstiges,ausgaben,sparen,sonstiges],
               backgroundColor: [
                 'rgba(246, 53, 53, 1)',
                 'rgba(81, 95, 235, 1)',

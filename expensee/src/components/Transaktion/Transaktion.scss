@@ -32,15 +32,14 @@
   }
 }
 .transaktionContainer {
-  margin-top: 25%;
   padding-bottom: 24%;
   .transaktionHeader {
     color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 5% 0%;
-    h3 {
+    .transaktionTitle {
+      padding:25% 0 0 0;
       font-size: 1em;
       margin-left: 3%;
       font-weight: 400;

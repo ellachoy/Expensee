@@ -49,10 +49,18 @@ const financeCollectionRef = collection(db, "finance")
 const createFinance = async () => {
     await addDoc(financeCollectionRef, {amount: newAmount, category: newCategory, date: newDate, description: newDescription});
 }
+//diese Funktion fasst zwei Funktionen zusammen , sodass man 2 Funktionen onClick verwenden kann 
+const onClickCollect=()=>{ 
+  createFinance();
+  setOpenModal(true)
+}
+
+
+
 
 // ======================================
 
-  let valueChoice = optionData.map((element) => {
+  let valueChoice = descriptionData.map((element) => {
     return (
       <option key={element} value={element}>
         {element}
@@ -109,8 +117,8 @@ const createFinance = async () => {
               />{' '}
           
           <button 
-              onClick={createFinance} 
-              onClick={()=>setOpenModal(true)}>Abschicken</button>
+              onClick={onClickCollect} 
+              >Abschicken</button>
             </div>
         
           <div className="Modalbg"  onClick={()=>setOpenModal(false)}  style={{width: openModal?'100vw':'0vw'}}>
