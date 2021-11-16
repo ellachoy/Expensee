@@ -111,6 +111,7 @@ const onClickCollect=()=>{
               <input
                 type='datetime-local'
                 name='created_at'
+                placeholder='Datum'
                 onChange={(event) => {
                   setNewDate(event.target.value)}}
                 required
@@ -123,7 +124,7 @@ const onClickCollect=()=>{
         
           <div className="Modalbg"  onClick={()=>setOpenModal(false)}  style={{width: openModal?'100vw':'0vw'}}>
               <div id="ModalPopUp" style={{display: openModal?'block':'none'}}>
-                    <img src={successImg } alt="success" />
+                    <img  id="sucessImg" src={successImg } alt="success" />
                     <h3>Erfolgreich <br/> eingetragen!</h3>
                     <span className="circle1"></span>
                     <img id= "line"  src={lineImg}alt="line" />
@@ -141,7 +142,7 @@ const onClickCollect=()=>{
                           
                         </article>
                         <p className="categorie">
-                          <span>Kategorie</span>
+                          <span id="cat">Kategorie</span>
                             <br /> <span id="showDc">{newDescription}</span>
                         </p>
                         <p className="price">
