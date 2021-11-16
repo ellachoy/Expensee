@@ -11,6 +11,7 @@ import { db } from "../../Service/firebase"
 import { collection, addDoc } from "firebase/firestore"
 import successImg from '../../img/sucess.png'
 import lineImg from '../../img/line.png'
+import { useAuth } from '../../contexts/AuthContext'
 const Add = () => {
   //Diese Funktionen setzen das richtige Bild auf gelb onload
   const{setHomeIsActive,setAddIsActive,setChartsIsActive}=useContext(FooterContext)
@@ -43,11 +44,12 @@ const [newCategory, setNewCategory] = useState("")
 const [newDescription, setNewDescription] = useState("")
 const [newAmount, setNewAmount] = useState(0)
 const [newDate, setNewDate] = useState("")
+const [newUser, setNewUser] = useState("")
 const[openModal,setOpenModal]=useState(false)
 const financeCollectionRef = collection(db, "finance")
-
+const { currentUser } = useAuth()
 const createFinance = async () => {
-    await addDoc(financeCollectionRef, {amount: newAmount, category: newCategory, date: newDate, description: newDescription});
+    await addDoc(financeCollectionRef, {amount: newAmount, category: newCategory, date: newDate, description: newDescription,user:newUser});
 }
 //diese Funktion fasst zwei Funktionen zusammen , sodass man 2 Funktionen onClick verwenden kann 
 const onClickCollect=()=>{ 
@@ -116,6 +118,15 @@ const onClickCollect=()=>{
                   setNewDate(event.target.value)}}
                 required
               />{' '}
+                  <input
+                type='hidden'
+                name='user'
+                value={currentUser}
+                onSubmit={(event) => {
+                  setNewUser(event.target.value)}}
+                required
+              />{' '}
+
           
           <button 
               onClick={onClickCollect} 
