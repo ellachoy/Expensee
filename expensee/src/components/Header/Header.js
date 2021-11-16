@@ -1,6 +1,7 @@
 import './Header.scss'
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+
 import {useState} from "react";
 
 
@@ -29,7 +30,7 @@ class Header extends Component{
                 onClick={this.handleIsOpen} style={{display:this.state.isOpen?'none':'block'}}>
                     ☰
                 </div>
-                <h3>{this.props.title}</h3>
+                <h3 className="HeaderH3">{this.props.title}</h3>
                 </section>
             
             <div className='sidebar'style={{width:this.state.isOpen?'70vw':'0vw'}}>

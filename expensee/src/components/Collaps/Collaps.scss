@@ -4,25 +4,37 @@
         .Collapsible__trigger{
         background: linear-gradient(90deg,#F63535,#FF009D);
         margin:3% 3% 0 3%;
+        @media(min-width:800px) and (max-width:1920px){
+            margin: 5% 20% 0 20%;
+        }
       
         }
     }
     .Ausgaben{
         .Collapsible__trigger{
         background-color:#515FEB;
-        margin:3% 3% 0 3%;
+        margin:5% 3% 0 3%;
+        @media(min-width:800px) and (max-width:1920px){
+            margin: 5% 20% 0 20%;
+        }
         }
     }
     .Sparen{
         .Collapsible__trigger{
         background-color:#EFB722;
-        margin:3% 3% 0 3%;
+        margin:5% 3% 0 3%;
+        @media(min-width:800px) and (max-width:1920px){
+            margin: 5% 20% 0 20%;
+        }
         }
     }
     .Sonstiges{
         .Collapsible__trigger{
         background-color:#95989A;
         margin:3% 3% 0 3%;
+        @media(min-width:800px) and (max-width:1920px){
+            margin: 5% 20% 0 20%;
+        }
         }
     }
     .Collapsible {
@@ -30,7 +42,9 @@
       
       .Collapsible__contentInner {
         padding:0 3% 10px 3%;
-        border-top: 0; }
+        border-top: 0; 
+        
+    }
 
           .Collapsible__contentInner p:last-child {
             margin-bottom: 0; }
@@ -43,7 +57,11 @@
         font-size:1.2em;
         border-radius:2px;
         text-align:center;
-        color: white; }
+        color: white;
+        @media(min-width:800px)and(max-width:3400px){
+            padding: 2%
+        }
+    }
       
 //=======================CollapsItem=================
 

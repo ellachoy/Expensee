@@ -10,9 +10,10 @@ const { login, signInWithGoogle, signInWithTwitter, signInWithGitHub, currentUse
 
     return (
         <div className="mail" >
+            <h3 className="LoginH3" />
             <h3>Willkommen bei</h3>
             <h1>Expensee</h1>
-            <form className="loginMail" action="">
+            <form className="loginMail">
                 <input type="email" name="email" id="" placeholder="Email"/><br />
                 <input type="text" name="password" placeholder="Passwort"/><br />
                 <div className="reg">Noch nicht registriert? <Link to="./Login/register.js"><div>Sign Up</div></Link></div>
