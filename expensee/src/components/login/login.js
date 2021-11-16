@@ -102,7 +102,7 @@ export default function Login({ navigation }) {
       }
 }
 
-
+/*
 const Login = () => {
   return (
       <login className="login">
@@ -121,6 +121,8 @@ const Login = () => {
   );
   
 }
+
+*/
 
 /*
 

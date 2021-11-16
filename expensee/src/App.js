@@ -1,35 +1,51 @@
 import './App.scss';
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import Home from './pages/Home/Home.js';
 import Add from'./pages/Add/Add.js';
 import Charts from './pages/Charts/Charts.js';
+import Login from './pages/Login/login';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
 } from "react-router-dom";
-import Login from './pages/Login/login';
-import { useAuth } from './contexts/AuthContext'
-import { useAuthContext } from './hooks/useAuthContext'
+  import { useAuth } from './contexts/AuthContext'
 
 export default function App() {
-  const { currentUser } = useAuth()
+const { currentUser, appIsReady } = useAuth()
+console.log(currentUser)
 
-    return (
-      <Router>
-        <div>   
-          <Routes>
-            <Route exact path="/" element={<Login/>}/>
-            <Route exact path="/" element={<Charts/>}/>
-            <Route exact path="/charts" element={<Home/>}/>
-            <Route exact path="/home" element={<Charts/>}/>
-            <Route exact path="/add" element={<Add/>}/>
-          </Routes>
-        </div>
-      </Router>
-    );
+return (
+  <Router>
+    {appIsReady && (
+    <div>   
+      <Routes>
 
-  }
+        
+          {currentUser && <Route exact path="/" element={<Charts/>}/>}
+          {!currentUser && <Route exact path="/" element={<Login/>}/>}
+          
+          {currentUser && <Route exact path="/home" element={<Charts/>}/>}
+          {!currentUser && <Route exact path="/" element={<Login/>}/>}
+
+          {currentUser && <Route exact path="/charts" element={<Home/>}/>}
+          {!currentUser && <Route exact path="/" element={<Login/>}/>}
+
+          {currentUser && <Route exact path="/add" element={<Add/>}/>}
+          {!currentUser && <Route exact path="/" element={<Login/>}/>}
+
+      </Routes>
+    </div>
+    )}
+  </Router>
+);
+
+}
+
+
+
+
+
+
 
 

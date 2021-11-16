@@ -8,7 +8,7 @@ export default function TransaktionDB() {
     const [finance, setFinance] = useState([])
     const[showItems,setShowItems] = useState(7)
 
-    console.log(finance)
+    // console.log(finance)
     useEffect(
         () => 
             onSnapshot(collection(db, "finance"),(snapshot) => 
