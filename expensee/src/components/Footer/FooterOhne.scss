@@ -4,12 +4,7 @@
   position: fixed;
   height: 7vh;
   width: 100%;
-
-  #footerBg {
-    position: relative;
-    bottom: 240%;
-    z-index: 2;
-  }
+  z-index: 400;
 
   .nav-Bg {
     position: absolute;

@@ -49,15 +49,18 @@ const financeCollectionRef = collection(db, "finance")
 const createFinance = async () => {
     await addDoc(financeCollectionRef, {amount: newAmount, category: newCategory, date: newDate, description: newDescription});
 }
-// const handleClose = () => {
-//   setOpen(false);
-//   setError(null);
-// };
+//diese Funktion fasst zwei Funktionen zusammen , sodass man 2 Funktionen onClick verwenden kann 
+const onClickCollect=()=>{ 
+  createFinance();
+  setOpenModal(true)
+}
+
+
 
 
 // ======================================
 
-  let valueChoice = optionData.map((element) => {
+  let valueChoice = descriptionData.map((element) => {
     return (
       <option key={element} value={element}>
         {element}
@@ -108,48 +111,47 @@ const createFinance = async () => {
               <input
                 type='datetime-local'
                 name='created_at'
-                // placeholder='Datum'
+                placeholder='Datum'
                 onChange={(event) => {
                   setNewDate(event.target.value)}}
                 required
               />{' '}
           
           <button 
-              onClick={createFinance} 
-              onClick={()=>setOpenModal(true)}>Abschicken</button>
+              onClick={onClickCollect} 
+              >Abschicken</button>
             </div>
-           {/* <ModalAdd  open={open} onClose={handleClose} data={inputs} /> */}
-           {/* <ModalAdd  open={open} onClose={handleClose} data={inputs}/> */}
-           <div className="Modalbg"  onClick={()=>setOpenModal(false)}  style={{width: openModal?'100vw':'0vw'}}>
-                  <div id="ModalPopUp" style={{display: openModal?'block':'none'}}>
-                  <img src={successImg } alt="success" />
-                  <h3>Erfolgreich <br/> eingetragen!</h3>
-                  <span className="circle1"></span>
-                  <img id= "line"  src={lineImg}alt="line" />
-                  <span className="circle2"></span>
-                  <section>
-                      <article>
-                        <p>
-                        <span id="date">Datum </span>
-                        <br />  {newDate}
+        
+          <div className="Modalbg"  onClick={()=>setOpenModal(false)}  style={{width: openModal?'100vw':'0vw'}}>
+              <div id="ModalPopUp" style={{display: openModal?'block':'none'}}>
+                    <img  id="sucessImg" src={successImg } alt="success" />
+                    <h3>Erfolgreich <br/> eingetragen!</h3>
+                    <span className="circle1"></span>
+                    <img id= "line"  src={lineImg}alt="line" />
+                    <span className="circle2"></span>
+                    <section className="infoContainer">
+                        <article>
+                          <p>
+                          <span id="mLeft">Datum </span>
+                          <br />  <span id="showDt">{`${newDate.slice(8,10)}.${newDate.slice(5,7)}.${newDate.slice(0,4)}`}</span>
+                          </p>
+                          <p>
+                            <span>Zeit</span>
+                            <br />{time}
+                          </p>
+                          
+                        </article>
+                        <p className="categorie">
+                          <span id="cat">Kategorie</span>
+                            <br /> <span id="showDc">{newDescription}</span>
                         </p>
-                        <p>
-                          <span>Zeit</span>
-                          <br />{time}
+                        <p className="price">
+                          <span id="mLeft">Summe</span>
+                            <br /> <span id="showBig">{newAmount}</span> 
                         </p>
-                        
-                      </article>
-                      <p className="categorie">
-                        <span>Kategorie</span>
-                          <br />{newDescription}
-                      </p>
-                      <p className="price">
-                        <span>Summe</span>
-                          <br /> <span id="showBig">{newAmount}</span> 
-                      </p>
-          </section>
+                    </section>
                  
-                  </div>
+              </div>
            </div>
         </section>
        

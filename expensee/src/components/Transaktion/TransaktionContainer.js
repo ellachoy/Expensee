@@ -20,15 +20,15 @@ export default function TransaktionDB() {
     return (
         <div className="transaktionContainer">
                <div className="transaktionHeader">
-            <h3>Letzten Transaktionen</h3>
+            <h3 className="transaktionTitle">Letzten Transaktionen</h3>
             <p onClick={()=>setShowItems(finance.length)}>Show full</p>
             </div> 
             {finance.slice(0,showItems).map((elt) => (
                 <TransaktionItem  key={elt.id} 
-                income={elt.category=='Einkommen'? true:false} 
+                income={elt.category=='Gehalt'||elt.category=='Sonstige Einnahmen'? true:false} 
                 description={elt.description} 
                 date={`${elt.date.slice(8,10)}.${elt.date.slice(5,7)}.${elt.date.slice(0,4)}  ${elt.date.slice(11,16)}`} 
-                value={elt.category=='Einkommen'?elt.amount:`-${elt.amount}`}/>
+                value={elt.category=='Gehalt'||elt.category=='Sonstige Einnahmen'?elt.amount:`-${elt.amount}`}/>
             ))}
             <div className="button" onClick={()=>setShowItems(showItems+7)}> 
             MEHR TRANSAKTIONEN

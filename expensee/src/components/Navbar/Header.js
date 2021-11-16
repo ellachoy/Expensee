@@ -18,7 +18,7 @@ const Header = (props) => {
             onClick={()=>setState(true)} style={{display: isOpen?'none':'block'}}>
                 ☰
             </div>
-            <h3>{props.title}</h3>
+            <h3 className="headerTitle">{props.title}</h3>
             </section>
         
         <div className='sidebar'style={{width: isOpen?'70vw':'0vw'}}>
