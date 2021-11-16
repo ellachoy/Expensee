@@ -128,7 +128,7 @@ const onClickCollect=()=>{
                         <article>
                           <p>
                           <span id="mLeft">Datum </span>
-                          <br />  <span id="showDt">{newDate}</span>
+                          <br />  <span id="showDt">{`${newDate.slice(8,10)}.${newDate.slice(5,7)}.${newDate.slice(0,4)}`}</span>
                           </p>
                           <p>
                             <span>Zeit</span>
