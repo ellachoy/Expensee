@@ -8,10 +8,21 @@ export const optionData =[
 ];
 
 export const descriptionData=[
+
     'Gehalt',
+    'Sonstige Einnahmen',
+    //Einkommen
     'Lebensmittel',
     'Shopping',
-    'Wohnung',
+    'Wohnen',
+    'Mobilität',
+    'Freizeit',
     'Restaurant',
     'Versicherung',
+    //Ausgaben
+    'Geldanlage',
+    'Sonstiges Sparen',
+    //Sparen
+    'Sonstiges'
+    //Sonstiges
 ]
