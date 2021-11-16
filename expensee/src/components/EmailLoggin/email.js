@@ -20,7 +20,7 @@ const Email = () => {
                                 <Route loginpath = "./Login/login.js"><Login/></Route>
                             </Switch>
                         </Router>
-                            <Link to="./Login/login.js"><div>Login</div></Link>
+                            <Link to="#"><div>Login</div></Link>
                         </li>
                         <li>
                             <Router>
@@ -28,7 +28,7 @@ const Email = () => {
                                     <Route registerpath = "./Login/register.js"><Register/></Route>
                                 </Switch>
                             </Router>
-                                <Link to="./Login/register.js"><div>Account erstellen mit Email</div></Link>
+                                <Link to="#"><div>Account erstellen mit Email</div></Link>
                         </li>
                     </ul>
                 </nav>
