@@ -20,8 +20,8 @@ const App = () => {
 
         []
     );
-    const financeRef = collection(db, "finance");
-    const q = query(financeRef, where("category", "==", 'Einkommen'));
+    // const financeRef = collection(db, "finance");
+    // const q = query(financeRef, where("category", "==", 'Einkommen'));
     // console.log(q);
 
     
