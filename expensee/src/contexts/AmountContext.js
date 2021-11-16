@@ -38,8 +38,9 @@ const AmountContextProvider = ({children}) => {
     
             []
         );
-        
+     
     useEffect(() => {
+        if(currentUser!==null){  
         let sum=0;
         finance.forEach((elt)=>{
             console.log(elt)
@@ -47,21 +48,28 @@ const AmountContextProvider = ({children}) => {
                 sum+=Number(elt.amount)
             }
                 })
-                setEinkommen(sum);
+                setEinkommen(sum);}
     }, [finance]);
 
     useEffect(() => {
+        if(currentUser!==null){  
         let sum=0;
         finance.forEach((elt)=>{
             console.log(elt)
-            if(elt.category=='Lebensmittel'&&elt.user==currentUser.email||elt.category=='Shopping'&&elt.user==currentUser.email||elt.category=='Wohnen'&&elt.user==currentUser.email||elt.category=='Mobilität'&&elt.user==currentUser.email||elt.category=='Freizeit'&&elt.user==currentUser.email||elt.category=='Restaurant'&&elt.user==currentUser.email||elt.category=='Versicherungen'&&elt.user==currentUser.email){
+            if(elt.category=='Lebensmittel'&&elt.user==currentUser.email||
+            elt.category=='Shopping'&&elt.user==currentUser.email||
+            elt.category=='Wohnen'&&elt.user==currentUser.email||
+            elt.category=='Mobilität'&&elt.user==currentUser.email||
+            elt.category=='Freizeit'&&elt.user==currentUser.email||
+            elt.category=='Restaurant'&&elt.user==currentUser.email||elt.category=='Versicherungen'&&elt.user==currentUser.email){
                 sum+=Number(elt.amount)
             }
                 })
-                setAusgaben(sum);
+                setAusgaben(sum);}
     }, [finance]);
 
     useEffect(() => {
+        if(currentUser!==null){  
         let sum=0;
         finance.forEach((elt)=>{
             console.log(elt)
@@ -69,10 +77,11 @@ const AmountContextProvider = ({children}) => {
                 sum+=Number(elt.amount)
             }
                 })
-                setSparen(sum);
+                setSparen(sum);}
     }, [finance]);
 
     useEffect(() => {
+        if(currentUser!==null){  
         let sum=0;
         finance.forEach((elt)=>{
             console.log(elt)
@@ -80,10 +89,11 @@ const AmountContextProvider = ({children}) => {
                 sum+=Number(elt.amount)
             }
                 })
-                setSonstiges(sum);
+                setSonstiges(sum);}
     }, [finance]);
 
     useEffect(() => {
+        if(currentUser!==null){  
         let sum1=0,sum2=0,sum3=0,sum4=0,sum5=0,sum6=0,sum7=0,sum8=0,sum9=0,sum10=0,sum11=0;
         finance.forEach((elt)=>{ //Notiz an Erik( mich selbst) es wäre viel kürzer mit Switch Case c(^:
             console.log(elt)
@@ -144,9 +154,9 @@ const AmountContextProvider = ({children}) => {
                 setGeldanlage(sum10)
                 setSonstigesSparen(sum11)
 
-               
+            }           
     }, [finance]);
-        
+       
 
     return ( 
         <AmountContext.Provider value={{einkommen,setEinkommen,ausgaben,setAusgaben,sparen,setSparen,sonstiges,setSonstiges,gehalt,sonstigeEinnahmen,lebensmittel,shopping,wohnen,mobilitaet,freizeit,restaurant,versicherung,geldanlage,sonstigesSparen}}>

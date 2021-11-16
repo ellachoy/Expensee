@@ -47,8 +47,10 @@ const [newDate, setNewDate] = useState("")
 const[openModal,setOpenModal]=useState(false)
 const financeCollectionRef = collection(db, "finance")
 const { currentUser } = useAuth()
+let timestamp = Date.now(); // The Date.now() method returns the number of milliseconds elapsed since 1 January 1970 00:00:00 UTC.
+//Because now() is a static method of Date, you always use it as Date.now().
 const createFinance = async () => {
-    await addDoc(financeCollectionRef, {amount: newAmount, category: newCategory, date: newDate, description: newDescription, user: currentUser.email});
+    await addDoc(financeCollectionRef, {amount: newAmount, category: newCategory, date: newDate, description: newDescription, user: currentUser.email ,itemTimestamp: timestamp});
 }
 //diese Funktion fasst zwei Funktionen zusammen , sodass man 2 Funktionen onClick verwenden kann 
 const onClickCollect=()=>{ 
