@@ -11,7 +11,8 @@ import { db } from "../../Service/firebase"
 import { collection, addDoc } from "firebase/firestore"
 import successImg from '../../img/sucess.png'
 import lineImg from '../../img/line.png'
-// import errorImg from '../../img/'
+import { useAuth } from '../../contexts/AuthContext'
+import errorImg from '../../img/error.png'
 const Add = () => {
   //Diese Funktionen setzen das richtige Bild auf gelb onload
   const{setHomeIsActive,setAddIsActive,setChartsIsActive}=useContext(FooterContext)
@@ -46,9 +47,9 @@ const [newAmount, setNewAmount] = useState(0)
 const [newDate, setNewDate] = useState("")
 const[openModal,setOpenModal]=useState(false)
 const financeCollectionRef = collection(db, "finance")
-
+const { currentUser } = useAuth()
 const createFinance = async () => {
-    await addDoc(financeCollectionRef, {amount: newAmount, category: newCategory, date: newDate, description: newDescription});
+    await addDoc(financeCollectionRef, {amount: newAmount, category: newCategory, date: newDate, description: newDescription, user: currentUser.email});
 }
 //diese Funktion fasst zwei Funktionen zusammen , sodass man 2 Funktionen onClick verwenden kann 
 const onClickCollect=()=>{ 
@@ -112,6 +113,7 @@ const onClickCollect=()=>{
                   setNewDate(event.target.value)}}
                 required
               />{' '}
+
           
           <button 
               onClick={onClickCollect} 
@@ -119,7 +121,7 @@ const onClickCollect=()=>{
             </div>
         
           <div className="Modalbg"  onClick={()=>setOpenModal(false)}  style={{width: openModal?'100vw':'0vw'}}>
-              <div id="ModalPopUp" style={{display: openModal?'block':'none'}}>
+               <div id="ModalPopUp" style={{display: openModal?'block':'none'}}>
                     <img  id="sucessImg" src={successImg } alt="success" />
                     <h3>Erfolgreich <br/> eingetragen!</h3>
                     <span className="circle1"></span>
@@ -147,9 +149,18 @@ const onClickCollect=()=>{
                         </p>
                     </section>
                  
-              </div>
+              </div> 
+              {/* <div id="errorPopUp" style={{display: openModal?'block':'none'}}>
+                <img  id ="errorImg" src={errorImg} alt="errorImg" />
+               <h3> </h3>
+                <span className="circle1"></span>
+                    <img id= "line"  src={lineImg}alt="line" />
+                    <span className="circle2"></span>
+                    <h3 id="errortitle">Error</h3>
+                    <h4>Bitte Füllen Sie alle Felder aus!</h4>
+                </div> */}
            </div>
-           
+            
         </section>
        
       </main>

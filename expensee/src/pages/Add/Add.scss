@@ -71,7 +71,8 @@
   top: 0;
   left: 0;
   z-index: 999;
-  #ModalPopUp {
+  #ModalPopUp,
+  #errorPopUp {
     margin: 0 0 0 20px;
     color: #fff;
     width: 330px;
@@ -179,3 +180,38 @@
 }
 
 // ===================MDOAL=================
+#errorPopUp {
+  text-align: center;
+  background-color: #2b2d5b;
+  height: 380px;
+  width: 300px;
+  border-radius: 10px;
+
+  #errorImg {
+    position: relative;
+    top: 25px;
+    width: 35%;
+    height: 15vh;
+    animation: scale 1s ease-in-out alternate;
+    margin-bottom: 2%;
+  }
+  @keyframes scale {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  #errortitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    position: relative;
+    top: -100px;
+    margin-bottom: 2%;
+  }
+  h4 {
+    position: relative;
+    top: -100px;
+  }
+}
