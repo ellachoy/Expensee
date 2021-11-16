@@ -2,12 +2,12 @@ import { onSnapshot, collection } from '@firebase/firestore';
 import { useEffect, useState } from 'react'
 import { db } from '../../Service/firebase'
 import TransaktionItem from './TransaktionItem'
-
+import { useAuth } from '../../contexts/AuthContext'
 
 export default function TransaktionDB() {
     const [finance, setFinance] = useState([])
     const[showItems,setShowItems] = useState(7)
-
+    const { currentUser } = useAuth()
     // console.log(finance)
     useEffect(
         () => 
@@ -23,12 +23,12 @@ export default function TransaktionDB() {
             <h3 className="transaktionTitle">Letzten Transaktionen</h3>
             <p onClick={()=>setShowItems(finance.length)}>Show full</p>
             </div> 
-            {finance.slice(0,showItems).map((elt) => (
+            {finance.map((elt) => ( elt.user===currentUser.email?
                 <TransaktionItem  key={elt.id} 
                 income={elt.category=='Gehalt'||elt.category=='Sonstige Einnahmen'? true:false} 
                 description={elt.description} 
                 date={`${elt.date.slice(8,10)}.${elt.date.slice(5,7)}.${elt.date.slice(0,4)}  ${elt.date.slice(11,16)}`} 
-                value={elt.category=='Gehalt'||elt.category=='Sonstige Einnahmen'?elt.amount:`-${elt.amount}`}/>
+                value={elt.category=='Gehalt'||elt.category=='Sonstige Einnahmen'?elt.amount:`-${elt.amount}`}/>:null
             ))}
             <div className="button" onClick={()=>setShowItems(showItems+7)}> 
             MEHR TRANSAKTIONEN
