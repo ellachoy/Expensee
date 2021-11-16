@@ -150,7 +150,10 @@ const onClickCollect=()=>{
                     </section>
                  
               </div> 
-              {/* <div id="errorPopUp" style={{display: openModal?'block':'none'}}>
+              
+           </div>
+           <div className="Modalbg"  onClick={()=>setOpenModal(true)}  style={{width: openModal?'100vw':'0vw'}}>
+             <div id="errorPopUp" style={{display:'block'}}>
                 <img  id ="errorImg" src={errorImg} alt="errorImg" />
                <h3> </h3>
                 <span className="circle1"></span>
@@ -158,9 +161,8 @@ const onClickCollect=()=>{
                     <span className="circle2"></span>
                     <h3 id="errortitle">Error</h3>
                     <h4>Bitte Füllen Sie alle Felder aus!</h4>
-                </div> */}
-           </div>
-            
+                </div>
+                </div>
         </section>
        
       </main>
