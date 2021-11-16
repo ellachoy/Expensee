@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
 import "./EmailButton.scss";
+
+import "./Login/config/firebase_config.js";
+import "./Login/login.js";
+import "./Login/register.js";
+
+
+
+
 const EmailButton = () => {
     return (
 
