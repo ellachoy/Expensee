@@ -157,7 +157,7 @@ const onClickCollect=()=>{
                         <article>
                         <p className="categorie">
                           <span id="opacity">Kategorie</span>
-                            <br /> <span id="showDc">{newDescription}</span>
+                            <br /> <span id="showDc">{newCategory}</span>
                         </p>
                         </article>
                         <article>
