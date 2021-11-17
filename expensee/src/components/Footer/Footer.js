@@ -10,7 +10,7 @@ import chart from '../../img/charts.png'
 import chartActive from '../../img/chart_active.png'
 import backgroundNav from '../../img/background_nav.png'
 import { FooterContext } from '../../contexts/FooterContext'
-import Bg from '../../img/background.png'
+import Bg from '../../img/Symbol2.png'
 
 
 const Footer = () => {
