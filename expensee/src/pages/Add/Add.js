@@ -61,7 +61,7 @@ const createFinance = async () => {
 
 //diese Funktion fasst drei Funktionen zusammen , sodass man 2 Funktionen onClick verwenden kann 
 const onClickCollect=()=>{ 
-  if(newAmount===0||newDate===''||newCategory===''||newDescription===''){ 
+  if(newAmount===0||newDate===''||newCategory===''||newDescription===''||newCategory==='Kategorie'){ 
     // wenn einer der 4 states null oder '' ist , dann soll er den Error zeigen
     setOpenError(true)
   }
