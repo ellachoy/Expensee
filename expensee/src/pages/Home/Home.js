@@ -21,7 +21,7 @@ const Home = () => {
     return (  
         <div className="Home">
             <Header title="Übersicht"/>
-            <TransaktionContainer/>
+            <TransaktionContainer />
             <FooterOhne/>
         </div>
     );

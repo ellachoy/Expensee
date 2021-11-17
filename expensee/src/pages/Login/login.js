@@ -2,6 +2,7 @@ import "./login.scss";
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext'
+import backImg from '../../img/background.png'
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -16,10 +17,11 @@ const handleSubmit = (e) => {
     
 }
 
+
     return (
         <div className="mail" >
             <h3 className="LoginH3">Willkommen bei</h3>
-            <h1>Expensee</h1>
+            <h1 className="LoginH1">Expensee</h1>
             <form className="loginMail" action="">
                 <input 
                     type="email" 
@@ -35,7 +37,7 @@ const handleSubmit = (e) => {
                     /><br />
                 <div className="reg">Noch nicht registriert? <Link to="/register"><div>Sign Up</div></Link></div>
 
-                <button type="submit" onClick={handleSubmit}>Login</button>
+                <button className="subB" type="submit" onClick={handleSubmit}>Login</button>
                 <p>oder Login mit</p>
                     <div className="buttons">
                         <div className="container">
@@ -61,6 +63,9 @@ const handleSubmit = (e) => {
                         </div>
                     </div>
             </form>
+            <div className="backGcont">
+                <img className="backG" src={backImg} alt="" />
+            </div>
         </div>
     );
 }

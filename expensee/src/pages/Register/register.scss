@@ -1,23 +1,28 @@
 *:focus {
     outline: 0;
   }
-.registerh3{
-    color:#ffffff;
-    font-size:1em;
-    text-align: center;
-    font-weight:500;
-    padding-top: 30%;
-}
+
 .registerh1{
     color:#ffffff;
     font-size:4em;
     text-align:center;
+    font-weight:500;
+    margin-top: 18.5%;
+    padding-bottom: 4%;
+}
+.registerh3{
+    color:#ffffff;
+    font-size:1em;
+    text-align: center;
     font-weight:500;
 }
 
 .regis {
     padding: 10%;
     .registerMail {
+        .conti{
+            margin-bottom: 7.5%;
+        }
         input,
         button {
             width: 100%;
@@ -43,15 +48,15 @@
             }
         }
         .signUpB{
-            display: flex;
             margin-top: 10%;
             background: #2b2d5b;
             box-shadow: 3px 3px 6px 2px #141627;
-            margin-top: 25%;
+            margin-top: 20%;
             font-size: 1em;
             position: relative;
             z-index: 999;
             padding-left: 0px;
+            text-align: center;
         }
     }
 
@@ -59,4 +64,11 @@
         color: rgba(255, 255, 255, 0.767);
         font-size: 1.2em;
     }
+}
+
+.backGcont{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    z-index: 999;
 }
