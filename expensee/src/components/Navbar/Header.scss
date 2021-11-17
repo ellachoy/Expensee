@@ -7,6 +7,9 @@
     z-index:5;
     background:#2B2D5B;
     filter: drop-shadow(0 -2mm 2mm #141529);
+    @media(min-width:800px)and(max-width:3400px){
+        
+    }
     
     // z-index:3;
     display:flex; //Um die Buttons zu platzieren 
@@ -63,11 +66,14 @@
     display:flex;
     align-items:center;
     z-index:5;
+    @media(min-width:800px)and(max-width:3400px){
+        
+    }
     .headerTitle{
         color:white;
         font-weight:400;
         font-size:1.2em;
-        @media(min-width:800px)and(max-wgidth:3400px){
+        @media(min-width:800px)and(max-width:3400px){
             margin-left:36vw;
         }
     }
