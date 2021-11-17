@@ -3,18 +3,14 @@
 }
 .wallet {
   padding: 10%;
-  @media (min-width:1440px){
-       
-  }
 
   h1 {
     font-weight: 400;
     font-size: 2rem;
     padding: 5% 0;
     text-align: start;
-    @media (min-width:1440px){
+    @media(min-width:1440px){
       text-align: center;
-      font-size: 4rem; 
     }
   }
   .add-form {
@@ -27,39 +23,28 @@
       border-style: none;
       margin-top: 12%;
       color: #fff;
-
-      @media (min-width:1440px){
-        width: 60%;
-        padding: 0 1%;
-        margin-left: 20%;
-      }
-
       border-radius: 5px;
       padding-left: 5%;
+      @media(min-width:1440px){
+        margin-top: 9%;
+      }
     }
+    
+    }
+    
     select:focus,
     input:focus,
     button:focus {
       outline: none;
     }
-    input {
-      width: 95%;
-
-    }
+  
     button {
       background: #2b2d5b;
       box-shadow: 3px 3px 6px 2px #141627;
       margin-top: 25%;
       font-size: 1em;
-
-      @media(min-width:1440px){
-        margin-top: 7%;
-        margin-left:21%;
-      }
-
       position: relative;
       z-index: 999;
-
     }
     input[type='datetime-local'] {
       color: rgb(95, 95, 130);
@@ -75,6 +60,7 @@
       color: rgb(95, 95, 130);
       font-size: 1em;
       padding-left: 20px;
+    
     }
   }
 
@@ -83,7 +69,7 @@
     font-size: 1.2em;
     padding-left: 10px;
   }
-}
+
 // ===================MDOAL=================
 .Modalbg {
   width: 100%;
@@ -104,10 +90,19 @@
     border-radius: 10px;
     position: absolute;
     top: 150px;
+    @media(min-width:1440px){
+      top:220px;
+      left:250px;
+      width: 930px;
+      height: 950px;
+    }
     #sucessImg {
       position: relative;
       top: -30px;
       animation: magic 1s ease-in-out alternate;
+      @media(min-width:1440px){
+        width: 100px;
+      }
     }
     @keyframes magic {
       from {
@@ -123,6 +118,9 @@
     #line {
       position: relative;
       top: -88px;
+      @media(min-width:1440px){
+        top:-70px;
+      }
     }
     .circle1 {
       position: absolute;
@@ -150,6 +148,10 @@
       position: relative;
       top: -100px;
       margin-bottom: 2%;
+      @media(min-width:1440px){
+        top: -40px;
+        font-size: 2rem;
+      }
     }
     .infoContainer {
       padding: 0 7%;
@@ -161,6 +163,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media(min-width:1440px){
+          font-size: 2.5rem;
+        }
       }
       #mLeft {
         margin-right: 100px;
@@ -172,6 +177,11 @@
         position: absolute;
         left: 22px;
         top: 150px;
+        @media(min-width:1440px){
+          top:500px;
+          left:65px;
+          font-size: 2rem;
+        }
       }
       .price::after {
         content: ' €';
@@ -189,10 +199,18 @@
         font-size: 1.3rem;
         color: #fff;
         margin-left: -80px;
+        @media(min-width:1440px){
+          font-size: 2rem;
+        }
       }
       .categorie {
         position: absolute;
         left: 20px;
+        @media(min-width:1440px){
+          top:250px;
+          left:65px;
+          font-size: 2rem;
+        }
         #cat {
           margin-left: 1px;
         }
