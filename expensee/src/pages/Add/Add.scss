@@ -3,6 +3,7 @@
 }
 .wallet {
   padding: 10%;
+  color: #ffffff;
 
   h1 {
     font-weight: 400;
@@ -22,7 +23,7 @@
       background-color: #232450;
       border-style: none;
       margin-top: 12%;
-      color: #fff;
+      color: #ffffff;
       border-radius: 5px;
       padding-left: 5%;
       @media(min-width:1440px){
@@ -47,27 +48,25 @@
       z-index: 999;
     }
     input[type='datetime-local'] {
-      color: rgb(95, 95, 130);
-      padding-left: 20px;
-      width: 93%;
+      padding: 0 13px 0 20px;
+      width: 90%;
     }
     input[type='datetime-local']::-webkit-calendar-picker-indicator {
       cursor: pointer;
-      color: rgb(95, 95, 130);
-      filter: invert(0.4);
+      filter: invert(0.9);
     }
     select {
-      color: rgb(95, 95, 130);
       font-size: 1em;
       padding-left: 20px;
-    
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
     }
   }
 
   ::placeholder {
-    color: rgb(95, 95, 130);
     font-size: 1.2em;
-    padding-left: 10px;
+    color: #ffffff;
   }
 
 // ===================MDOAL=================
@@ -142,19 +141,34 @@
       transform: rotate(-90deg);
       right: -5px;
     }
-    h3 {
+    #message {
       font-size: 1.5rem;
       font-weight: 300;
       position: relative;
-      top: -100px;
+      top: 0px;
       margin-bottom: 2%;
       @media(min-width:1440px){
         top: -40px;
         font-size: 2rem;
       }
     }
-    .infoContainer {
-      padding: 0 7%;
+  }
+  .infoContainer {
+    padding: 0 10%;
+    text-align: left;
+    position: relative;
+    top: 0px;
+    font-size: 1.2rem;
+
+    article {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    p {
+      width: 30%;
+      font-weight: 400;
+      display: block;
       text-align: left;
       position: relative;
       top: -100px;
@@ -219,7 +233,7 @@
   }
 }
 
-// ===================MDOAL=================
+// ===================MDOALError=================
 #errorPopUp {
   text-align: center;
   background-color: #2b2d5b;
@@ -247,11 +261,12 @@
     font-size: 1.5rem;
     font-weight: 400;
     position: relative;
-    top: -100px;
+    top: 70px;
+    
     margin-bottom: 2%;
   }
   h4 {
     position: relative;
-    top: -100px;
+    top: 90px;
   }
 }

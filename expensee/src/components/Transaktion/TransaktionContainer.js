@@ -16,7 +16,8 @@ export default function TransaktionDB() {
                 setFinance(snapshot.docs.map((doc) => doc.data()))
             ),
         []
-    );   
+    );  
+    //Sortier Funktion
     function compare( a, b ) {
         if ( a.itemTimestamp > b.itemTimestamp ){
           return -1;
@@ -33,13 +34,16 @@ export default function TransaktionDB() {
             <h3 className="transaktionTitle">Letzten Transaktionen</h3>
             <p onClick={()=>setShowItems(finance.length)}>Show full</p>
             </div> 
-            {finance.slice(0,showItems).map((elt) => (elt.user===currentUser.email&&counter<showItems?
+            {finance.map((elt) => (elt.user===currentUser.email&&counter<showItems?
                 <TransaktionItem  key={elt.id} 
                 income={elt.category=='Gehalt'||elt.category=='Sonstige Einnahmen'? true:false} 
                 description={elt.description} 
                 date={`${elt.date.slice(8,10)}.${elt.date.slice(5,7)}.${elt.date.slice(0,4)}  ${elt.date.slice(11,16)}`} 
                 value={elt.category=='Gehalt'||elt.category=='Sonstige Einnahmen'?elt.amount:`-${elt.amount}`}/>:null
             ))}
+            {/* {finance.map((elt) => (elt.user===currentUser&&counter<=showItems+1?
+            setCounter(counter+1):null
+            ))} */}
             <div className="button" onClick={()=>setShowItems(showItems+7)}> 
             MEHR TRANSAKTIONEN
             </div>

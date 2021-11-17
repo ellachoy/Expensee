@@ -48,7 +48,7 @@ const AmountContextProvider = ({children}) => {
                 sum+=Number(elt.amount)
             }
                 })
-                setEinkommen(sum);}
+                setEinkommen(sum.toFixed(2));}
     }, [finance]);
 
     useEffect(() => {
@@ -65,7 +65,7 @@ const AmountContextProvider = ({children}) => {
                 sum+=Number(elt.amount)
             }
                 })
-                setAusgaben(sum);}
+                setAusgaben(sum.toFixed(2));}
     }, [finance]);
 
     useEffect(() => {
@@ -77,7 +77,7 @@ const AmountContextProvider = ({children}) => {
                 sum+=Number(elt.amount)
             }
                 })
-                setSparen(sum);}
+                setSparen(sum.toFixed(2));}
     }, [finance]);
 
     useEffect(() => {
@@ -89,7 +89,7 @@ const AmountContextProvider = ({children}) => {
                 sum+=Number(elt.amount)
             }
                 })
-                setSonstiges(sum);}
+                setSonstiges(sum.toFixed(2));}
     }, [finance]);
 
     useEffect(() => {
@@ -142,17 +142,17 @@ const AmountContextProvider = ({children}) => {
             }
            
                 })
-                setGehalt(sum1)
-                setRestaurant(sum2)
-                setSonstigeEinnahmen(sum3)
-                setLebensmittel(sum4)
-                setShopping(sum5)
-                setWohnen(sum6)
-                setMobilitaet(sum7)
-                setFreizeit(sum8)
-                setVersicherung(sum9)
-                setGeldanlage(sum10)
-                setSonstigesSparen(sum11)
+                setGehalt(sum1.toFixed(2))
+                setRestaurant(sum2.toFixed(2))
+                setSonstigeEinnahmen(sum3.toFixed(2))
+                setLebensmittel(sum4.toFixed(2))
+                setShopping(sum5.toFixed(2))
+                setWohnen(sum6.toFixed(2))
+                setMobilitaet(sum7.toFixed(2))
+                setFreizeit(sum8.toFixed(2))
+                setVersicherung(sum9.toFixed(2))
+                setGeldanlage(sum10.toFixed(2))
+                setSonstigesSparen(sum11.toFixed(2))
 
             }           
     }, [finance]);

@@ -17,7 +17,7 @@ const Footer = () => {
     const{homeIsActive,setHomeIsActive,addIsActive,setAddIsActive,chartsIsActive,setChartsIsActive}=useContext(FooterContext)
   return (
     <footer className="footer">
-      <img src={Bg} id="footerBg" alt="" />
+      <img id="footerBg" src={Bg}  alt="" />
 
       <img src={backgroundNav} className="nav-Bg" alt="bBg" />
 

@@ -8,7 +8,7 @@ export const optionData =[
 ];
 
 export const descriptionData=[
-
+    'Kategorie',
     'Gehalt',
     'Sonstige Einnahmen',
     //Einkommen
