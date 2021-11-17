@@ -19,8 +19,8 @@ const Register = () => {
 
     return (
         <div className="regis" >
-            <h1>Expensee</h1>
-            <h3>Account erstellen</h3>
+            <h1 className="registerh1">Expensee</h1>
+            <h3 className="registerh3">Account erstellen</h3>
             <form className="registerMail" onSubmit={handleSubmit}>
                 <input 
                     type="email" 
