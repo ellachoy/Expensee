@@ -125,37 +125,39 @@ const onClickCollect=()=>{
           <div className="Modalbg"  onClick={()=>setOpenModal(false)}  style={{width: openModal?'100vw':'0vw'}}>
                <div id="ModalPopUp" style={{display: openModal?'block':'none'}}>
                     <img  id="sucessImg" src={successImg } alt="success" />
-                    <h3>Erfolgreich <br/> eingetragen!</h3>
+                    <h3 id="message">Erfolgreich <br/> eingetragen!</h3>
                     <span className="circle1"></span>
                     <img id= "line"  src={lineImg}alt="line" />
                     <span className="circle2"></span>
                     <section className="infoContainer">
                         <article>
                           <p>
-                          <span id="mLeft">Datum </span>
+                          <span id="opacity">Datum </span>
                           <br />  <span id="showDt">{`${newDate.slice(8,10)}.${newDate.slice(5,7)}.${newDate.slice(0,4)}`}</span>
                           </p>
                           <p>
-                            <span>Zeit</span>
+                            <span id="opacity">Zeit</span>
                             <br />{time}
                           </p>
                           
                         </article>
+                        <article>
                         <p className="categorie">
-                          <span id="cat">Kategorie</span>
+                          <span id="opacity">Kategorie</span>
                             <br /> <span id="showDc">{newDescription}</span>
                         </p>
+                        </article>
+                        <article>
                         <p className="price">
-                          <span id="mLeft">Summe</span>
+                          <span id="opacity">Summe</span>
                             <br /> <span id="showBig">{newAmount}</span> 
                         </p>
+                        </article>
                     </section>
+                    
                  
               </div> 
-              
-           </div>
-           {/* <div className="Modalbg"  onClick={()=>setOpenModal(true)}  style={{width: openModal?'100vw':'0vw'}}>
-             <div id="errorPopUp" style={{display:'block'}}>
+              {/* <div id="errorPopUp" style={{display: openModal?'block':'none'}}>
                 <img  id ="errorImg" src={errorImg} alt="errorImg" />
                <h3> </h3>
                 <span className="circle1"></span>
@@ -163,8 +165,9 @@ const onClickCollect=()=>{
                     <span className="circle2"></span>
                     <h3 id="errortitle">Error</h3>
                     <h4>Bitte Füllen Sie alle Felder aus!</h4>
-                </div>
-                </div> */}
+              </div> */}
+           </div>
+          
         </section>
        
       </main>
