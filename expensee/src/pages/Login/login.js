@@ -10,7 +10,7 @@ const { login, signInWithGoogle, signInWithTwitter, signInWithGitHub, currentUse
 
     return (
         <div className="mail" >
-            <h3>Willkommen bei</h3>
+            <h3 className="loginHeadline">Willkommen bei</h3>
             <h1>Expensee</h1>
             <form className="loginMail" action="">
                 <input type="email" name="email" id="" placeholder="Email"/><br />

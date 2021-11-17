@@ -9,7 +9,6 @@ const { login, signInWithGoogle, signInWithTwitter, signInWithGitHub, currentUse
 
     return (
         <div className="mail" >
-            <h3>  </h3>
             <h1>Expensee</h1>
             <h3>Account erstellen</h3>
             <form className="loginMail" action="">
