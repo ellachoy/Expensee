@@ -24,6 +24,7 @@ const App = () => {
 
     
   return (
+      
       <div className="collapsContainer">
     <section className="Einkommen">
     <Collapsible trigger={`Einkommen: ${einkommen} €`}>

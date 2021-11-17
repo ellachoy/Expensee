@@ -29,7 +29,9 @@ p{
     text-align: center;
     font-weight:500;
     padding-top: 15%;
-    @media(min-width:800px) and (max-width:1920px){
+    @media(min-width:1440px){
+        margin-top:-10%;
+        margin-left: 3%;
         
     }
 }
@@ -47,6 +49,12 @@ p{
             color: #fff;
             border-radius: 5px;
             padding-left: 15px;
+            @media(min-width:1440px){
+                width: 60%; 
+                margin-left:21%;
+                margin-top: 10%;
+                
+            }
         }
         .subB {
             margin-top: 20%;
@@ -68,7 +76,7 @@ p{
             display: flex;
             @media(min-width:800px) and (max-width:1920px){
                 margin-left:34vw;
-                margin-top: 5vh;
+                margin-top: 2vh;
                 
             }
             div{
@@ -90,6 +98,10 @@ p{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                @media(min-width:1440px){
+                    margin-top: 4%;
+                    margin-left: 4%;
+                }
             }
                 .buttonG {
                     background-image: url('../../img/google.png');
