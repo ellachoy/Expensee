@@ -167,7 +167,7 @@ const onClickCollect=()=>{
        
       </main>
       <Footer/>
-</>
+    </>
   );
 }
 
