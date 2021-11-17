@@ -10,7 +10,7 @@ const DoughnutChart = () => {
   return (
     <div className='chart'>
         <div className="konto"> 
-        {(einkommen-ausgaben-sparen-sonstiges).toFixed(2)+'€'}
+        {(einkommen-ausgaben-sparen-sonstiges).toFixed(0)+'€'}
              
         </div>
       <div className='chartText'>
