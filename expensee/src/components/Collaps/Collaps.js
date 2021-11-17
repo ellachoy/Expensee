@@ -11,7 +11,7 @@ const App = () => {
     const [finance, setFinance] = useState([])
     const{einkommen,ausgaben,sparen,sonstiges,gehalt,sonstigeEinnahmen,lebensmittel,shopping,wohnen,mobilitaet,freizeit,restaurant,versicherung,geldanlage,sonstigesSparen}=useContext(AmountContext)
 
-    console.log(finance)
+    // console.log(finance)
     useEffect(
         () => 
             onSnapshot(collection(db, "finance"),(snapshot) => 
@@ -20,6 +20,8 @@ const App = () => {
 
         []
     );
+
+
     
   return (
       <div className="collapsContainer">

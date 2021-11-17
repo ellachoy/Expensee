@@ -1,35 +1,54 @@
 import './App.scss';
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import Home from './pages/Home/Home.js';
 import Add from'./pages/Add/Add.js';
 import Charts from './pages/Charts/Charts.js';
+import Login from './pages/Login/login';
+import Register from './pages/Register/register';
 import {
-  BrowserRouter as Router,
+  BrowserRouter as 
+  Router,
   Routes,
   Route,
-  Navigate,
 } from "react-router-dom";
-import Login from './pages/Login/login';
 import { useAuth } from './contexts/AuthContext'
-import { useAuthContext } from './hooks/useAuthContext'
 
 export default function App() {
-  const { currentUser } = useAuth()
+const { currentUser, appIsReady } = useAuth()
+console.log(currentUser)
+return (
+  <Router>
+    {appIsReady && (
+    <div>   
+      <Routes>
 
-    return (
-      <Router>
-        <div>   
-          <Routes>
-            <Route exact path="/" element={<Login/>}/>
-            <Route exact path="/" element={<Charts/>}/>
-            <Route exact path="/charts" element={<Home/>}/>
-            <Route exact path="/home" element={<Charts/>}/>
-            <Route exact path="/add" element={<Add/>}/>
-          </Routes>
-        </div>
-      </Router>
-    );
+          {currentUser && <Route exact path="/" element={<Charts/>}/>}
+          {!currentUser && <Route exact path="/" element={<Login/>}/>}
+          
+          {currentUser && <Route exact path="/home" element={<Charts/>}/>}
+          {!currentUser && <Route exact path="/home" element={<Login/>}/>}
 
-  }
+          {currentUser && <Route exact path="/register" element={<Charts/>}/>}
+          {!currentUser && <Route exact path="/register" element={<Register/>}/>}
+
+          {currentUser && <Route exact path="/charts" element={<Home/>}/>}
+          {!currentUser && <Route exact path="/charts" element={<Login/>}/>}
+
+          {currentUser && <Route exact path="/add" element={<Add/>}/>}
+          {!currentUser && <Route exact path="/add" element={<Login/>}/>}
+
+      </Routes>
+    </div>
+    )}
+  </Router>
+);
+
+}
+
+
+
+
+
+
 
 

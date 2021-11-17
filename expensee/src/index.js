@@ -12,7 +12,7 @@ ReactDOM.render(
     <AuthContextProvider>
       <FooterContextProvider>
         <AmountContextProvider>
-        <App />
+            <App />
         </AmountContextProvider>
       </FooterContextProvider>
       </AuthContextProvider>

@@ -38,18 +38,14 @@ p{
     .loginMail {
         input,
         button {
-        width: 100%;
-        height: 55px;
-        padding: 0 1%;
-        background-color: #232450;
-        border-style: none;
-        margin-top: 12%;
-        color: #fff;
-        @media(min-width:800px) and (max-width:1920px){
-            width:50%;
-            margin-left:19vw;
-            text-align: center;
-        }
+            width: 100%;
+            height: 56px;
+            background-color: #232450;
+            border-style: none;
+            margin-top: 12%;
+            color: #fff;
+            border-radius: 5px;
+            padding-left: 15px;
         }
         .reg{
             margin: 2px 0 0 3px;
@@ -113,6 +109,5 @@ p{
     ::placeholder {
         color: rgba(255, 255, 255, 0.767);
         font-size: 1.2em;
-        padding-left: 15px;
     }
-  }
+}
