@@ -26,34 +26,34 @@ const App = () => {
   return (
       <div className="collapsContainer">
     <section className="Einkommen">
-    <Collapsible trigger={`Einkommen: ${einkommen.toFixed(2)} €`}>
-     <CollapsItem  description={'Gehalt'} value={gehalt.toFixed(2)}/>
-     <CollapsItem  description={'Sonstige Einnahmen'} value={sonstigeEinnahmen.toFixed(2)}/>
+    <Collapsible trigger={`Einkommen: ${einkommen} €`}>
+     <CollapsItem  description={'Gehalt'} value={gehalt}/>
+     <CollapsItem  description={'Sonstige Einnahmen'} value={sonstigeEinnahmen}/>
     </Collapsible>
 
     </section>
     <section className='Ausgaben'>
-    <Collapsible trigger={`Ausgaben: ${ausgaben.toFixed(2)} €`} className='Ausgaben'>
-     <CollapsItem  description={'Lebensmittel'} value={lebensmittel.toFixed(2)}/>
-     <CollapsItem  description={'Shopping'} value={shopping.toFixed(2)}/>
-     <CollapsItem  description={'Wohnen'} value={wohnen.toFixed(2)}/>
-     <CollapsItem  description={'Mobilität'} value={mobilitaet.toFixed(2)}/>
-     <CollapsItem  description={'Freizeit'} value={freizeit.toFixed(2)}/>
-     <CollapsItem  description={'Restaurant'} value={restaurant.toFixed(2)}/>
-     <CollapsItem  description={'Versicherung'} value={versicherung.toFixed(2)}/>
+    <Collapsible trigger={`Ausgaben: ${ausgaben} €`} className='Ausgaben'>
+     <CollapsItem  description={'Lebensmittel'} value={lebensmittel}/>
+     <CollapsItem  description={'Shopping'} value={shopping}/>
+     <CollapsItem  description={'Wohnen'} value={wohnen}/>
+     <CollapsItem  description={'Mobilität'} value={mobilitaet}/>
+     <CollapsItem  description={'Freizeit'} value={freizeit}/>
+     <CollapsItem  description={'Restaurant'} value={restaurant}/>
+     <CollapsItem  description={'Versicherung'} value={versicherung}/>
     </Collapsible>
     </section>
 
     <section className='Sparen'>
-    <Collapsible trigger={`Sparen: ${sparen.toFixed(2)} €`} className='Sparen'>
-    <CollapsItem  description={'Geldanlage'} value={geldanlage.toFixed(2)}/>
-    <CollapsItem  description={'Sonstiges Sparen'} value={sonstigesSparen.toFixed(2)}/>
+    <Collapsible trigger={`Sparen: ${sparen} €`} className='Sparen'>
+    <CollapsItem  description={'Geldanlage'} value={geldanlage}/>
+    <CollapsItem  description={'Sonstiges Sparen'} value={sonstigesSparen}/>
     </Collapsible>
     </section>
 
     <section className='Sonstiges'>
-    <Collapsible trigger={`Sonstiges: ${sonstiges.toFixed(2)} €`} className='Sonstiges'>
-     <CollapsItem  description={'Sonstiges'} value={sonstiges.toFixed(2)}/>
+    <Collapsible trigger={`Sonstiges: ${sonstiges} €`} className='Sonstiges'>
+     <CollapsItem  description={'Sonstiges'} value={sonstiges}/>
     </Collapsible>
     </section>
       </div>
