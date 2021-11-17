@@ -1,5 +1,9 @@
 .chart{ 
     margin: 0 0 10% 0;
+    @media(min-width:800px)and(max-width:3400px){
+        margin:0% 0% 0% 35%;
+        width: 30vw;
+    }
    .konto{
        width:15vh;
        height:15vh;
@@ -14,5 +18,9 @@
        left:34%;
        z-index:-1;
        font-size:1.5em;
+       @media(min-width:800px)and(max-width:3400px){
+            top:18.5%;
+            left:45.5%;
+       }
    }
 }

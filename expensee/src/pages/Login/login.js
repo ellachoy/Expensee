@@ -18,7 +18,7 @@ const handleSubmit = (e) => {
 
     return (
         <div className="mail" >
-            <h3>Willkommen bei</h3>
+            <h3 className="LoginH3">Willkommen bei</h3>
             <h1>Expensee</h1>
             <form className="loginMail" action="">
                 <input 

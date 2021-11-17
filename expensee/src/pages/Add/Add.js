@@ -4,7 +4,7 @@ import { useState, useEffect  } from 'react';
 import Footer from '../../components/Footer/Footer';
 import './Add.scss';
 import shapeImg from '../../img/shape.png'
-import {optionData, descriptionData} from '../../data/Add.data'
+import {descriptionData} from '../../data/Add.data'
 import { FooterContext } from '../../contexts/FooterContext'
 import React ,{useContext} from 'react'
 import { db } from "../../Service/firebase"
@@ -19,7 +19,7 @@ const Add = () => {
   setAddIsActive(true)
   setHomeIsActive(false)
   setChartsIsActive(false)
-  //==========================================================
+  //=======================================================================================
   const [open, setOpen] = useState(false);
   const [data, setData] = useState('');
   const [inputs, setInputs] = useState({
@@ -28,7 +28,7 @@ const Add = () => {
     price: '',
     created_at: '',
   });
-  const [error, setError] = useState(null);
+  
   useEffect(() => {
     let close;
     if (open) {
@@ -39,26 +39,39 @@ const Add = () => {
     }
     return () => clearTimeout(close);
   }, [open]);
-  // ======================================
-// =========== FIREBASE ADD =============
+  // =========================================================
+// ================ FIREBASE ADD ===================
 const [newCategory, setNewCategory] = useState("")
 const [newDescription, setNewDescription] = useState("")
 const [newAmount, setNewAmount] = useState(0)
 const [newDate, setNewDate] = useState("")
 const[openModal,setOpenModal]=useState(false)
+const[openError,setOpenError]=useState(false)
 const financeCollectionRef = collection(db, "finance")
 const { currentUser } = useAuth()
-let timestamp = Date.now(); // The Date.now() method returns the number of milliseconds elapsed since 1 January 1970 00:00:00 UTC.
+
+
+let timestamp = Date.now(); 
+// The Date.now() method returns the number of milliseconds elapsed since 1 January 1970 00:00:00 UTC.
 //Because now() is a static method of Date, you always use it as Date.now().
 const createFinance = async () => {
     await addDoc(financeCollectionRef, {amount: newAmount, category: newCategory, date: newDate, description: newDescription, user: currentUser.email ,itemTimestamp: timestamp});
 }
-//diese Funktion fasst zwei Funktionen zusammen , sodass man 2 Funktionen onClick verwenden kann 
+
+
+//diese Funktion fasst drei Funktionen zusammen , sodass man 2 Funktionen onClick verwenden kann 
 const onClickCollect=()=>{ 
+  if(newAmount===0||newDate===''||newCategory===''||newDescription===''){ 
+    // wenn einer der 4 states null oder '' ist , dann soll er den Error zeigen
+    setOpenError(true)
+  }
+  else{ 
+    //sind alle befüllt , sollen die Daten in die Firebase gepusht werden und der SuccessModal gezeigt werden 
   createFinance();
   setOpenModal(true)
+  }
 }
-// ======================================
+// =========================================================
   let valueChoice = descriptionData.map((element) => {
     return (
       <option key={element} value={element}>
@@ -121,7 +134,7 @@ const onClickCollect=()=>{
               onClick={onClickCollect} 
               >Abschicken</button>
             </div>
-        
+          {/* =============================================================SUCCESSMODAL======================================================================== */}
           <div className="Modalbg"  onClick={()=>setOpenModal(false)}  style={{width: openModal?'100vw':'0vw'}}>
                <div id="ModalPopUp" style={{display: openModal?'block':'none'}}>
                     <img  id="sucessImg" src={successImg } alt="success" />
@@ -157,7 +170,11 @@ const onClickCollect=()=>{
                     
                  
               </div> 
-              {/* <div id="errorPopUp" style={{display: openModal?'block':'none'}}>
+              
+           </div>
+           {/* =============================================================ERRORMODAL======================================================================== */}
+           <div className="Modalbg"  onClick={()=>setOpenError(false)}  style={{width: openError?'100vw':'0vw'}}>
+             <div id="errorPopUp" style={{display: openError?'block':'none'}}>
                 <img  id ="errorImg" src={errorImg} alt="errorImg" />
                <h3> </h3>
                 <span className="circle1"></span>
@@ -165,9 +182,8 @@ const onClickCollect=()=>{
                     <span className="circle2"></span>
                     <h3 id="errortitle">Error</h3>
                     <h4>Bitte Füllen Sie alle Felder aus!</h4>
-              </div> */}
-           </div>
-          
+                </div>
+                </div>
         </section>
        
       </main>
