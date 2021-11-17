@@ -1,20 +1,43 @@
-import "./login.scss";
+import "./register.scss";
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext'
 
 const Register = () => {
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
 
-const { login, signInWithGoogle, signInWithTwitter, signInWithGitHub, currentUser } = useAuth()
+    const { register, currentUser } = useAuth()
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        //console.log(email, password)
+        register(email, password)
+        
+    }
+
 
     return (
-        <div className="mail" >
+        <div className="regis" >
             <h1>Expensee</h1>
             <h3>Account erstellen</h3>
-            <form className="loginMail" action="">
-                <input type="email" name="email" id="" placeholder="Email"/><br />
-                <input type="text" name="password" placeholder="Passwort"/><br />
-                <button></button>
+            <form className="registerMail" onSubmit={handleSubmit}>
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+                <br />
+                <input 
+                    type="password" 
+                    name="password" 
+                    placeholder="Passwort"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                /><br />
+                <button className="signUpB" type="submit">Sign Up</button>
             </form>
         </div>
     );
