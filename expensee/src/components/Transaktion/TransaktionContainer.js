@@ -7,6 +7,7 @@ import { useAuth } from '../../contexts/AuthContext'
 export default function TransaktionDB() {
     const [finance, setFinance] = useState([])
     const[showItems,setShowItems] = useState(7)
+    const[counter,setCounter] = useState(0)
     const { currentUser } = useAuth()
     // console.log(finance)
     useEffect(
@@ -15,15 +16,24 @@ export default function TransaktionDB() {
                 setFinance(snapshot.docs.map((doc) => doc.data()))
             ),
         []
-    );
-        
+    );   
+    function compare( a, b ) {
+        if ( a.itemTimestamp > b.itemTimestamp ){
+          return -1;
+        }
+        if ( a.itemTimestamp < b.itemTimestamp ){
+          return 1;
+        }
+        return 0;
+      }
+    finance.sort(compare)
     return (
         <div className="transaktionContainer">
                <div className="transaktionHeader">
             <h3 className="transaktionTitle">Letzten Transaktionen</h3>
             <p onClick={()=>setShowItems(finance.length)}>Show full</p>
             </div> 
-            {finance.map((elt) => ( elt.user===currentUser.email?
+            {finance.slice(0,showItems).map((elt) => (elt.user===currentUser.email&&counter<showItems?
                 <TransaktionItem  key={elt.id} 
                 income={elt.category=='Gehalt'||elt.category=='Sonstige Einnahmen'? true:false} 
                 description={elt.description} 

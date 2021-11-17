@@ -58,14 +58,6 @@ const Header = (props) => {
                         </p>
                 </div>
             </Link>
-            {/* {currentUser && (
-                <div className="logoutButton" >
-                <li onClick={onClickCollect}>
-                  Logout
-                </li>
-                </div>
-              )}
-            </div> */}
             {currentUser && (
                 <div className="addedButton"  onClick={onClickCollect}
                 style={{}}>
