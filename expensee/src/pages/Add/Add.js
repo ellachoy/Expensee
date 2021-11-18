@@ -13,6 +13,7 @@ import successImg from '../../img/sucess.png'
 import lineImg from '../../img/line.png'
 import { useAuth } from '../../contexts/AuthContext'
 import errorImg from '../../img/error.png'
+
 const Add = () => {
   //Diese Funktionen setzen das richtige Bild auf gelb onload
   const { setHomeIsActive, setAddIsActive, setChartsIsActive } = useContext(FooterContext)
