@@ -59,12 +59,12 @@ const Header = (props) => {
                 </div>
             </Link>
             {currentUser && (
-                <div className="addedButton"  onClick={onClickCollect}
+                <Link to="/" className="addedButton"  onClick={onClickCollect}
                 style={{}}>
                         <p className="sideText">
                             { isOpen ?'Logout':''}
                         </p>
-                </div>)}
+                </Link>)}
             
             
             </div>
