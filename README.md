@@ -1,7 +1,7 @@
 # FullstackAbschlussprojekt- Expensee
 https://expensees.netlify.app/
 
-Die App Expansee soll den Nutzern ermöglichen ihre Kosten im Überblick zu behalten! Diese App ist auf mobile ausgelegt.
+Die Mobile App Expansee ermöglichen, den Nutzern ihre Kosten im Überblick zu behalten!
 
 ##  Kurze Projektbeschreibung:
 Der Nutzer kann seine Ausgaben / Einnahmen ordnen und sich damit einen Überblick verschaffen, weshalb sein Konto am Ende des Monats immer so leer ist.
