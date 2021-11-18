@@ -5,6 +5,7 @@ import Add from'./pages/Add/Add.js';
 import Charts from './pages/Charts/Charts.js';
 import Login from './pages/Login/login';
 import Register from './pages/Register/register';
+import Welcome from './pages/Login/welcome'
 import {
   BrowserRouter as 
   Router,
@@ -22,13 +23,13 @@ return (
     <div>   
       <Routes>
 
-          {currentUser && <Route exact path="/" element={<Charts/>}/>}
+          {currentUser && <Route exact path="/" element={<Welcome/>}/>}
           {!currentUser && <Route exact path="/" element={<Login/>}/>}
           
           {currentUser && <Route exact path="/home" element={<Charts/>}/>}
           {!currentUser && <Route exact path="/home" element={<Login/>}/>}
 
-          {currentUser && <Route exact path="/register" element={<Charts/>}/>}
+          {currentUser && <Route exact path="/register" element={<Welcome/>}/>}
           {!currentUser && <Route exact path="/register" element={<Register/>}/>}
 
           {currentUser && <Route exact path="/charts" element={<Home/>}/>}

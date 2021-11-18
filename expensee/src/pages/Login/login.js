@@ -2,7 +2,8 @@ import "./login.scss";
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext'
-import backImg from '../../img/background.png'
+import Bg from '../../img/background.png'
+
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -19,17 +20,20 @@ const handleSubmit = (e) => {
 
 
     return (
+        <div>
         <div className="mail" >
             <h3 className="LoginH3">Willkommen bei</h3>
             <h1 className="LoginH1">Expensee</h1>
             <form className="loginMail" action="">
                 <input 
+                    className="infield"
                     type="email" 
                     name="email" 
                     placeholder="Email"
                     onChange={(e) => setEmail(e.target.value)}
                     /><br />
                 <input 
+                    className="infield"
                     type="password" 
                     name="password" 
                     placeholder="Passwort"
@@ -63,9 +67,10 @@ const handleSubmit = (e) => {
                         </div>
                     </div>
             </form>
-            <div className="backGcont">
-                <img className="backG" src={backImg} alt="" />
-            </div>
+        </div>
+        <div className="waveconti">
+            <img id="footerBg" src={Bg}  alt="" />
+        </div>
         </div>
     );
 }

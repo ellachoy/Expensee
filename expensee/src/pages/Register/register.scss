@@ -1,6 +1,6 @@
 *:focus {
     outline: 0;
-  }
+}
 
 .registerh1{
     color:#ffffff;
@@ -22,6 +22,9 @@
     .registerMail {
         .conti{
             margin-bottom: 7.5%;
+        }
+        .infield{
+            width: 95%;
         }
         input,
         button {
@@ -65,10 +68,17 @@
         font-size: 1.2em;
     }
 }
-
-.backGcont{
-    width: 200px;
-    height: 200px;
-    position: relative;
-    z-index: 999;
+.waveconti {
+    position: absolute;
+    bottom: 0;
+    position: fixed;
+    height: 7vh;
+    width: 100%;
+    #footerBg {
+        position: relative;
+        bottom: 245%;
+        z-index: 2;
+        right:20%;
+    }
 }
+

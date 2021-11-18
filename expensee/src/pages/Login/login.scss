@@ -39,6 +39,9 @@ p{
 .mail {
     padding: 10%;
     .loginMail {
+        .infield{
+            width: 95%;
+        }
         input,
         button {
             width: 100%;
@@ -95,6 +98,8 @@ p{
                 box-shadow: 3px 3px 6px 2px #141627;
                 background: #fff;
                 border-radius: 50%;
+                position: relative;
+                z-index: 4;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -107,6 +112,8 @@ p{
                     background-image: url('../../img/google.png');
                     background-size: cover;
                     background-position: center;
+                    position: relative;
+                    z-index: 5;
                     width: 45px;
                     height: 45px;
                     color: #fff;
@@ -115,6 +122,8 @@ p{
                     background-image: url('../../img/twitter.png');
                     background-size: cover;
                     background-position: center;
+                    position: relative;
+                    z-index: 5;
                     width: 45px;
                     height: 45px;
                     color: #fff;
@@ -123,6 +132,8 @@ p{
                     background-image: url('../../img/github.png');
                     background-size: cover;
                     background-position: center;
+                    position: relative;
+                    z-index: 5;
                     width: 50px;
                     height: 50px;
                     color: #fff;
@@ -135,9 +146,17 @@ p{
         font-size: 1.2em;
     }
 }
-.backGcont{
-    width: 200px;
-    height: 200px;
-    position: relative;
-    z-index: 999;
+
+.waveconti {
+    position: absolute;
+    bottom: 0;
+    position: fixed;
+    height: 7vh;
+    width: 100%;
+    #footerBg {
+        position: relative;
+        bottom: 245%;
+        z-index: 2;
+        right:20%;
+    }
 }

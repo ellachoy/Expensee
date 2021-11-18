@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext'
 import shapeImg from '../../img/shape.png'
-import backImg from '../../img/background.png'
+import Bg from '../../img/background.png'
 
 const Register = () => {
     const [email, setEmail] = useState("")
@@ -29,6 +29,7 @@ const Register = () => {
             <form className="registerMail" onSubmit={handleSubmit}>
                 <div className="conti">
                     <input 
+                        className="infield"
                         type="email" 
                         name="email" 
                         placeholder="Email"
@@ -37,6 +38,7 @@ const Register = () => {
                     />
                     <br />
                     <input 
+                        className="infield"
                         type="password" 
                         name="password" 
                         placeholder="Passwort"
@@ -46,9 +48,10 @@ const Register = () => {
                 </div>
                 <button className="signUpB" type="submit">Sign Up</button>
             </form>
-            <div className="backGcont">
-                <img className="backG" src={backImg} alt="" />
-            </div>
+
+            <div className="waveconti">
+                <img id="footerBg" src={Bg}  alt="" />
+        </div>
         </div>
 
     );
