@@ -21,20 +21,31 @@
         margin-bottom: 10%;
 
     }
-    .losg{
+    a{
+        display:flex;
+        justify-content: center;
+        margin: 22% 0 0 10%;
         width: 80%;
-        height: 56px;
-        background-color: #232450;
-        border-style: none;
-        margin-top: 12%;
-        color: #fff;
-        border-radius: 5px;
-        box-shadow: 3px 3px 6px 2px #141627;
-        font-size: 1em;
-        position: relative;
-        z-index: 999;
-        padding-left: 0px;
-        text-align: center;
+        &:active{
+            color: transparent;
+        }
+        .losg{
+            width: 100%;
+            height: 56px;
+            background-color: #232450;
+            border-style: none;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 3px 3px 6px 2px #141627;
+            font-size: 1em;
+            text-align: center;
+            .texti{
+                text-align: center;
+                padding-top: 15px;
+                font-size: 1em;
+                color: #fff;
+            }
+        }
     }
 }
 
