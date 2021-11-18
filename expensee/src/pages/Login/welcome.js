@@ -41,9 +41,7 @@ const { currentUser } = useAuth()
                 <h2 className="welc">Willkomen</h2>
                 <img className="userimg" src={ currentUser.photoURL} alt="" />
                 <h3 className="welcomeUser">{ currentUser.displayName }</h3>
-                <Link to="/home" className="losg"
-                // onClick={onClickCollect} 
-                >Los geht's</Link>
+                <a className="losg"href="home">Los geht's</a>
             </div>
             <div className="waveconti">
             <img id="footerBg" src={Bg}  alt="" />
